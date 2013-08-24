@@ -1,0 +1,68 @@
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.CadastroSacoles.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Login.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Principal.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Properties.Resources.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Vendas.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.exe
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.pdb
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.exe
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.pdb
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmVendas.resources
+G:\ProjetoC#TCC\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Consulta.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.exe
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.pdb
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.exe
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.pdb
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.CadastroSacoles.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Consulta.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmVendas.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Login.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Principal.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Properties.Resources.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Vendas.resources
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\LeO\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.exe
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.pdb
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.exe
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.pdb
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.CadastroSacoles.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Consulta.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmVendas.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Login.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Principal.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Properties.Resources.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Vendas.resources
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Backup Note - Maio 2013\Desktop\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.exe
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.pdb
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.CadastroSacoles.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Consulta.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmVendas.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Login.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Principal.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Properties.Resources.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Vendas.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.exe
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.pdb
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\SistemaControleVendasSacoles.exe.config
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.graficos.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.AlterareExcluir.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.JanelaEstoque.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Telateste.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\banco.Designer.cs
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\banco.xsc
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\banco.xsd
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\banco.xss
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Form2.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.vend.resources
+D:\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.MenuPrincipal2.resources
