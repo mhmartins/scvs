@@ -33,8 +33,10 @@ namespace SistemaControleVendasSacoles
            // Form4.Show();
            // Telateste venda = new Telateste();
            // venda.Show();
-            Vendas tt = new Vendas();
-            tt.Show();
+            //Vendas tt = new Vendas();
+            //tt.Show();
+            MenuPrincipal2 forma = new MenuPrincipal2();
+            forma.Show();
 
         }
 

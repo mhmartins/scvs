@@ -41,44 +41,52 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbxquantmin = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.nupdowtipo = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.banco_rr_sacolesDataSet1 = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1();
             this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoTableAdapter = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.tipoTableAdapter();
             this.tableAdapterManager = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.TableAdapterManager();
             this.label8 = new System.Windows.Forms.Label();
             this.toolTipSabor = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.nupdowtipo)).BeginInit();
+            this.banco = new SistemaControleVendasSacoles.banco();
+            this.tipoTableAdapter1 = new SistemaControleVendasSacoles.bancoTableAdapters.tipoTableAdapter();
+            this.tableAdapterManager1 = new SistemaControleVendasSacoles.bancoTableAdapters.TableAdapterManager();
+            this.tipoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nupdowtipo2 = new System.Windows.Forms.ComboBox();
+            this.tipoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vendasTableAdapter1 = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.vendasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(268, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(314, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 25);
+            this.label1.Size = new System.Drawing.Size(333, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Sacolés";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(177, 125);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(236, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.Size = new System.Drawing.Size(106, 33);
             this.label2.TabIndex = 10;
             this.label2.Text = "Sabor:";
             // 
             // tbxnome
             // 
-            this.tbxnome.Location = new System.Drawing.Point(325, 129);
+            this.tbxnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxnome.Location = new System.Drawing.Point(459, 71);
             this.tbxnome.Name = "tbxnome";
-            this.tbxnome.Size = new System.Drawing.Size(265, 20);
+            this.tbxnome.Size = new System.Drawing.Size(265, 40);
             this.tbxnome.TabIndex = 1;
             this.toolTipSabor.SetToolTip(this.tbxnome, "Insira o sabor do sacolé.");
             this.tbxnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxnome_KeyPress);
@@ -86,26 +94,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 179);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(236, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
+            this.label3.Size = new System.Drawing.Size(184, 33);
             this.label3.TabIndex = 11;
             this.label3.Text = "Quantidade:";
             // 
             // tbxquant
             // 
-            this.tbxquant.Location = new System.Drawing.Point(325, 184);
+            this.tbxquant.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxquant.Location = new System.Drawing.Point(459, 153);
             this.tbxquant.Name = "tbxquant";
-            this.tbxquant.Size = new System.Drawing.Size(120, 20);
+            this.tbxquant.Size = new System.Drawing.Size(120, 40);
             this.tbxquant.TabIndex = 3;
             this.toolTipSabor.SetToolTip(this.tbxquant, "Insira a quantidade dos Sacolés.");
             this.tbxquant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxquant_KeyPress);
             // 
             // btnCadastra
             // 
-            this.btnCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastra.Location = new System.Drawing.Point(546, 277);
+            this.btnCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastra.Location = new System.Drawing.Point(536, 311);
             this.btnCadastra.Name = "btnCadastra";
             this.btnCadastra.Size = new System.Drawing.Size(120, 51);
             this.btnCadastra.TabIndex = 5;
@@ -116,8 +125,8 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(100, 277);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(305, 311);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 51);
             this.button2.TabIndex = 6;
@@ -129,18 +138,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label4.Location = new System.Drawing.Point(181, 227);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(236, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
+            this.label4.Size = new System.Drawing.Size(97, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Valor:";
             // 
             // tbxvalor
             // 
-            this.tbxvalor.Location = new System.Drawing.Point(325, 232);
+            this.tbxvalor.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxvalor.Location = new System.Drawing.Point(459, 235);
             this.tbxvalor.Name = "tbxvalor";
-            this.tbxvalor.Size = new System.Drawing.Size(120, 20);
+            this.tbxvalor.Size = new System.Drawing.Size(120, 40);
             this.tbxvalor.TabIndex = 5;
             this.toolTipSabor.SetToolTip(this.tbxvalor, "Insira o valor do sacolé.");
             this.tbxvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxvalor_KeyPress);
@@ -148,19 +158,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label5.Location = new System.Drawing.Point(178, 203);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(236, 197);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 24);
+            this.label5.Size = new System.Drawing.Size(227, 33);
             this.label5.TabIndex = 9;
             this.label5.Text = "Quant. Mínima:";
             // 
             // tbxquantmin
             // 
-            this.tbxquantmin.Enabled = false;
-            this.tbxquantmin.Location = new System.Drawing.Point(325, 208);
+            this.tbxquantmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxquantmin.Location = new System.Drawing.Point(459, 194);
             this.tbxquantmin.Name = "tbxquantmin";
-            this.tbxquantmin.Size = new System.Drawing.Size(120, 20);
+            this.tbxquantmin.Size = new System.Drawing.Size(120, 40);
             this.tbxquantmin.TabIndex = 4;
             this.tbxquantmin.Text = "5";
             this.toolTipSabor.SetToolTip(this.tbxquantmin, "Valor pré definido.");
@@ -168,44 +178,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label6.Location = new System.Drawing.Point(177, 152);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(236, 115);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.Size = new System.Drawing.Size(85, 33);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tipo:";
-            // 
-            // nupdowtipo
-            // 
-            this.nupdowtipo.Location = new System.Drawing.Point(325, 155);
-            this.nupdowtipo.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nupdowtipo.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nupdowtipo.Name = "nupdowtipo";
-            this.nupdowtipo.Size = new System.Drawing.Size(37, 20);
-            this.nupdowtipo.TabIndex = 13;
-            this.toolTipSabor.SetToolTip(this.nupdowtipo, "Escolha o tipo do sacolé.");
-            this.nupdowtipo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(369, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "1 - Cremoso    2 - Suco";
             // 
             // banco_rr_sacolesDataSet1
             // 
@@ -234,20 +212,66 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(184, 92);
+            this.label8.Location = new System.Drawing.Point(239, 284);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(178, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "* Todos os campos são obrigatórios.";
             // 
+            // banco
+            // 
+            this.banco.DataSetName = "banco";
+            this.banco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipoTableAdapter1
+            // 
+            this.tipoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.sacolesTableAdapter = null;
+            this.tableAdapterManager1.tipoTableAdapter = this.tipoTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = SistemaControleVendasSacoles.bancoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.usuariosTableAdapter = null;
+            this.tableAdapterManager1.vendas_sacolesTableAdapter = null;
+            this.tableAdapterManager1.vendasTableAdapter = null;
+            // 
+            // tipoBindingSource1
+            // 
+            this.tipoBindingSource1.DataMember = "tipo";
+            this.tipoBindingSource1.DataSource = this.banco;
+            // 
+            // nupdowtipo2
+            // 
+            this.nupdowtipo2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tipoBindingSource1, "idtipo", true));
+            this.nupdowtipo2.DataSource = this.tipoBindingSource2;
+            this.nupdowtipo2.DisplayMember = "tipo";
+            this.nupdowtipo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nupdowtipo2.FormattingEnabled = true;
+            this.nupdowtipo2.Location = new System.Drawing.Point(459, 112);
+            this.nupdowtipo2.Name = "nupdowtipo2";
+            this.nupdowtipo2.Size = new System.Drawing.Size(120, 41);
+            this.nupdowtipo2.TabIndex = 16;
+            this.nupdowtipo2.ValueMember = "idtipo";
+            this.nupdowtipo2.SelectedIndexChanged += new System.EventHandler(this.nupdowtipo2_SelectedIndexChanged);
+            // 
+            // tipoBindingSource2
+            // 
+            this.tipoBindingSource2.DataMember = "tipo";
+            this.tipoBindingSource2.DataSource = this.banco;
+            // 
+            // vendasTableAdapter1
+            // 
+            this.vendasTableAdapter1.ClearBeforeFill = true;
+            // 
             // CadastroSacoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 402);
+            this.ClientSize = new System.Drawing.Size(960, 392);
+            this.Controls.Add(this.nupdowtipo2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.nupdowtipo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbxquantmin);
             this.Controls.Add(this.label5);
@@ -263,9 +287,11 @@
             this.Name = "CadastroSacoles";
             this.Text = "Cadastro de Sacolés - RR Sacolés";
             this.Load += new System.EventHandler(this.CadastroSacoles_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nupdowtipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,13 +311,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbxquantmin;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown nupdowtipo;
-        private System.Windows.Forms.Label label7;
         private banco_rr_sacolesDataSet1 banco_rr_sacolesDataSet1;
         private System.Windows.Forms.BindingSource tipoBindingSource;
         private banco_rr_sacolesDataSet1TableAdapters.tipoTableAdapter tipoTableAdapter;
         private banco_rr_sacolesDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolTip toolTipSabor;
+        private banco banco;
+        private bancoTableAdapters.tipoTableAdapter tipoTableAdapter1;
+        private bancoTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource tipoBindingSource1;
+        private System.Windows.Forms.ComboBox nupdowtipo2;
+        private System.Windows.Forms.BindingSource tipoBindingSource2;
+        private banco_rr_sacolesDataSet1TableAdapters.vendasTableAdapter vendasTableAdapter1;
     }
 }

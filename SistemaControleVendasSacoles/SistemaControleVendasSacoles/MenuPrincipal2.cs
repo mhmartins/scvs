@@ -37,5 +37,16 @@ namespace SistemaControleVendasSacoles
             frmAzul.Show(); 
         }
 
+        private void MenuPrincipal2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuArquivoNovo_Click(object sender, EventArgs e)
+        {
+            CadastroSacoles Form = new CadastroSacoles();
+            Form.Show();
+        }
+
     }
 }

@@ -33,10 +33,10 @@
             this.mn1 = new System.Windows.Forms.MenuStrip();
             this.mnuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuArquivoNovo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuArquivoNovoAzul = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuArquivoNovoVermelho = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuArquivoSair = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mn1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.mnuWindows});
             this.mn1.Location = new System.Drawing.Point(0, 0);
             this.mn1.Name = "mn1";
-            this.mn1.Size = new System.Drawing.Size(811, 24);
+            this.mn1.Size = new System.Drawing.Size(824, 24);
             this.mn1.TabIndex = 1;
             this.mn1.Text = "menuStrip1";
             // 
@@ -55,38 +55,25 @@
             // 
             this.mnuArquivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuArquivoNovo,
-            this.mnuArquivoSair});
+            this.mnuArquivoSair,
+            this.consultarToolStripMenuItem,
+            this.excluirToolStripMenuItem});
             this.mnuArquivo.Name = "mnuArquivo";
             this.mnuArquivo.Size = new System.Drawing.Size(61, 20);
-            this.mnuArquivo.Text = "Arquivo";
+            this.mnuArquivo.Text = "Estoque";
             // 
             // mnuArquivoNovo
             // 
-            this.mnuArquivoNovo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuArquivoNovoAzul,
-            this.mnuArquivoNovoVermelho});
             this.mnuArquivoNovo.Name = "mnuArquivoNovo";
             this.mnuArquivoNovo.Size = new System.Drawing.Size(152, 22);
-            this.mnuArquivoNovo.Text = "Novo";
-            // 
-            // mnuArquivoNovoAzul
-            // 
-            this.mnuArquivoNovoAzul.Name = "mnuArquivoNovoAzul";
-            this.mnuArquivoNovoAzul.Size = new System.Drawing.Size(152, 22);
-            this.mnuArquivoNovoAzul.Text = "Azul";
-            this.mnuArquivoNovoAzul.Click += new System.EventHandler(this.mnuArquivoNovoAzul_Click);
-            // 
-            // mnuArquivoNovoVermelho
-            // 
-            this.mnuArquivoNovoVermelho.Name = "mnuArquivoNovoVermelho";
-            this.mnuArquivoNovoVermelho.Size = new System.Drawing.Size(152, 22);
-            this.mnuArquivoNovoVermelho.Text = "Vermelho";
+            this.mnuArquivoNovo.Text = "Cadastrar";
+            this.mnuArquivoNovo.Click += new System.EventHandler(this.mnuArquivoNovo_Click);
             // 
             // mnuArquivoSair
             // 
             this.mnuArquivoSair.Name = "mnuArquivoSair";
             this.mnuArquivoSair.Size = new System.Drawing.Size(152, 22);
-            this.mnuArquivoSair.Text = "Sair";
+            this.mnuArquivoSair.Text = "Alterar";
             // 
             // mnuWindows
             // 
@@ -94,16 +81,33 @@
             this.mnuWindows.Size = new System.Drawing.Size(68, 20);
             this.mnuWindows.Text = "Windows";
             // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            // 
             // MenuPrincipal2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 335);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::SistemaControleVendasSacoles.Properties.Resources.receita_gelinho_ou_sacole;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(824, 347);
             this.Controls.Add(this.mn1);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mn1;
             this.Name = "MenuPrincipal2";
             this.Text = "MenuPrincipal2";
+            this.Load += new System.EventHandler(this.MenuPrincipal2_Load);
             this.mn1.ResumeLayout(false);
             this.mn1.PerformLayout();
             this.ResumeLayout(false);
@@ -117,9 +121,9 @@
         private System.Windows.Forms.MenuStrip mn1;
         private System.Windows.Forms.ToolStripMenuItem mnuArquivo;
         private System.Windows.Forms.ToolStripMenuItem mnuArquivoNovo;
-        private System.Windows.Forms.ToolStripMenuItem mnuArquivoNovoAzul;
-        private System.Windows.Forms.ToolStripMenuItem mnuArquivoNovoVermelho;
         private System.Windows.Forms.ToolStripMenuItem mnuArquivoSair;
         private System.Windows.Forms.ToolStripMenuItem mnuWindows;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

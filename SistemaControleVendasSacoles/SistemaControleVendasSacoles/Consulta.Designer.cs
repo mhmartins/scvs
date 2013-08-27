@@ -43,6 +43,7 @@
             this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,10 +91,10 @@
             this.quantminDataGridViewTextBoxColumn,
             this.precoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sacolesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 178);
             this.dataGridView1.TabIndex = 3;
             // 
             // idSacolesDataGridViewTextBoxColumn
@@ -142,11 +143,22 @@
             this.tipoBindingSource.DataMember = "tipo";
             this.tipoBindingSource.DataSource = this.banco_rr_sacolesDataSet1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 37);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Lista de Sacolés";
+            // 
             // Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 230);
+            this.ClientSize = new System.Drawing.Size(743, 304);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Consulta";
             this.Text = "Consulta";
@@ -157,6 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantminDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }

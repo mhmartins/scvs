@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idvendasLabel;
             System.Windows.Forms.Label usuarios_idusuariosLabel;
             System.Windows.Forms.Label dataLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vend));
@@ -52,7 +51,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vendasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idvendasTextBox = new System.Windows.Forms.TextBox();
             this.usuarios_idusuariosComboBox = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -67,7 +65,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            idvendasLabel = new System.Windows.Forms.Label();
+            this.btnvender = new System.Windows.Forms.Button();
             usuarios_idusuariosLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.banco)).BeginInit();
@@ -81,30 +79,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.SacoleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // idvendasLabel
-            // 
-            idvendasLabel.AutoSize = true;
-            idvendasLabel.Location = new System.Drawing.Point(139, 49);
-            idvendasLabel.Name = "idvendasLabel";
-            idvendasLabel.Size = new System.Drawing.Size(79, 13);
-            idvendasLabel.TabIndex = 1;
-            idvendasLabel.Text = "Venda número:";
-            // 
             // usuarios_idusuariosLabel
             // 
             usuarios_idusuariosLabel.AutoSize = true;
-            usuarios_idusuariosLabel.Location = new System.Drawing.Point(139, 75);
+            usuarios_idusuariosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarios_idusuariosLabel.Location = new System.Drawing.Point(41, 41);
             usuarios_idusuariosLabel.Name = "usuarios_idusuariosLabel";
-            usuarios_idusuariosLabel.Size = new System.Drawing.Size(46, 13);
+            usuarios_idusuariosLabel.Size = new System.Drawing.Size(100, 24);
             usuarios_idusuariosLabel.TabIndex = 3;
-            usuarios_idusuariosLabel.Text = "Usuário:";
+            usuarios_idusuariosLabel.Text = "Vendedor:";
             // 
             // dataLabel
             // 
             dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(139, 102);
+            dataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataLabel.Location = new System.Drawing.Point(41, 79);
             dataLabel.Name = "dataLabel";
-            dataLabel.Size = new System.Drawing.Size(33, 13);
+            dataLabel.Size = new System.Drawing.Size(52, 24);
             dataLabel.TabIndex = 5;
             dataLabel.Text = "Data:";
             // 
@@ -185,6 +176,7 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.bindingNavigatorCountItem.Click += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -264,23 +256,16 @@
             this.vendasBindingNavigatorSaveItem.Text = "Save Data";
             this.vendasBindingNavigatorSaveItem.Click += new System.EventHandler(this.vendasBindingNavigatorSaveItem_Click);
             // 
-            // idvendasTextBox
-            // 
-            this.idvendasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "idvendas", true));
-            this.idvendasTextBox.Location = new System.Drawing.Point(244, 46);
-            this.idvendasTextBox.Name = "idvendasTextBox";
-            this.idvendasTextBox.Size = new System.Drawing.Size(121, 20);
-            this.idvendasTextBox.TabIndex = 2;
-            // 
             // usuarios_idusuariosComboBox
             // 
             this.usuarios_idusuariosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "usuarios_idusuarios", true));
             this.usuarios_idusuariosComboBox.DataSource = this.usuariosBindingSource;
             this.usuarios_idusuariosComboBox.DisplayMember = "nome";
+            this.usuarios_idusuariosComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarios_idusuariosComboBox.FormattingEnabled = true;
-            this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(244, 72);
+            this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(146, 38);
             this.usuarios_idusuariosComboBox.Name = "usuarios_idusuariosComboBox";
-            this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(121, 21);
+            this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(121, 32);
             this.usuarios_idusuariosComboBox.TabIndex = 4;
             this.usuarios_idusuariosComboBox.ValueMember = "idusuarios";
             // 
@@ -292,12 +277,14 @@
             // dataMaskedTextBox
             // 
             this.dataMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "data", true));
-            this.dataMaskedTextBox.Location = new System.Drawing.Point(244, 99);
+            this.dataMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataMaskedTextBox.Location = new System.Drawing.Point(146, 76);
             this.dataMaskedTextBox.Mask = "00/00/0000";
             this.dataMaskedTextBox.Name = "dataMaskedTextBox";
-            this.dataMaskedTextBox.Size = new System.Drawing.Size(121, 20);
+            this.dataMaskedTextBox.Size = new System.Drawing.Size(121, 29);
             this.dataMaskedTextBox.TabIndex = 6;
             this.dataMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            this.dataMaskedTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.dataMaskedTextBox_MaskInputRejected);
             // 
             // vendas_sacolesBindingSource
             // 
@@ -327,7 +314,7 @@
             this.vendas_sacolesDataGridView.Location = new System.Drawing.Point(45, 125);
             this.vendas_sacolesDataGridView.Name = "vendas_sacolesDataGridView";
             this.vendas_sacolesDataGridView.RowHeadersVisible = false;
-            this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(548, 220);
+            this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(405, 220);
             this.vendas_sacolesDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -376,14 +363,24 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnvender
+            // 
+            this.btnvender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvender.Location = new System.Drawing.Point(330, 55);
+            this.btnvender.Name = "btnvender";
+            this.btnvender.Size = new System.Drawing.Size(199, 37);
+            this.btnvender.TabIndex = 8;
+            this.btnvender.Text = "Concluir Venda";
+            this.btnvender.UseVisualStyleBackColor = true;
+            this.btnvender.Click += new System.EventHandler(this.btnvender_Click);
+            // 
             // vend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 357);
+            this.Controls.Add(this.btnvender);
             this.Controls.Add(this.vendas_sacolesDataGridView);
-            this.Controls.Add(idvendasLabel);
-            this.Controls.Add(this.idvendasTextBox);
             this.Controls.Add(usuarios_idusuariosLabel);
             this.Controls.Add(this.usuarios_idusuariosComboBox);
             this.Controls.Add(dataLabel);
@@ -427,7 +424,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton vendasBindingNavigatorSaveItem;
         private bancoTableAdapters.usuariosTableAdapter usuariosTableAdapter;
-        private System.Windows.Forms.TextBox idvendasTextBox;
         private System.Windows.Forms.ComboBox usuarios_idusuariosComboBox;
         private System.Windows.Forms.MaskedTextBox dataMaskedTextBox;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
@@ -443,5 +439,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnvender;
     }
 }

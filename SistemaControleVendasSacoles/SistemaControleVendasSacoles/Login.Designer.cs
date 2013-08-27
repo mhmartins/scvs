@@ -36,7 +36,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxSenha = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,15 +47,14 @@
             this.tbxUser.Name = "tbxUser";
             this.tbxUser.Size = new System.Drawing.Size(369, 31);
             this.tbxUser.TabIndex = 0;
-            this.tbxUser.Text = "Digite seu Usuário";
             this.toolTipLogin.SetToolTip(this.tbxUser, "Digite o seu usuário.");
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(248, 363);
+            this.button1.Location = new System.Drawing.Point(138, 350);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 60);
+            this.button1.Size = new System.Drawing.Size(171, 60);
             this.button1.TabIndex = 2;
             this.button1.Text = "Entrar";
             this.toolTipLogin.SetToolTip(this.button1, "Clique aqui para logar no sistema.");
@@ -112,24 +110,11 @@
             this.tbxSenha.TabIndex = 1;
             this.toolTipLogin.SetToolTip(this.tbxSenha, "Digite aqui a sua senha.");
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(25, 363);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(124, 60);
-            this.btnCancel.TabIndex = 8;
-            this.btnCancel.Text = "Cancelar";
-            this.toolTipLogin.SetToolTip(this.btnCancel, "Clique aqui para sair do programa.");
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 533);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbxSenha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -156,7 +141,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxSenha;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ToolTip toolTipLogin;
     }
 }

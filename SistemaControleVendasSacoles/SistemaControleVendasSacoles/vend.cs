@@ -49,6 +49,23 @@ namespace SistemaControleVendasSacoles
 
         }
 
+        private void btnvender_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vendasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.banco);
+        }
+
+        private void dataMaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

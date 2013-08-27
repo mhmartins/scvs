@@ -11,6 +11,7 @@ namespace SistemaControleVendasSacoles
 {
     public partial class CadastroSacoles : Form
     {
+ 
         public CadastroSacoles()
         {
             InitializeComponent();
@@ -52,7 +53,16 @@ namespace SistemaControleVendasSacoles
                 Sacole sa = new Sacole();
                 DAO da = new DAO();
                 sa.Sabor = tbxnome.Text;
-                sa.Tipo = int.Parse(nupdowtipo.Text);
+                int nupdow;
+                if (nupdowtipo2.Text == "Cremoso")
+                {
+                    nupdow = 1;
+                }
+                else
+                {
+                    nupdow = 2;
+                }
+                sa.Tipo = nupdow;
                 sa.Quant = int.Parse(tbxquant.Text);
                 sa.QuantMin = int.Parse(tbxquantmin.Text);
                 sa.Valor = tbxvalor.Text;
@@ -60,7 +70,7 @@ namespace SistemaControleVendasSacoles
                 MessageBox.Show("Produto cadastrado com sucesso!");
 
                 tbxnome.Text = "";
-                nupdowtipo.Text = "1";
+                //nupdowtipo.Text = "1";
                 tbxquant.Text = "";
                 //tbxquantmin.Text = "";
                 tbxvalor.Text = "";
@@ -83,6 +93,8 @@ namespace SistemaControleVendasSacoles
 
         private void CadastroSacoles_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'banco.tipo' table. You can move, or remove it, as needed.
+            this.tipoTableAdapter1.Fill(this.banco.tipo);
             // TODO: This line of code loads data into the 'banco_rr_sacolesDataSet1.tipo' table. You can move, or remove it, as needed.
             this.tipoTableAdapter.Fill(this.banco_rr_sacolesDataSet1.tipo);
 
@@ -121,6 +133,11 @@ namespace SistemaControleVendasSacoles
             {
                 e.Handled = true;
             }
+        }
+
+        private void nupdowtipo2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
