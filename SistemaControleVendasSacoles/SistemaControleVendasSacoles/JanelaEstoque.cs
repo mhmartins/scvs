@@ -39,6 +39,7 @@ namespace SistemaControleVendasSacoles
         {
             AlterareExcluir Form = new AlterareExcluir();
             Form.Show();
+            this.Close();
         }
 
         private void JanelaEstoque_Load(object sender, EventArgs e)
