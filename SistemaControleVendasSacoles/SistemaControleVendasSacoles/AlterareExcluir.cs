@@ -54,6 +54,20 @@ this.sacolesTableAdapter.Fill(this.banco_rr_sacolesDataSet1.sacoles);
 }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sacolesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.banco_rr_sacolesDataSet1);
+        }
+
+        private void sacolesBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+
+
 
 
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendas));
             System.Windows.Forms.Label vendas_sacIDLabel;
             System.Windows.Forms.Label vendas_idvendasLabel;
             System.Windows.Forms.Label sacoles_idsacolesLabel;
@@ -38,22 +37,24 @@
             System.Windows.Forms.Label idvendasLabel;
             System.Windows.Forms.Label usuarios_idusuariosLabel;
             System.Windows.Forms.Label dataLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendas));
             this.banco = new SistemaControleVendasSacoles.banco();
             this.vendas_sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendas_sacolesTableAdapter = new SistemaControleVendasSacoles.bancoTableAdapters.vendas_sacolesTableAdapter();
             this.tableAdapterManager = new SistemaControleVendasSacoles.bancoTableAdapters.TableAdapterManager();
+            this.vendasTableAdapter = new SistemaControleVendasSacoles.bancoTableAdapters.vendasTableAdapter();
             this.vendas_sacolesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vendas_sacolesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.vendas_sacIDTextBox = new System.Windows.Forms.TextBox();
             this.vendas_idvendasTextBox = new System.Windows.Forms.TextBox();
@@ -61,7 +62,6 @@
             this.quantidadeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vendasTableAdapter = new SistemaControleVendasSacoles.bancoTableAdapters.vendasTableAdapter();
             this.idvendasTextBox = new System.Windows.Forms.TextBox();
             this.usuarios_idusuariosComboBox = new System.Windows.Forms.ComboBox();
             this.dataMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -80,6 +80,78 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantidadeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // vendas_sacIDLabel
+            // 
+            vendas_sacIDLabel.AutoSize = true;
+            vendas_sacIDLabel.Location = new System.Drawing.Point(288, 25);
+            vendas_sacIDLabel.Name = "vendas_sacIDLabel";
+            vendas_sacIDLabel.Size = new System.Drawing.Size(79, 13);
+            vendas_sacIDLabel.TabIndex = 1;
+            vendas_sacIDLabel.Text = "vendas sac ID:";
+            // 
+            // vendas_idvendasLabel
+            // 
+            vendas_idvendasLabel.AutoSize = true;
+            vendas_idvendasLabel.Location = new System.Drawing.Point(288, 51);
+            vendas_idvendasLabel.Name = "vendas_idvendasLabel";
+            vendas_idvendasLabel.Size = new System.Drawing.Size(91, 13);
+            vendas_idvendasLabel.TabIndex = 3;
+            vendas_idvendasLabel.Text = "vendas idvendas:";
+            // 
+            // sacoles_idsacolesLabel
+            // 
+            sacoles_idsacolesLabel.AutoSize = true;
+            sacoles_idsacolesLabel.Location = new System.Drawing.Point(288, 77);
+            sacoles_idsacolesLabel.Name = "sacoles_idsacolesLabel";
+            sacoles_idsacolesLabel.Size = new System.Drawing.Size(93, 13);
+            sacoles_idsacolesLabel.TabIndex = 5;
+            sacoles_idsacolesLabel.Text = "sacoles idsacoles:";
+            // 
+            // quantidadeLabel
+            // 
+            quantidadeLabel.AutoSize = true;
+            quantidadeLabel.Location = new System.Drawing.Point(288, 101);
+            quantidadeLabel.Name = "quantidadeLabel";
+            quantidadeLabel.Size = new System.Drawing.Size(63, 13);
+            quantidadeLabel.TabIndex = 7;
+            quantidadeLabel.Text = "quantidade:";
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.Location = new System.Drawing.Point(288, 130);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(33, 13);
+            valorLabel.TabIndex = 9;
+            valorLabel.Text = "valor:";
+            // 
+            // idvendasLabel
+            // 
+            idvendasLabel.AutoSize = true;
+            idvendasLabel.Location = new System.Drawing.Point(32, 51);
+            idvendasLabel.Name = "idvendasLabel";
+            idvendasLabel.Size = new System.Drawing.Size(53, 13);
+            idvendasLabel.TabIndex = 11;
+            idvendasLabel.Text = "idvendas:";
+            // 
+            // usuarios_idusuariosLabel
+            // 
+            usuarios_idusuariosLabel.AutoSize = true;
+            usuarios_idusuariosLabel.Location = new System.Drawing.Point(32, 77);
+            usuarios_idusuariosLabel.Name = "usuarios_idusuariosLabel";
+            usuarios_idusuariosLabel.Size = new System.Drawing.Size(99, 13);
+            usuarios_idusuariosLabel.TabIndex = 13;
+            usuarios_idusuariosLabel.Text = "usuarios idusuarios:";
+            // 
+            // dataLabel
+            // 
+            dataLabel.AutoSize = true;
+            dataLabel.Location = new System.Drawing.Point(32, 104);
+            dataLabel.Name = "dataLabel";
+            dataLabel.Size = new System.Drawing.Size(31, 13);
+            dataLabel.TabIndex = 15;
+            dataLabel.Text = "data:";
             // 
             // banco
             // 
@@ -104,6 +176,10 @@
             this.tableAdapterManager.usuariosTableAdapter = null;
             this.tableAdapterManager.vendas_sacolesTableAdapter = this.vendas_sacolesTableAdapter;
             this.tableAdapterManager.vendasTableAdapter = this.vendasTableAdapter;
+            // 
+            // vendasTableAdapter
+            // 
+            this.vendasTableAdapter.ClearBeforeFill = true;
             // 
             // vendas_sacolesBindingNavigator
             // 
@@ -134,6 +210,32 @@
             this.vendas_sacolesBindingNavigator.Size = new System.Drawing.Size(766, 25);
             this.vendas_sacolesBindingNavigator.TabIndex = 0;
             this.vendas_sacolesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Enabled = false;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -167,17 +269,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -185,7 +280,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -194,49 +289,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // vendas_sacolesBindingNavigatorSaveItem
             // 
             this.vendas_sacolesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.vendas_sacolesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("vendas_sacolesBindingNavigatorSaveItem.Image")));
             this.vendas_sacolesBindingNavigatorSaveItem.Name = "vendas_sacolesBindingNavigatorSaveItem";
-            this.vendas_sacolesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.vendas_sacolesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.vendas_sacolesBindingNavigatorSaveItem.Text = "Save Data";
             this.vendas_sacolesBindingNavigatorSaveItem.Click += new System.EventHandler(this.vendas_sacolesBindingNavigatorSaveItem_Click_2);
-            // 
-            // vendas_sacIDLabel
-            // 
-            vendas_sacIDLabel.AutoSize = true;
-            vendas_sacIDLabel.Location = new System.Drawing.Point(288, 25);
-            vendas_sacIDLabel.Name = "vendas_sacIDLabel";
-            vendas_sacIDLabel.Size = new System.Drawing.Size(79, 13);
-            vendas_sacIDLabel.TabIndex = 1;
-            vendas_sacIDLabel.Text = "vendas sac ID:";
             // 
             // vendas_sacIDTextBox
             // 
@@ -246,15 +314,6 @@
             this.vendas_sacIDTextBox.Size = new System.Drawing.Size(121, 20);
             this.vendas_sacIDTextBox.TabIndex = 2;
             // 
-            // vendas_idvendasLabel
-            // 
-            vendas_idvendasLabel.AutoSize = true;
-            vendas_idvendasLabel.Location = new System.Drawing.Point(288, 51);
-            vendas_idvendasLabel.Name = "vendas_idvendasLabel";
-            vendas_idvendasLabel.Size = new System.Drawing.Size(91, 13);
-            vendas_idvendasLabel.TabIndex = 3;
-            vendas_idvendasLabel.Text = "vendas idvendas:";
-            // 
             // vendas_idvendasTextBox
             // 
             this.vendas_idvendasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendas_sacolesBindingSource, "vendas_idvendas", true));
@@ -262,15 +321,6 @@
             this.vendas_idvendasTextBox.Name = "vendas_idvendasTextBox";
             this.vendas_idvendasTextBox.Size = new System.Drawing.Size(121, 20);
             this.vendas_idvendasTextBox.TabIndex = 4;
-            // 
-            // sacoles_idsacolesLabel
-            // 
-            sacoles_idsacolesLabel.AutoSize = true;
-            sacoles_idsacolesLabel.Location = new System.Drawing.Point(288, 77);
-            sacoles_idsacolesLabel.Name = "sacoles_idsacolesLabel";
-            sacoles_idsacolesLabel.Size = new System.Drawing.Size(93, 13);
-            sacoles_idsacolesLabel.TabIndex = 5;
-            sacoles_idsacolesLabel.Text = "sacoles idsacoles:";
             // 
             // sacoles_idsacolesComboBox
             // 
@@ -282,15 +332,6 @@
             this.sacoles_idsacolesComboBox.TabIndex = 6;
             this.sacoles_idsacolesComboBox.SelectedIndexChanged += new System.EventHandler(this.sacoles_idsacolesComboBox_SelectedIndexChanged_1);
             // 
-            // quantidadeLabel
-            // 
-            quantidadeLabel.AutoSize = true;
-            quantidadeLabel.Location = new System.Drawing.Point(288, 101);
-            quantidadeLabel.Name = "quantidadeLabel";
-            quantidadeLabel.Size = new System.Drawing.Size(63, 13);
-            quantidadeLabel.TabIndex = 7;
-            quantidadeLabel.Text = "quantidade:";
-            // 
             // quantidadeNumericUpDown
             // 
             this.quantidadeNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendas_sacolesBindingSource, "quantidade", true));
@@ -298,15 +339,6 @@
             this.quantidadeNumericUpDown.Name = "quantidadeNumericUpDown";
             this.quantidadeNumericUpDown.Size = new System.Drawing.Size(121, 20);
             this.quantidadeNumericUpDown.TabIndex = 8;
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(288, 130);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(33, 13);
-            valorLabel.TabIndex = 9;
-            valorLabel.Text = "valor:";
             // 
             // valorTextBox
             // 
@@ -321,19 +353,6 @@
             this.vendasBindingSource.DataMember = "vendas";
             this.vendasBindingSource.DataSource = this.banco;
             // 
-            // vendasTableAdapter
-            // 
-            this.vendasTableAdapter.ClearBeforeFill = true;
-            // 
-            // idvendasLabel
-            // 
-            idvendasLabel.AutoSize = true;
-            idvendasLabel.Location = new System.Drawing.Point(32, 51);
-            idvendasLabel.Name = "idvendasLabel";
-            idvendasLabel.Size = new System.Drawing.Size(53, 13);
-            idvendasLabel.TabIndex = 11;
-            idvendasLabel.Text = "idvendas:";
-            // 
             // idvendasTextBox
             // 
             this.idvendasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "idvendas", true));
@@ -341,15 +360,6 @@
             this.idvendasTextBox.Name = "idvendasTextBox";
             this.idvendasTextBox.Size = new System.Drawing.Size(121, 20);
             this.idvendasTextBox.TabIndex = 12;
-            // 
-            // usuarios_idusuariosLabel
-            // 
-            usuarios_idusuariosLabel.AutoSize = true;
-            usuarios_idusuariosLabel.Location = new System.Drawing.Point(32, 77);
-            usuarios_idusuariosLabel.Name = "usuarios_idusuariosLabel";
-            usuarios_idusuariosLabel.Size = new System.Drawing.Size(99, 13);
-            usuarios_idusuariosLabel.TabIndex = 13;
-            usuarios_idusuariosLabel.Text = "usuarios idusuarios:";
             // 
             // usuarios_idusuariosComboBox
             // 
@@ -359,15 +369,6 @@
             this.usuarios_idusuariosComboBox.Name = "usuarios_idusuariosComboBox";
             this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(121, 21);
             this.usuarios_idusuariosComboBox.TabIndex = 14;
-            // 
-            // dataLabel
-            // 
-            dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(32, 104);
-            dataLabel.Name = "dataLabel";
-            dataLabel.Size = new System.Drawing.Size(31, 13);
-            dataLabel.TabIndex = 15;
-            dataLabel.Text = "data:";
             // 
             // dataMaskedTextBox
             // 

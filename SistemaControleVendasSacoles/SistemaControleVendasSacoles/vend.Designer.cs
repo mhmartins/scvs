@@ -387,6 +387,7 @@
             this.Controls.Add(this.dataMaskedTextBox);
             this.Controls.Add(this.vendasBindingNavigator);
             this.Name = "vend";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "vend";
             this.Load += new System.EventHandler(this.vend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.banco)).EndInit();

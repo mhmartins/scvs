@@ -25,6 +25,7 @@ namespace SistemaControleVendasSacoles
         {
             JanelaEstoque Form3 = new JanelaEstoque();
             Form3.Show();
+            //this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,6 +47,11 @@ namespace SistemaControleVendasSacoles
             Form4.Show();
             //Telateste Form4 = new Telateste();
             //Form4.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -41,11 +41,37 @@ namespace SistemaControleVendasSacoles
             */
         }
 
-
+        private MySqlConnection conexao;
 
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
         {
-         //   select * from EQUIPAMENTO ORDER BY<br/>
+            string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
+
+            try
+            {
+                conexao = new MySqlConnection(caminho);
+                // MySqlDataReader leitura;
+                conexao.Open();
+
+               // string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
+               // MySqlCommand comandos = new MySqlCommand(inserir, conexao);
+              //  comandos.ExecuteNonQuery();
+               // conexao.Close();
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Erro de comandos: " + ex.Message);
+            }
+            if (conexao.State == ConnectionState.Open)
+            {
+
+
+            }
+
+
+            
+            //   select * from EQUIPAMENTO ORDER BY<br/>
 //CASE WHEN [ID_EQUIPAMENTO] = 'ID_EQTO_QUE_EU_SELECIONO' THEN 0 ELSE 1 END, [ID_EQUIPAMENTO
         }
 

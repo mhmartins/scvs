@@ -52,6 +52,11 @@ namespace SistemaControleVendasSacoles
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 30);
+        }
+
 
     }
 }

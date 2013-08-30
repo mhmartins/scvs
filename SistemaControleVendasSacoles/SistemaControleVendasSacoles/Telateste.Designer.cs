@@ -324,6 +324,7 @@
             this.Controls.Add(this.cmbxsacolescre);
             this.Controls.Add(this.AddCre);
             this.Name = "Telateste";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Vendas";
             this.Load += new System.EventHandler(this.Telateste_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesBindingSource)).EndInit();

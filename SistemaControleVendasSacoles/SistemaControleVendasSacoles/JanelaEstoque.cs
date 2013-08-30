@@ -20,6 +20,7 @@ namespace SistemaControleVendasSacoles
         {
             CadastroSacoles Form = new CadastroSacoles();
             Form.Show();
+            this.Close();
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
@@ -38,6 +39,16 @@ namespace SistemaControleVendasSacoles
         {
             AlterareExcluir Form = new AlterareExcluir();
             Form.Show();
+        }
+
+        private void JanelaEstoque_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

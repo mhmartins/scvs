@@ -32,13 +32,15 @@
             this.btnaltera = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncadastrar
             // 
-            this.btncadastrar.Location = new System.Drawing.Point(578, 238);
+            this.btncadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btncadastrar.Location = new System.Drawing.Point(714, 238);
             this.btncadastrar.Name = "btncadastrar";
-            this.btncadastrar.Size = new System.Drawing.Size(129, 41);
+            this.btncadastrar.Size = new System.Drawing.Size(165, 46);
             this.btncadastrar.TabIndex = 0;
             this.btncadastrar.Text = "CADASTRAR";
             this.btncadastrar.UseVisualStyleBackColor = true;
@@ -46,9 +48,10 @@
             // 
             // btnaltera
             // 
-            this.btnaltera.Location = new System.Drawing.Point(328, 238);
+            this.btnaltera.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnaltera.Location = new System.Drawing.Point(464, 220);
             this.btnaltera.Name = "btnaltera";
-            this.btnaltera.Size = new System.Drawing.Size(129, 41);
+            this.btnaltera.Size = new System.Drawing.Size(165, 64);
             this.btnaltera.TabIndex = 1;
             this.btnaltera.Text = "ALTERAR CADASTRO";
             this.btnaltera.UseVisualStyleBackColor = true;
@@ -56,9 +59,10 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(328, 108);
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnConsultar.Location = new System.Drawing.Point(464, 108);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(129, 41);
+            this.btnConsultar.Size = new System.Drawing.Size(165, 46);
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -66,25 +70,41 @@
             // 
             // btnexcluir
             // 
-            this.btnexcluir.Location = new System.Drawing.Point(78, 238);
+            this.btnexcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnexcluir.Location = new System.Drawing.Point(214, 238);
             this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(129, 41);
+            this.btnexcluir.Size = new System.Drawing.Size(165, 46);
             this.btnexcluir.TabIndex = 3;
             this.btnexcluir.Text = "EXCLUIR";
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button1.Location = new System.Drawing.Point(56, 434);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 46);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // JanelaEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 350);
+            this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnaltera);
             this.Controls.Add(this.btncadastrar);
+            this.IsMdiContainer = true;
             this.Name = "JanelaEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JanelaEstoque";
+            this.Load += new System.EventHandler(this.JanelaEstoque_Load);
             this.ResumeLayout(false);
 
         }
@@ -95,5 +115,6 @@
         private System.Windows.Forms.Button btnaltera;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnexcluir;
+        private System.Windows.Forms.Button button1;
     }
 }

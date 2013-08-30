@@ -111,10 +111,13 @@ namespace SistemaControleVendasSacoles
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //apaga os tbx relacionado abaixo
-            tbxnome.Clear();
-            tbxquant.Clear();
-            tbxvalor.Clear();
+            if (MessageBox.Show("Você tem certeza que deseja limpar os campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //apaga os tbx relacionado abaixo
+                tbxnome.Clear();
+                tbxquant.Clear();
+                tbxvalor.Clear();
+            }
         }
 
         private void tbxvalor_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,6 +141,13 @@ namespace SistemaControleVendasSacoles
         private void nupdowtipo2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            JanelaEstoque Form = new JanelaEstoque();
+            Form.Show();
+            this.Close();
         }
 
     }
