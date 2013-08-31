@@ -125,6 +125,7 @@
       <DependentUpon>MenuPrincipal2.cs</DependentUpon>
     </Compile>
     <Compile Include="MetodoVenda.cs" />
+    <Compile Include="ParaCombos.cs" />
     <Compile Include="Telateste.cs">
       <SubType>Form</SubType>
     </Compile>
