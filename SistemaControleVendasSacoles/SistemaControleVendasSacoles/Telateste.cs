@@ -21,6 +21,20 @@ namespace SistemaControleVendasSacoles
 
         private void Telateste_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vendas.usuarios' table. You can move, or remove it, as needed.
+            this.usuariosTableAdapter.Fill(this.vendas.usuarios);
+            // TODO: This line of code loads data into the 'vendas.sacoles' table. You can move, or remove it, as needed.
+            this.sacolesTableAdapter.Fill(this.vendas.sacoles);
+            // TODO: This line of code loads data into the 'vendas.vendas_sacoles' table. You can move, or remove it, as needed.
+            this.vendas_sacolesTableAdapter.Fill(this.vendas.vendas_sacoles);
+            // TODO: This line of code loads data into the 'vendas.vendas_sacoles' table. You can move, or remove it, as needed.
+            this.vendas_sacolesTableAdapter.Fill(this.vendas.vendas_sacoles);
+            // TODO: This line of code loads data into the 'vendas._vendas' table. You can move, or remove it, as needed.
+            this.vendasTableAdapter.Fill(this.vendas._vendas);
+            // TODO: This line of code loads data into the 'vendas._vendas' table. You can move, or remove it, as needed.
+            this.vendasTableAdapter.Fill(this.vendas._vendas);
+            // TODO: This line of code loads data into the 'vendas._vendas' table. You can move, or remove it, as needed.
+            this.vendasTableAdapter.Fill(this.vendas._vendas);
             MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
             MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 1", combo);
             MySqlDataAdapter sql2 = new MySqlDataAdapter("select * from sacoles where tipo = 2", combo);
@@ -125,6 +139,30 @@ namespace SistemaControleVendasSacoles
 
                 }
             }
+        }
+
+        private void vendasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vendasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.vendas);
+
+        }
+
+        private void vendasBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vendasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.vendas);
+
+        }
+
+        private void vendasBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vendasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.vendas);
+
         }
         /*  private void carregaCombox()
           {

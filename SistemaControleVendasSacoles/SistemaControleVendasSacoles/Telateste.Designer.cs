@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Telateste));
             this.AddCre = new System.Windows.Forms.Button();
             this.cmbxsacolescre = new System.Windows.Forms.ComboBox();
             this.cbxSuco = new System.Windows.Forms.ComboBox();
@@ -35,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mskValSuco = new System.Windows.Forms.MaskedTextBox();
             this.addSuco = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mktDesc = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,10 +53,48 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.vendas = new SistemaControleVendasSacoles.vendas();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vendasTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.vendasTableAdapter();
+            this.tableAdapterManager = new SistemaControleVendasSacoles.vendasTableAdapters.TableAdapterManager();
+            this.sacolesTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.sacolesTableAdapter();
+            this.vendas_sacolesTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.vendas_sacolesTableAdapter();
+            this.vendasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.vendasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.usuarios_idusuariosComboBox = new System.Windows.Forms.ComboBox();
+            this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.vendas_sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vendas_sacolesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.sacolebindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.usuariosTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingNavigator)).BeginInit();
+            this.vendasBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolebindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCre
@@ -71,6 +110,7 @@
             // 
             // cmbxsacolescre
             // 
+            this.cmbxsacolescre.DisplayMember = "idSacoles";
             this.cmbxsacolescre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxsacolescre.FormattingEnabled = true;
             this.cmbxsacolescre.Location = new System.Drawing.Point(16, 29);
@@ -127,15 +167,6 @@
             this.addSuco.TabIndex = 7;
             this.addSuco.Text = "Adicionar";
             this.addSuco.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(413, 223);
-            this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
@@ -225,9 +256,9 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 519);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1025, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1033, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -296,11 +327,264 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Quantidade";
             // 
+            // vendas
+            // 
+            this.vendas.DataSetName = "vendas";
+            this.vendas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataMember = "vendas";
+            this.vendasBindingSource.DataSource = this.vendas;
+            // 
+            // vendasTableAdapter
+            // 
+            this.vendasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.sacolesTableAdapter = this.sacolesTableAdapter;
+            this.tableAdapterManager.tipoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.vendasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = null;
+            this.tableAdapterManager.vendas_sacolesTableAdapter = this.vendas_sacolesTableAdapter;
+            this.tableAdapterManager.vendasTableAdapter = this.vendasTableAdapter;
+            // 
+            // sacolesTableAdapter
+            // 
+            this.sacolesTableAdapter.ClearBeforeFill = true;
+            // 
+            // vendas_sacolesTableAdapter
+            // 
+            this.vendas_sacolesTableAdapter.ClearBeforeFill = true;
+            // 
+            // vendasBindingNavigator
+            // 
+            this.vendasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.vendasBindingNavigator.BindingSource = this.vendasBindingSource;
+            this.vendasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.vendasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.vendasBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vendasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.vendasBindingNavigatorSaveItem});
+            this.vendasBindingNavigator.Location = new System.Drawing.Point(0, 494);
+            this.vendasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.vendasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.vendasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.vendasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.vendasBindingNavigator.Name = "vendasBindingNavigator";
+            this.vendasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.vendasBindingNavigator.Size = new System.Drawing.Size(1033, 25);
+            this.vendasBindingNavigator.TabIndex = 20;
+            this.vendasBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // vendasBindingNavigatorSaveItem
+            // 
+            this.vendasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.vendasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("vendasBindingNavigatorSaveItem.Image")));
+            this.vendasBindingNavigatorSaveItem.Name = "vendasBindingNavigatorSaveItem";
+            this.vendasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.vendasBindingNavigatorSaveItem.Text = "Save Data";
+            this.vendasBindingNavigatorSaveItem.Click += new System.EventHandler(this.vendasBindingNavigatorSaveItem_Click_2);
+            // 
+            // usuarios_idusuariosComboBox
+            // 
+            this.usuarios_idusuariosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "usuarios_idusuarios", true));
+            this.usuarios_idusuariosComboBox.DataSource = this.usuariosBindingSource;
+            this.usuarios_idusuariosComboBox.DisplayMember = "nome";
+            this.usuarios_idusuariosComboBox.FormattingEnabled = true;
+            this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(16, 407);
+            this.usuarios_idusuariosComboBox.Name = "usuarios_idusuariosComboBox";
+            this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(200, 21);
+            this.usuarios_idusuariosComboBox.TabIndex = 23;
+            this.usuarios_idusuariosComboBox.ValueMember = "idusuarios";
+            // 
+            // dataDateTimePicker
+            // 
+            this.dataDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendasBindingSource, "data", true));
+            this.dataDateTimePicker.Location = new System.Drawing.Point(16, 434);
+            this.dataDateTimePicker.Name = "dataDateTimePicker";
+            this.dataDateTimePicker.Size = new System.Drawing.Size(227, 20);
+            this.dataDateTimePicker.TabIndex = 25;
+            // 
+            // vendas_sacolesBindingSource
+            // 
+            this.vendas_sacolesBindingSource.DataMember = "valor";
+            this.vendas_sacolesBindingSource.DataSource = this.vendasBindingSource;
+            // 
+            // vendas_sacolesDataGridView
+            // 
+            this.vendas_sacolesDataGridView.AutoGenerateColumns = false;
+            this.vendas_sacolesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vendas_sacolesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.vendas_sacolesDataGridView.DataSource = this.vendas_sacolesBindingSource;
+            this.vendas_sacolesDataGridView.Location = new System.Drawing.Point(16, 178);
+            this.vendas_sacolesDataGridView.Name = "vendas_sacolesDataGridView";
+            this.vendas_sacolesDataGridView.RowHeadersVisible = false;
+            this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(413, 223);
+            this.vendas_sacolesDataGridView.TabIndex = 26;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "vendas_idvendas";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "sacoles_idsacoles";
+            this.dataGridViewTextBoxColumn3.DataSource = this.sacolebindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "sabor";
+            this.dataGridViewTextBoxColumn3.HeaderText = "sacoles_idsacoles";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "idSacoles";
+            // 
+            // sacolebindingSource
+            // 
+            this.sacolebindingSource.DataMember = "sacoles";
+            this.sacolebindingSource.DataSource = this.vendas;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
+            this.dataGridViewTextBoxColumn4.HeaderText = "quantidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
+            this.dataGridViewTextBoxColumn5.HeaderText = "valor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.vendas;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 473);
+            this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.vendas_sacolesDataGridView);
+            this.Controls.Add(this.usuarios_idusuariosComboBox);
+            this.Controls.Add(this.dataDateTimePicker);
+            this.Controls.Add(this.vendasBindingNavigator);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.numericUpDown2);
@@ -312,7 +596,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.addSuco);
             this.Controls.Add(this.mskValSuco);
             this.Controls.Add(this.label2);
@@ -324,11 +607,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Vendas";
             this.Load += new System.EventHandler(this.Telateste_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingNavigator)).EndInit();
+            this.vendasBindingNavigator.ResumeLayout(false);
+            this.vendasBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolebindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,7 +634,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mskValSuco;
         private System.Windows.Forms.Button addSuco;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox mktDesc;
         private System.Windows.Forms.Label label4;
@@ -360,6 +650,37 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private vendas vendas;
+        private System.Windows.Forms.BindingSource vendasBindingSource;
+        private vendasTableAdapters.vendasTableAdapter vendasTableAdapter;
+        private vendasTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator vendasBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton vendasBindingNavigatorSaveItem;
+        private System.Windows.Forms.ComboBox usuarios_idusuariosComboBox;
+        private System.Windows.Forms.DateTimePicker dataDateTimePicker;
+        private vendasTableAdapters.vendas_sacolesTableAdapter vendas_sacolesTableAdapter;
+        private System.Windows.Forms.BindingSource vendas_sacolesBindingSource;
+        private vendasTableAdapters.sacolesTableAdapter sacolesTableAdapter;
+        private System.Windows.Forms.DataGridView vendas_sacolesDataGridView;
+        private System.Windows.Forms.BindingSource sacolebindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private vendasTableAdapters.usuariosTableAdapter usuariosTableAdapter;
 
     }
 }
