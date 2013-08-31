@@ -35,15 +35,15 @@
             this.tableAdapterManager = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.TableAdapterManager();
             this.tipoTableAdapter = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.tipoTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.idSacolesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saborDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,6 +82,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idSacolesDataGridViewTextBoxColumn,
@@ -91,48 +93,12 @@
             this.quantminDataGridViewTextBoxColumn,
             this.precoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sacolesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(166, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 178);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 328);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idSacolesDataGridViewTextBoxColumn
-            // 
-            this.idSacolesDataGridViewTextBoxColumn.DataPropertyName = "idSacoles";
-            this.idSacolesDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.idSacolesDataGridViewTextBoxColumn.Name = "idSacolesDataGridViewTextBoxColumn";
-            // 
-            // saborDataGridViewTextBoxColumn
-            // 
-            this.saborDataGridViewTextBoxColumn.DataPropertyName = "sabor";
-            this.saborDataGridViewTextBoxColumn.HeaderText = "Sabor";
-            this.saborDataGridViewTextBoxColumn.Name = "saborDataGridViewTextBoxColumn";
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            // 
-            // quantDataGridViewTextBoxColumn
-            // 
-            this.quantDataGridViewTextBoxColumn.DataPropertyName = "quant";
-            this.quantDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantDataGridViewTextBoxColumn.Name = "quantDataGridViewTextBoxColumn";
-            // 
-            // quantminDataGridViewTextBoxColumn
-            // 
-            this.quantminDataGridViewTextBoxColumn.DataPropertyName = "quantmin";
-            this.quantminDataGridViewTextBoxColumn.HeaderText = "Quant. Mínima";
-            this.quantminDataGridViewTextBoxColumn.Name = "quantminDataGridViewTextBoxColumn";
-            // 
-            // precoDataGridViewTextBoxColumn
-            // 
-            this.precoDataGridViewTextBoxColumn.DataPropertyName = "preco";
-            this.precoDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
             // 
             // sacolesBindingSource1
             // 
@@ -153,6 +119,49 @@
             this.label1.Size = new System.Drawing.Size(267, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de Sacolés";
+            // 
+            // idSacolesDataGridViewTextBoxColumn
+            // 
+            this.idSacolesDataGridViewTextBoxColumn.DataPropertyName = "idSacoles";
+            this.idSacolesDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.idSacolesDataGridViewTextBoxColumn.Name = "idSacolesDataGridViewTextBoxColumn";
+            this.idSacolesDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // saborDataGridViewTextBoxColumn
+            // 
+            this.saborDataGridViewTextBoxColumn.DataPropertyName = "sabor";
+            this.saborDataGridViewTextBoxColumn.HeaderText = "Sabor";
+            this.saborDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.saborDataGridViewTextBoxColumn.Name = "saborDataGridViewTextBoxColumn";
+            this.saborDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.Width = 53;
+            // 
+            // quantDataGridViewTextBoxColumn
+            // 
+            this.quantDataGridViewTextBoxColumn.DataPropertyName = "quant";
+            this.quantDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantDataGridViewTextBoxColumn.Name = "quantDataGridViewTextBoxColumn";
+            this.quantDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // quantminDataGridViewTextBoxColumn
+            // 
+            this.quantminDataGridViewTextBoxColumn.DataPropertyName = "quantmin";
+            this.quantminDataGridViewTextBoxColumn.HeaderText = "Quant. Mínima";
+            this.quantminDataGridViewTextBoxColumn.Name = "quantminDataGridViewTextBoxColumn";
+            this.quantminDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // precoDataGridViewTextBoxColumn
+            // 
+            this.precoDataGridViewTextBoxColumn.DataPropertyName = "preco";
+            this.precoDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
+            this.precoDataGridViewTextBoxColumn.Width = 56;
             // 
             // Consulta
             // 
@@ -185,12 +194,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource tipoBindingSource;
         private System.Windows.Forms.BindingSource sacolesBindingSource1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSacolesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn saborDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantminDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
     }
 }

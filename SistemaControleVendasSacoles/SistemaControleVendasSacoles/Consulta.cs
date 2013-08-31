@@ -49,12 +49,12 @@ namespace SistemaControleVendasSacoles
             this.tipoTableAdapter.Fill(this.banco_rr_sacolesDataSet1.tipo);
             // TODO: This line of code loads data into the 'banco_rr_sacolesDataSet1.sacoles' table. You can move, or remove it, as needed.
             this.sacolesTableAdapter.Fill(this.banco_rr_sacolesDataSet1.sacoles);
-
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 20);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 30);
+            
         }
 
 

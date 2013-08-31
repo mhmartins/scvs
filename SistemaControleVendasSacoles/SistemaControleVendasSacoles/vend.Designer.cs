@@ -157,7 +157,7 @@
             this.vendasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.vendasBindingNavigator.Name = "vendasBindingNavigator";
             this.vendasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.vendasBindingNavigator.Size = new System.Drawing.Size(614, 25);
+            this.vendasBindingNavigator.Size = new System.Drawing.Size(1001, 25);
             this.vendasBindingNavigator.TabIndex = 0;
             this.vendasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -366,7 +366,7 @@
             // btnvender
             // 
             this.btnvender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvender.Location = new System.Drawing.Point(330, 55);
+            this.btnvender.Location = new System.Drawing.Point(598, 380);
             this.btnvender.Name = "btnvender";
             this.btnvender.Size = new System.Drawing.Size(199, 37);
             this.btnvender.TabIndex = 8;
@@ -378,7 +378,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 357);
+            this.ClientSize = new System.Drawing.Size(1001, 533);
             this.Controls.Add(this.btnvender);
             this.Controls.Add(this.vendas_sacolesDataGridView);
             this.Controls.Add(usuarios_idusuariosLabel);

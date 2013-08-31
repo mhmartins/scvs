@@ -21,10 +21,36 @@ namespace SistemaControleVendasSacoles
 
         private void Telateste_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'banco.sacoles' table. You can move, or remove it, as needed.
-            this.sacolesTableAdapter.Fill(this.banco.sacoles);
-            // TODO: This line of code loads data into the 'banco.vendas_sacoles' table. You can move, or remove it, as needed.
-            this.vendas_sacolesTableAdapter.Fill(this.banco.vendas_sacoles);
+            MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+            MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 1", combo);
+            MySqlDataAdapter sql2 = new MySqlDataAdapter("select * from sacoles where tipo = 2", combo);
+
+            DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+
+            sql.Fill(dt);
+            sql2.Fill(dt2);
+
+            try
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    cmbxsacolescre.Items.Add(dt.Rows[i]["sabor"]);
+                }
+                for (int ii = 0; ii < dt2.Rows.Count; ii++)
+                {
+                    cbxSuco.Items.Add(dt2.Rows[ii]["sabor"]);
+                }
+
+            }
+            catch (MySqlException erro)
+            {
+                throw new Exception("Erro de comandos: " + erro.Message);
+            }
+            finally
+            {
+                combo.Close();
+            }
         /*    c.Text = codigoID;
             cmbxsacolescre.Text = 
             txtNome.Text = nome;
@@ -41,33 +67,33 @@ namespace SistemaControleVendasSacoles
             */
         }
 
-        private MySqlConnection conexao;
+       // private MySqlConnection conexao;
 
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
+           // string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
 
-            try
-            {
-                conexao = new MySqlConnection(caminho);
+           // try
+          //  {
+               // conexao = new MySqlConnection(caminho);
                 // MySqlDataReader leitura;
-                conexao.Open();
+               // conexao.Open();
 
                // string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
                // MySqlCommand comandos = new MySqlCommand(inserir, conexao);
               //  comandos.ExecuteNonQuery();
                // conexao.Close();
-            }
+           // }
 
-            catch (Exception ex)
-            {
-                throw new Exception("Erro de comandos: " + ex.Message);
-            }
-            if (conexao.State == ConnectionState.Open)
-            {
+           // catch (Exception ex)
+           // {
+             //   throw new Exception("Erro de comandos: " + ex.Message);
+           // }
+           // if (conexao.State == ConnectionState.Open)
+           // {
 
 
-            }
+           // }
 
 
             
@@ -88,6 +114,17 @@ namespace SistemaControleVendasSacoles
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //dataGridView1.Rows.add(cmbxsacolescre.Text, cbxSuco.Text, mskValCre.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            {
+                if (MessageBox.Show("Você tem certeza que deseja limpar os campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //apaga os tbx relacionado abaixo
+
+                }
+            }
         }
         /*  private void carregaCombox()
           {

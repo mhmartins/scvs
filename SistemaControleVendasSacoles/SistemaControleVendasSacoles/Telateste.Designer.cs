@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.AddCre = new System.Windows.Forms.Button();
             this.cmbxsacolescre = new System.Windows.Forms.ComboBox();
-            this.vendas_sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.banco = new SistemaControleVendasSacoles.banco();
-            this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxSuco = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,20 +48,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.mskValCre = new System.Windows.Forms.MaskedTextBox();
-            this.vendas_sacolesTableAdapter = new SistemaControleVendasSacoles.bancoTableAdapters.vendas_sacolesTableAdapter();
-            this.tableAdapterManager = new SistemaControleVendasSacoles.bancoTableAdapters.TableAdapterManager();
-            this.sacolesTableAdapter = new SistemaControleVendasSacoles.bancoTableAdapters.sacolesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.banco)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCre
             // 
             this.AddCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCre.Location = new System.Drawing.Point(377, 29);
+            this.AddCre.Location = new System.Drawing.Point(504, 29);
             this.AddCre.Name = "AddCre";
             this.AddCre.Size = new System.Drawing.Size(104, 37);
             this.AddCre.TabIndex = 0;
@@ -75,9 +71,6 @@
             // 
             // cmbxsacolescre
             // 
-            this.cmbxsacolescre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendas_sacolesBindingSource, "sacoles_idsacoles", true));
-            this.cmbxsacolescre.DataSource = this.sacolesBindingSource;
-            this.cmbxsacolescre.DisplayMember = "sabor";
             this.cmbxsacolescre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxsacolescre.FormattingEnabled = true;
             this.cmbxsacolescre.Location = new System.Drawing.Point(16, 29);
@@ -87,28 +80,10 @@
             this.cmbxsacolescre.ValueMember = "idSacoles";
             this.cmbxsacolescre.SelectedIndexChanged += new System.EventHandler(this.cmbxsacolescre_SelectedIndexChanged);
             // 
-            // vendas_sacolesBindingSource
-            // 
-            this.vendas_sacolesBindingSource.DataMember = "vendas_sacoles";
-            this.vendas_sacolesBindingSource.DataSource = this.banco;
-            // 
-            // banco
-            // 
-            this.banco.DataSetName = "banco";
-            this.banco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sacolesBindingSource
-            // 
-            this.sacolesBindingSource.DataMember = "sacoles";
-            this.sacolesBindingSource.DataSource = this.banco;
-            // 
             // cbxSuco
             // 
             this.cbxSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSuco.FormattingEnabled = true;
-            this.cbxSuco.Items.AddRange(new object[] {
-            "TESTANDO",
-            "UVA"});
             this.cbxSuco.Location = new System.Drawing.Point(16, 115);
             this.cbxSuco.Name = "cbxSuco";
             this.cbxSuco.Size = new System.Drawing.Size(209, 33);
@@ -137,7 +112,7 @@
             // mskValSuco
             // 
             this.mskValSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskValSuco.Location = new System.Drawing.Point(252, 117);
+            this.mskValSuco.Location = new System.Drawing.Point(379, 117);
             this.mskValSuco.Mask = "$0.00";
             this.mskValSuco.Name = "mskValSuco";
             this.mskValSuco.Size = new System.Drawing.Size(100, 31);
@@ -146,7 +121,7 @@
             // addSuco
             // 
             this.addSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSuco.Location = new System.Drawing.Point(377, 115);
+            this.addSuco.Location = new System.Drawing.Point(504, 115);
             this.addSuco.Name = "addSuco";
             this.addSuco.Size = new System.Drawing.Size(104, 37);
             this.addSuco.TabIndex = 7;
@@ -170,9 +145,9 @@
             this.groupBox1.Controls.Add(this.btnSomar);
             this.groupBox1.Controls.Add(this.mktTotal);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(521, 12);
+            this.groupBox1.Location = new System.Drawing.Point(610, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 282);
+            this.groupBox1.Size = new System.Drawing.Size(403, 282);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Financeiros";
@@ -235,6 +210,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Limpar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -259,7 +235,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(248, 2);
+            this.label5.Location = new System.Drawing.Point(375, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 24);
             this.label5.TabIndex = 13;
@@ -269,7 +245,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(248, 90);
+            this.label6.Location = new System.Drawing.Point(375, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 24);
             this.label6.TabIndex = 14;
@@ -277,37 +253,58 @@
             // 
             // mskValCre
             // 
-            this.mskValCre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sacolesBindingSource, "preco", true));
             this.mskValCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskValCre.Location = new System.Drawing.Point(252, 31);
+            this.mskValCre.Location = new System.Drawing.Point(379, 31);
             this.mskValCre.Mask = "$0.00";
             this.mskValCre.Name = "mskValCre";
             this.mskValCre.Size = new System.Drawing.Size(100, 31);
             this.mskValCre.TabIndex = 15;
             // 
-            // vendas_sacolesTableAdapter
+            // numericUpDown1
             // 
-            this.vendas_sacolesTableAdapter.ClearBeforeFill = true;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.numericUpDown1.Location = new System.Drawing.Point(248, 31);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(58, 31);
+            this.numericUpDown1.TabIndex = 16;
             // 
-            // tableAdapterManager
+            // numericUpDown2
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.sacolesTableAdapter = this.sacolesTableAdapter;
-            this.tableAdapterManager.tipoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.bancoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuariosTableAdapter = null;
-            this.tableAdapterManager.vendas_sacolesTableAdapter = this.vendas_sacolesTableAdapter;
-            this.tableAdapterManager.vendasTableAdapter = null;
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.numericUpDown2.Location = new System.Drawing.Point(248, 115);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(58, 31);
+            this.numericUpDown2.TabIndex = 17;
             // 
-            // sacolesTableAdapter
+            // label7
             // 
-            this.sacolesTableAdapter.ClearBeforeFill = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label7.Location = new System.Drawing.Point(244, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 24);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Quantidade";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label8.Location = new System.Drawing.Point(244, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 24);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Quantidade";
             // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 473);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.mskValCre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -327,12 +324,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Vendas";
             this.Load += new System.EventHandler(this.Telateste_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.vendas_sacolesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.banco)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,12 +356,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mskValCre;
-        private banco banco;
-        private System.Windows.Forms.BindingSource vendas_sacolesBindingSource;
-        private bancoTableAdapters.vendas_sacolesTableAdapter vendas_sacolesTableAdapter;
-        private bancoTableAdapters.TableAdapterManager tableAdapterManager;
-        private bancoTableAdapters.sacolesTableAdapter sacolesTableAdapter;
-        private System.Windows.Forms.BindingSource sacolesBindingSource;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
 
     }
 }

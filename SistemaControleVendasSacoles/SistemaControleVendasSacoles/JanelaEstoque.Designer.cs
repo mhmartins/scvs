@@ -38,7 +38,7 @@
             // btncadastrar
             // 
             this.btncadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btncadastrar.Location = new System.Drawing.Point(714, 238);
+            this.btncadastrar.Location = new System.Drawing.Point(668, 238);
             this.btncadastrar.Name = "btncadastrar";
             this.btncadastrar.Size = new System.Drawing.Size(165, 46);
             this.btncadastrar.TabIndex = 0;
@@ -49,7 +49,7 @@
             // btnaltera
             // 
             this.btnaltera.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnaltera.Location = new System.Drawing.Point(464, 220);
+            this.btnaltera.Location = new System.Drawing.Point(418, 220);
             this.btnaltera.Name = "btnaltera";
             this.btnaltera.Size = new System.Drawing.Size(165, 64);
             this.btnaltera.TabIndex = 1;
@@ -60,7 +60,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnConsultar.Location = new System.Drawing.Point(464, 108);
+            this.btnConsultar.Location = new System.Drawing.Point(418, 108);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(165, 46);
             this.btnConsultar.TabIndex = 2;
@@ -71,7 +71,7 @@
             // btnexcluir
             // 
             this.btnexcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnexcluir.Location = new System.Drawing.Point(214, 238);
+            this.btnexcluir.Location = new System.Drawing.Point(168, 238);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(165, 46);
             this.btnexcluir.TabIndex = 3;
@@ -100,7 +100,6 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnaltera);
             this.Controls.Add(this.btncadastrar);
-            this.IsMdiContainer = true;
             this.Name = "JanelaEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JanelaEstoque";
