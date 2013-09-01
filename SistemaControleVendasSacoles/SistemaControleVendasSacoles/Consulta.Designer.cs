@@ -35,15 +35,15 @@
             this.tableAdapterManager = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.TableAdapterManager();
             this.tipoTableAdapter = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.tipoTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.idSacolesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saborDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,29 +96,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(166, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(668, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 328);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // sacolesBindingSource1
-            // 
-            this.sacolesBindingSource1.DataMember = "sacoles";
-            this.sacolesBindingSource1.DataSource = this.banco_rr_sacolesDataSet1;
-            // 
-            // tipoBindingSource
-            // 
-            this.tipoBindingSource.DataMember = "tipo";
-            this.tipoBindingSource.DataSource = this.banco_rr_sacolesDataSet1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 37);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Lista de Sacolés";
             // 
             // idSacolesDataGridViewTextBoxColumn
             // 
@@ -162,6 +142,26 @@
             this.precoDataGridViewTextBoxColumn.HeaderText = "Valor";
             this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
             this.precoDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // sacolesBindingSource1
+            // 
+            this.sacolesBindingSource1.DataMember = "sacoles";
+            this.sacolesBindingSource1.DataSource = this.banco_rr_sacolesDataSet1;
+            // 
+            // tipoBindingSource
+            // 
+            this.tipoBindingSource.DataMember = "tipo";
+            this.tipoBindingSource.DataSource = this.banco_rr_sacolesDataSet1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 37);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Lista de Sacolés";
             // 
             // Consulta
             // 

@@ -37,8 +37,7 @@
             this.mskValSuco = new System.Windows.Forms.MaskedTextBox();
             this.addSuco = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.tbx3 = new System.Windows.Forms.TextBox();
+            this.mktTotal = new System.Windows.Forms.MaskedTextBox();
             this.mktDesc = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,8 +58,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbx2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mktValorCremoso = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -140,8 +139,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.tbx3);
+            this.groupBox1.Controls.Add(this.mktTotal);
             this.groupBox1.Controls.Add(this.mktDesc);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -154,21 +152,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Financeiros";
             // 
-            // maskedTextBox1
+            // mktTotal
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(110, 179);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(264, 80);
-            this.maskedTextBox1.TabIndex = 21;
-            // 
-            // tbx3
-            // 
-            this.tbx3.Location = new System.Drawing.Point(103, 256);
-            this.tbx3.Name = "tbx3";
-            this.tbx3.Size = new System.Drawing.Size(100, 26);
-            this.tbx3.TabIndex = 20;
-            this.tbx3.Text = "0";
+            this.mktTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
+            this.mktTotal.Location = new System.Drawing.Point(110, 179);
+            this.mktTotal.Name = "mktTotal";
+            this.mktTotal.Size = new System.Drawing.Size(264, 80);
+            this.mktTotal.TabIndex = 21;
+            this.mktTotal.Text = "0";
             // 
             // mktDesc
             // 
@@ -212,7 +203,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(458, 418);
+            this.button4.Location = new System.Drawing.Point(512, 430);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 37);
             this.button4.TabIndex = 10;
@@ -296,10 +287,15 @@
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(12, 244);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(423, 223);
+            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.Size = new System.Drawing.Size(463, 223);
             this.dgv.TabIndex = 28;
             // 
             // btnIni
@@ -356,28 +352,30 @@
             this.textBox1.Size = new System.Drawing.Size(209, 31);
             this.textBox1.TabIndex = 35;
             // 
-            // tbx2
+            // mktValorCremoso
             // 
-            this.tbx2.Location = new System.Drawing.Point(375, 146);
-            this.tbx2.Name = "tbx2";
-            this.tbx2.Size = new System.Drawing.Size(100, 20);
-            this.tbx2.TabIndex = 36;
+            this.mktValorCremoso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.mktValorCremoso.Location = new System.Drawing.Point(375, 108);
+            this.mktValorCremoso.Name = "mktValorCremoso";
+            this.mktValorCremoso.Size = new System.Drawing.Size(100, 31);
+            this.mktValorCremoso.TabIndex = 37;
             // 
-            // maskedTextBox2
+            // label13
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(375, 108);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 31);
-            this.maskedTextBox2.TabIndex = 37;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(309, 125);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.TabIndex = 38;
+            this.label13.Visible = false;
             // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.tbx2);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.mktValorCremoso);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -445,10 +443,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox tbx3;
-        private System.Windows.Forms.TextBox tbx2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mktTotal;
+        private System.Windows.Forms.MaskedTextBox mktValorCremoso;
+        private System.Windows.Forms.Label label13;
 
     }
 }
