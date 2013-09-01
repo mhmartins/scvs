@@ -17,6 +17,7 @@ namespace SistemaControleVendasSacoles
         public MenuPrincipal2()
         {
             InitializeComponent();
+            GridDesign();
             comboBox1.DataSource = LoadUserData();
 
             comboBox1.ValueMember = "idusuarios";
@@ -56,11 +57,20 @@ namespace SistemaControleVendasSacoles
         private void MenuPrincipal2_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = -1;
+            GridDesign();
 
-            
 
         }
+        private void GridDesign()
+        {
+            dgv.Columns.Add("srno", "Sacolés");
+            dgv.Columns.Add("bookingno", "Quantidade");
+            dgv.Columns.Add("bookingdate", "Total");
 
+            dgv.Columns[0].Width = 100;
+            dgv.Columns[1].Width = 100;
+            dgv.Columns[2].Width = 100;
+        }
         private void mnuArquivoNovo_Click(object sender, EventArgs e)
         {
             CadastroSacoles Form = new CadastroSacoles();
@@ -73,6 +83,11 @@ namespace SistemaControleVendasSacoles
             string message = comboBox1.SelectedValue.ToString();
 
             MessageBox.Show(message);
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            dgv.Rows.Add(tbx1.Text, tbx1.Text, tbx1.Text);
         }
 
     }

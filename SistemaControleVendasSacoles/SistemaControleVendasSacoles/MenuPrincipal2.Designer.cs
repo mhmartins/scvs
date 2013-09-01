@@ -38,7 +38,11 @@
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.tbx1 = new System.Windows.Forms.TextBox();
             this.mn1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // mn1
@@ -97,11 +101,36 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 114);
+            this.comboBox1.Location = new System.Drawing.Point(23, 41);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(461, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dgv
+            // 
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(69, 160);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(240, 150);
+            this.dgv.TabIndex = 5;
+            // 
+            // btn1
+            // 
+            this.btn1.Location = new System.Drawing.Point(609, 66);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(75, 23);
+            this.btn1.TabIndex = 6;
+            this.btn1.Text = "button1";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
+            // tbx1
+            // 
+            this.tbx1.Location = new System.Drawing.Point(23, 82);
+            this.tbx1.Name = "tbx1";
+            this.tbx1.Size = new System.Drawing.Size(100, 20);
+            this.tbx1.TabIndex = 7;
             // 
             // MenuPrincipal2
             // 
@@ -111,6 +140,9 @@
             this.BackgroundImage = global::SistemaControleVendasSacoles.Properties.Resources.receita_gelinho_ou_sacole;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(824, 347);
+            this.Controls.Add(this.tbx1);
+            this.Controls.Add(this.btn1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.mn1);
             this.DoubleBuffered = true;
@@ -121,6 +153,7 @@
             this.Load += new System.EventHandler(this.MenuPrincipal2_Load);
             this.mn1.ResumeLayout(false);
             this.mn1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +170,8 @@
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.TextBox tbx1;
     }
 }
