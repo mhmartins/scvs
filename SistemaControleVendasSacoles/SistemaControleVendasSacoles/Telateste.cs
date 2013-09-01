@@ -20,34 +20,25 @@ namespace SistemaControleVendasSacoles
             InitializeComponent();
 
             cbxUser.DataSource = LoadUserData();
-            cbxUser.ValueMember = "idusuario";
+            cbxUser.ValueMember = "idusuarios";
             cbxUser.DisplayMember = "nome";
         }
+
         private DataView LoadUserData()
         {
-            // string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
+            MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+            MySqlDataAdapter sql3 = new MySqlDataAdapter("select idusuarios,nome from usuarios", combo);
 
-            // try
-            //  {
-            // conexao = new MySqlConnection(caminho);
-            // MySqlDataReader leitura;
-            // conexao.Open();
+            DataTable dt3 = new DataTable();
+            sql3.Fill(dt3);
 
-            // string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
-            // MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-            string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
-            //string sqlSelect = "SELECT Tipo_Contacto, Descricao FROM Tipo_Contacto";
-            string sqlSelect = "select * from usuarios";
-
-            MySqlDataAdapter da = new MySqlDataAdapter(sqlSelect, caminho);
-            DataTable dt0 = new DataTable();
-
-            da.Fill(dt0);
-
-            return dt0.DefaultView;
+            return dt3.DefaultView;
         }
+
         private void Telateste_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vendas._vendas' table. You can move, or remove it, as needed.
+           // this.vendasTableAdapter.Fill(this.vendas._vendas);
             cbxUser.SelectedIndex = -1;
 	           dgv.Columns.Add("srno", "SrNo");
 	           dgv.Columns.Add("bookingno", "Booking No");
@@ -55,40 +46,26 @@ namespace SistemaControleVendasSacoles
 	 
 	           dgv.Columns[0].Width = 50;
 	           dgv.Columns[1].Width = 100;
-	           dgv.Columns[2].Width = 100;
-	           
+	           dgv.Columns[2].Width = 100;   
 	                   
-
             MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
             MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 1", combo);
             MySqlDataAdapter sql2 = new MySqlDataAdapter("select * from sacoles where tipo = 2", combo);
-            MySqlDataAdapter sql3 = new MySqlDataAdapter("select * from usuarios", combo);
+           // MySqlDataAdapter sql3 = new MySqlDataAdapter("select * from usuarios", combo);
+          /*  MySqlDataAdapter sql3 = new MySqlDataAdapter("select * from usuarios", combo);
 
+            DataTable dt3 = new DataTable();
+            sql3.Fill(dt3);
+            this.cbxUser.DataSource = dt3;
+            this.cbxUser.ValueMember = "idusuario";
+            this.cbxUser.DisplayMember = "nome";*/
             DataTable dt = new DataTable();
             DataTable dt2 = new DataTable();
-            DataTable dt3 = new DataTable();
+            //DataTable dt3 = new DataTable();
             sql.Fill(dt);
             sql2.Fill(dt2);
-            sql3.Fill(dt3);
-            /*
-           MySqlDataAdapter da = new MySqlDataAdapter("select * from usuarios order by idusuarios", combo);
+            //sql3.Fill(dt3);
 
-            DataTable dt4 = new DataTable();
-            da.Fill(dt4);
-            //Para usar o ArrayList não esquece de adicionar o using System.Collections;
-            ArrayList aNiveis = new ArrayList();
-
-            cbxUser.BeginUpdate();
-
-            foreach (DataRow oLinha in dt.Rows)
-                aNiveis.Add(new ParaCombos(oLinha["nome"].ToString(), oLinha["idusuario"].ToString()));
-
-            cbxUser.DataSource = combo;
-            cbxUser.DisplayMember = "nome";
-            cbxUser.ValueMember = "idusuario";
-            cbxUser.EndUpdate();
-
-            */
             try
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -100,6 +77,9 @@ namespace SistemaControleVendasSacoles
                 {
                     cbxSuco.Items.Add(dt2.Rows[ii]["sabor"]);
                 }
+               // this.cbxUser.DataSource = dt3;
+               // this.cbxUser.ValueMember = "idusuario";
+               // this.cbxUser.DisplayMember = "nome";
 
               //  for (int u = 0; u < dt3.Rows.Count; u++)
               //  {
@@ -114,52 +94,13 @@ namespace SistemaControleVendasSacoles
             {
                 combo.Close();
             }
-        /*    c.Text = codigoID;
-            cmbxsacolescre.Text = 
-            txtNome.Text = nome;
 
-            txtEndereco.Text = endereco;
-
-            txtCidade.Text = cidade;
-
-            txtEstado.Text = estado;
-
-            txtCep.Text = cep;
-
-            txtTelefone.Text = telefone;
-            */
         }
 
        // private MySqlConnection conexao;
 
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           // string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
-
-           // try
-          //  {
-               // conexao = new MySqlConnection(caminho);
-                // MySqlDataReader leitura;
-               // conexao.Open();
-
-               // string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
-               // MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-              //  comandos.ExecuteNonQuery();
-               // conexao.Close();
-           // }
-
-           // catch (Exception ex)
-           // {
-             //   throw new Exception("Erro de comandos: " + ex.Message);
-           // }
-           // if (conexao.State == ConnectionState.Open)
-           // {
-
-
-           // }
-
-
-            
+        {           
             //   select * from EQUIPAMENTO ORDER BY<br/>
 //CASE WHEN [ID_EQUIPAMENTO] = 'ID_EQTO_QUE_EU_SELECIONO' THEN 0 ELSE 1 END, [ID_EQUIPAMENTO
         }
@@ -206,7 +147,7 @@ namespace SistemaControleVendasSacoles
                 //MySqlCommand comandos = new MySqlCommand(inserir, combouser);
                 //comandos.ExecuteNonQuery();
                 //combouser.Close();
-                int valid = Convert.ToInt32(cbxUser.SelectedValue);
+               // int valid = Convert.ToInt32(cbxUser.SelectedValue);
 
                 mktData.Text = cbxUser.SelectedValue.ToString(); 
               
@@ -230,15 +171,22 @@ namespace SistemaControleVendasSacoles
 
         private void cbxUser_SelectedIndexChanged(object sender, EventArgs e)
         {
+           /* MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+            MySqlDataAdapter sql3 = new MySqlDataAdapter("select * from usuarios", combo);
+
+            DataTable dt3 = new DataTable();
+            sql3.Fill(dt3);
+            this.cbxUser.DataSource =dt3;
+            this.cbxUser.ValueMember = "idusuario";
+            this.cbxUser.DisplayMember = "nome";
+            combo.Close();*/
             string message = cbxUser.SelectedValue.ToString();
 
-            MessageBox.Show(message);
+           MessageBox.Show(message);
+
         }
 
-
-
-
-        /*  private void carregaCombox()
+          /*private void carregaCombox()
           {
               cx.Conectar(); //Método que abre conexão com banco 
               string sql1 = ""; 
@@ -250,7 +198,7 @@ namespace SistemaControleVendasSacoles
               cbEstado.ValueMember = "idEstado"; 
               cbEstado.DataSource = dt;
 
-          }
-          */
+          }*/
+          
     }
 }

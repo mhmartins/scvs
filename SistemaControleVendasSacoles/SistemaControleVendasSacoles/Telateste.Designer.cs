@@ -56,14 +56,24 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.usuariosTableAdapter();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.cbxUser = new System.Windows.Forms.ComboBox();
             this.mktData = new System.Windows.Forms.MaskedTextBox();
             this.btnIni = new System.Windows.Forms.Button();
+            this.vendas = new SistemaControleVendasSacoles.vendas();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vendasTableAdapter = new SistemaControleVendasSacoles.vendasTableAdapters.vendasTableAdapter();
+            this.tableAdapterManager = new SistemaControleVendasSacoles.vendasTableAdapters.TableAdapterManager();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxUser = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCre
@@ -312,15 +322,6 @@
             this.dgv.Size = new System.Drawing.Size(423, 223);
             this.dgv.TabIndex = 28;
             // 
-            // cbxUser
-            // 
-            this.cbxUser.FormattingEnabled = true;
-            this.cbxUser.Location = new System.Drawing.Point(16, 13);
-            this.cbxUser.Name = "cbxUser";
-            this.cbxUser.Size = new System.Drawing.Size(209, 21);
-            this.cbxUser.TabIndex = 29;
-            this.cbxUser.SelectedIndexChanged += new System.EventHandler(this.cbxUser_SelectedIndexChanged);
-            // 
             // mktData
             // 
             this.mktData.Location = new System.Drawing.Point(248, 13);
@@ -338,14 +339,56 @@
             this.btnIni.UseVisualStyleBackColor = true;
             this.btnIni.Click += new System.EventHandler(this.btnIni_Click);
             // 
+            // vendas
+            // 
+            this.vendas.DataSetName = "vendas";
+            this.vendas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource1
+            // 
+            this.usuariosBindingSource1.DataMember = "usuarios";
+            this.usuariosBindingSource1.DataSource = this.vendas;
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataMember = "vendas";
+            this.vendasBindingSource.DataSource = this.vendas;
+            // 
+            // vendasTableAdapter
+            // 
+            this.vendasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.sacolesTableAdapter = this.sacolesTableAdapter;
+            this.tableAdapterManager.tipoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.vendasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
+            this.tableAdapterManager.vendas_sacolesTableAdapter = null;
+            this.tableAdapterManager.vendasTableAdapter = this.vendasTableAdapter;
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataMember = "usuarios";
+            this.usuariosBindingSource2.DataSource = this.vendas;
+            // 
+            // cbxUser
+            // 
+            this.cbxUser.FormattingEnabled = true;
+            this.cbxUser.Location = new System.Drawing.Point(16, 13);
+            this.cbxUser.Name = "cbxUser";
+            this.cbxUser.Size = new System.Drawing.Size(121, 21);
+            this.cbxUser.TabIndex = 32;
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.cbxUser);
             this.Controls.Add(this.btnIni);
             this.Controls.Add(this.mktData);
-            this.Controls.Add(this.cbxUser);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -375,6 +418,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,9 +456,15 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private vendasTableAdapters.usuariosTableAdapter usuariosTableAdapter;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.ComboBox cbxUser;
         private System.Windows.Forms.MaskedTextBox mktData;
         private System.Windows.Forms.Button btnIni;
+        private System.Windows.Forms.BindingSource usuariosBindingSource1;
+        private vendas vendas;
+        private System.Windows.Forms.BindingSource vendasBindingSource;
+        private vendasTableAdapters.vendasTableAdapter vendasTableAdapter;
+        private vendasTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource usuariosBindingSource2;
+        private System.Windows.Forms.ComboBox cbxUser;
 
     }
 }

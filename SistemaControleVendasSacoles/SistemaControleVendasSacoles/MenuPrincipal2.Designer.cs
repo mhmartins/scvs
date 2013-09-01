@@ -34,9 +34,10 @@
             this.mnuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuArquivoNovo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuArquivoSair = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.mn1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,15 +66,27 @@
             // mnuArquivoNovo
             // 
             this.mnuArquivoNovo.Name = "mnuArquivoNovo";
-            this.mnuArquivoNovo.Size = new System.Drawing.Size(152, 22);
+            this.mnuArquivoNovo.Size = new System.Drawing.Size(125, 22);
             this.mnuArquivoNovo.Text = "Cadastrar";
             this.mnuArquivoNovo.Click += new System.EventHandler(this.mnuArquivoNovo_Click);
             // 
             // mnuArquivoSair
             // 
             this.mnuArquivoSair.Name = "mnuArquivoSair";
-            this.mnuArquivoSair.Size = new System.Drawing.Size(152, 22);
+            this.mnuArquivoSair.Size = new System.Drawing.Size(125, 22);
             this.mnuArquivoSair.Text = "Alterar";
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
             // 
             // mnuWindows
             // 
@@ -81,17 +94,14 @@
             this.mnuWindows.Size = new System.Drawing.Size(68, 20);
             this.mnuWindows.Text = "Windows";
             // 
-            // consultarToolStripMenuItem
+            // comboBox1
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(127, 114);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(461, 21);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MenuPrincipal2
             // 
@@ -101,6 +111,7 @@
             this.BackgroundImage = global::SistemaControleVendasSacoles.Properties.Resources.receita_gelinho_ou_sacole;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(824, 347);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.mn1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
@@ -125,5 +136,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuWindows;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
