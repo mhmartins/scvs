@@ -233,25 +233,37 @@ namespace SistemaControleVendasSacoles
 
            if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
            {
-               float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text));
-               mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text))).ToString();
-               dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
-               cmbxsacolescre.Text = "";
-               nupdowCre.Text = "0";
-               mktValorCremoso.Text = "";
-               //tbxvalor.Clear();
-               /* try
+   
+               try
+               {
+                   int quantidade = (int.Parse(nupdowCre.Text));
+                   float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text));
+                   mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text))).ToString();
+
+                   MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                   //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
+                                  
+                   conexao3.Open();
+                   string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + textBox2.Text + "','" + cmbxsacolescre.SelectedValue.ToString() + "','7','8.90')";
+                   MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
+                   comandos3.ExecuteNonQuery();
+                  // DataTable dt4 = new DataTable();
+                  // select.Fill(dt4);
+                  // BindingSource source = new BindingSource();
+                  // source.DataSource = dt4;
+                   //this.textBox2.DataBindings.Add("Text", source, "idvendas", true);                   
+                   conexao3.Close();
+                   dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
+                   cmbxsacolescre.Text = "";
+                   nupdowCre.Text = "0";
+                   mktValorCremoso.Text = "";
+                   textBox2.Text = quantidade.ToString();
+               }
+                catch (Exception ex)
                 {
-                    MySqlConnection cone = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                    MySqlDataAdapter selectvenda = new MySqlDataAdapter("SELECT * FROM vendas ORDER BY idvendas DESC LIMIT 1", cone);
-                    DataTable dt4 = new DataTable();
-                    selectvenda.Fill(dt4);
-                    BindingSource source = new BindingSource();
-                    source.DataSource = dt4;
-                    string message = cbxUser.SelectedValue.ToString();
-                    MessageBox.Show(message);
-                    $sql_pega_pedido = mysql_query("SELECT * FROM pedidos ORDER BY id_pedidos DESC LIMIT 1");
-                }*/
+                    throw new Exception("Erro de comandos: " + ex.Message);
+                }
+            
            }
            else
            {
@@ -281,18 +293,24 @@ namespace SistemaControleVendasSacoles
             bool CamposObrigPreenchidos2 = CamposObrig2();
             if (!CamposObrigPreenchidos2)//se o campos estiver preenchido ele entra 
             {
-                try
+               /* try
                 {
 
-                    MySqlConnection combouser = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                    // MySqlDataReader leitura;
-                    combouser.Open();
-
-                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','11111111')";
-                    MySqlCommand comandos = new MySqlCommand(inserir, combouser);
+                    MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                    conexao.Open();
+                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','22111111')";
+                    MySqlCommand comandos = new MySqlCommand(inserir, conexao);
+                    MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
+                   
                     comandos.ExecuteNonQuery();
-                    combouser.Close();
-                    // int valid = Convert.ToInt32(cbxUser.SelectedValue);
+                    DataTable dt4 = new DataTable();
+                    select.Fill(dt4);
+                    BindingSource source = new BindingSource();
+                    source.DataSource = dt4;
+                    this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
+                   
+                    conexao.Close();*/
+                    int valid = Convert.ToInt32(cbxUser.SelectedValue);
                     //label13.Visible = true;
                     addSuco.Enabled = true;
                     AddCre.Enabled = true;
@@ -304,12 +322,12 @@ namespace SistemaControleVendasSacoles
                     //  MySqlCommand comandos = new MySqlCommand(inserir, conexao);
                     //sqluse.ExecuteNonQuery();
                     //  conexao.Close();
-                }
+                //}
 
-                catch (Exception ex)
-                {
-                    throw new Exception("Erro de comandos: " + ex.Message);
-                }
+             //   catch (Exception ex)
+               // {
+                //    throw new Exception("Erro de comandos: " + ex.Message);
+              //  }
             }
             else
             {
@@ -371,8 +389,16 @@ namespace SistemaControleVendasSacoles
         }
 
         private void btnSomar_Click(object sender, EventArgs e)
-        {
-            mktTotal.Text = (float.Parse(mktTotal.Text) - float.Parse(mktDesc.Text)).ToString();
+        {            
+            float somadesconto = (float.Parse(mktTotal.Text) - float.Parse(mktDesc.Text));
+            if (somadesconto < 0)
+            {
+                MessageBox.Show("Valor superior ao valor TOTAL, digite um valor MENOR ou IGUAL ao TOTAL", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                mktTotal.Text = somadesconto.ToString();
+            }
         }
 
         private void cbxSuco_KeyPress(object sender, KeyPressEventArgs e)

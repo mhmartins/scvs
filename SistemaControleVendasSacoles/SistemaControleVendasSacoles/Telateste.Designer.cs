@@ -60,6 +60,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mktValorCremoso = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -75,6 +77,7 @@
             this.AddCre.Size = new System.Drawing.Size(104, 37);
             this.AddCre.TabIndex = 0;
             this.AddCre.Text = "Adicionar";
+            this.toolTip1.SetToolTip(this.AddCre, "Clique para adicionar o sabor");
             this.AddCre.UseVisualStyleBackColor = true;
             this.AddCre.Click += new System.EventHandler(this.AddCre_Click);
             // 
@@ -87,6 +90,7 @@
             this.cmbxsacolescre.Name = "cmbxsacolescre";
             this.cmbxsacolescre.Size = new System.Drawing.Size(209, 33);
             this.cmbxsacolescre.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.cmbxsacolescre, "Selecione um sabor");
             this.cmbxsacolescre.ValueMember = "idSacoles";
             this.cmbxsacolescre.SelectedIndexChanged += new System.EventHandler(this.cmbxsacolescre_SelectedIndexChanged);
             // 
@@ -94,10 +98,11 @@
             // 
             this.cbxSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSuco.FormattingEnabled = true;
-            this.cbxSuco.Location = new System.Drawing.Point(12, 192);
+            this.cbxSuco.Location = new System.Drawing.Point(12, 194);
             this.cbxSuco.Name = "cbxSuco";
             this.cbxSuco.Size = new System.Drawing.Size(209, 33);
             this.cbxSuco.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.cbxSuco, "Selecione um sabor");
             this.cbxSuco.SelectedIndexChanged += new System.EventHandler(this.cbxSuco_SelectedIndexChanged);
             this.cbxSuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxSuco_KeyPress);
             // 
@@ -129,6 +134,7 @@
             this.mskValSuco.Name = "mskValSuco";
             this.mskValSuco.Size = new System.Drawing.Size(100, 31);
             this.mskValSuco.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.mskValSuco, "Valor do sacolé");
             // 
             // addSuco
             // 
@@ -139,6 +145,7 @@
             this.addSuco.Size = new System.Drawing.Size(104, 37);
             this.addSuco.TabIndex = 7;
             this.addSuco.Text = "Adicionar";
+            this.toolTip1.SetToolTip(this.addSuco, "Clique para adicionar o sabor");
             this.addSuco.UseVisualStyleBackColor = true;
             this.addSuco.Click += new System.EventHandler(this.addSuco_Click);
             // 
@@ -166,6 +173,7 @@
             this.mktTotal.TabIndex = 21;
             this.mktTotal.Text = "0";
             this.mktTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.mktTotal, "Valor total da venda");
             // 
             // mktDesc
             // 
@@ -175,6 +183,7 @@
             this.mktDesc.Size = new System.Drawing.Size(100, 31);
             this.mktDesc.TabIndex = 19;
             this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.mktDesc, "Digite o valor para desconto");
             // 
             // label4
             // 
@@ -204,6 +213,7 @@
             this.btnSomar.Size = new System.Drawing.Size(150, 36);
             this.btnSomar.TabIndex = 17;
             this.btnSomar.Text = "Calcular Total";
+            this.toolTip1.SetToolTip(this.btnSomar, "Clique para calcular o total com desconto");
             this.btnSomar.UseVisualStyleBackColor = true;
             this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
             // 
@@ -215,6 +225,7 @@
             this.button4.Size = new System.Drawing.Size(92, 37);
             this.button4.TabIndex = 10;
             this.button4.Text = "Limpar";
+            this.toolTip1.SetToolTip(this.button4, "Clique para limpar todos os campos");
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -226,6 +237,7 @@
             this.button5.Size = new System.Drawing.Size(163, 37);
             this.button5.TabIndex = 11;
             this.button5.Text = "Finalizar Venda";
+            this.toolTip1.SetToolTip(this.button5, "Clique para finalizar a venda");
             this.button5.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
@@ -263,6 +275,7 @@
             this.nupdowCre.Name = "nupdowCre";
             this.nupdowCre.Size = new System.Drawing.Size(58, 31);
             this.nupdowCre.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.nupdowCre, "Selecione a quantidade");
             // 
             // nupdowSuc
             // 
@@ -271,6 +284,7 @@
             this.nupdowSuc.Name = "nupdowSuc";
             this.nupdowSuc.Size = new System.Drawing.Size(58, 31);
             this.nupdowSuc.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.nupdowSuc, "Selecione uma quantidade");
             // 
             // label7
             // 
@@ -313,6 +327,7 @@
             this.btnIni.Size = new System.Drawing.Size(104, 37);
             this.btnIni.TabIndex = 31;
             this.btnIni.Text = "Adicionar";
+            this.toolTip1.SetToolTip(this.btnIni, "Clique para inciar a venda");
             this.btnIni.UseVisualStyleBackColor = true;
             this.btnIni.Click += new System.EventHandler(this.btnIni_Click);
             // 
@@ -324,6 +339,7 @@
             this.cbxUser.Name = "cbxUser";
             this.cbxUser.Size = new System.Drawing.Size(209, 33);
             this.cbxUser.TabIndex = 32;
+            this.toolTip1.SetToolTip(this.cbxUser, "Escolha o seu nome");
             this.cbxUser.SelectedIndexChanged += new System.EventHandler(this.cbxUser_SelectedIndexChanged_1);
             // 
             // timer1
@@ -358,6 +374,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(209, 31);
             this.textBox1.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.textBox1, "Data de hoje");
             // 
             // mktValorCremoso
             // 
@@ -367,6 +384,7 @@
             this.mktValorCremoso.Name = "mktValorCremoso";
             this.mktValorCremoso.Size = new System.Drawing.Size(100, 31);
             this.mktValorCremoso.TabIndex = 37;
+            this.toolTip1.SetToolTip(this.mktValorCremoso, "Valor do sacolé");
             // 
             // label13
             // 
@@ -377,11 +395,20 @@
             this.label13.TabIndex = 38;
             this.label13.Visible = false;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(130, 486);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 39;
+            this.textBox2.Text = "18";
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.mktValorCremoso);
             this.Controls.Add(this.textBox1);
@@ -454,6 +481,8 @@
         private System.Windows.Forms.MaskedTextBox mktTotal;
         private System.Windows.Forms.MaskedTextBox mktValorCremoso;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox textBox2;
 
     }
 }
