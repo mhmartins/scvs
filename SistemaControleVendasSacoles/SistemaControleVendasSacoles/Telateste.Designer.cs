@@ -68,6 +68,7 @@
             // 
             // AddCre
             // 
+            this.AddCre.Enabled = false;
             this.AddCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddCre.Location = new System.Drawing.Point(500, 106);
             this.AddCre.Name = "AddCre";
@@ -98,6 +99,7 @@
             this.cbxSuco.Size = new System.Drawing.Size(209, 33);
             this.cbxSuco.TabIndex = 2;
             this.cbxSuco.SelectedIndexChanged += new System.EventHandler(this.cbxSuco_SelectedIndexChanged);
+            this.cbxSuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxSuco_KeyPress);
             // 
             // label1
             // 
@@ -121,6 +123,7 @@
             // 
             // mskValSuco
             // 
+            this.mskValSuco.Enabled = false;
             this.mskValSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskValSuco.Location = new System.Drawing.Point(375, 194);
             this.mskValSuco.Name = "mskValSuco";
@@ -129,6 +132,7 @@
             // 
             // addSuco
             // 
+            this.addSuco.Enabled = false;
             this.addSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addSuco.Location = new System.Drawing.Point(500, 192);
             this.addSuco.Name = "addSuco";
@@ -136,6 +140,7 @@
             this.addSuco.TabIndex = 7;
             this.addSuco.Text = "Adicionar";
             this.addSuco.UseVisualStyleBackColor = true;
+            this.addSuco.Click += new System.EventHandler(this.addSuco_Click);
             // 
             // groupBox1
             // 
@@ -160,6 +165,7 @@
             this.mktTotal.Size = new System.Drawing.Size(264, 80);
             this.mktTotal.TabIndex = 21;
             this.mktTotal.Text = "0";
+            this.mktTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // mktDesc
             // 
@@ -168,7 +174,7 @@
             this.mktDesc.Name = "mktDesc";
             this.mktDesc.Size = new System.Drawing.Size(100, 31);
             this.mktDesc.TabIndex = 19;
-            this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -199,6 +205,7 @@
             this.btnSomar.TabIndex = 17;
             this.btnSomar.Text = "Calcular Total";
             this.btnSomar.UseVisualStyleBackColor = true;
+            this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
             // 
             // button4
             // 
@@ -354,6 +361,7 @@
             // 
             // mktValorCremoso
             // 
+            this.mktValorCremoso.Enabled = false;
             this.mktValorCremoso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.mktValorCremoso.Location = new System.Drawing.Point(375, 108);
             this.mktValorCremoso.Name = "mktValorCremoso";

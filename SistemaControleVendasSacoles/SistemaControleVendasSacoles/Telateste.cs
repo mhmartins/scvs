@@ -103,30 +103,23 @@ namespace SistemaControleVendasSacoles
 	                   
         }
 
-       // private MySqlConnection conexao;
-
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
         {           
-            //   select * from EQUIPAMENTO ORDER BY<br/>
-//CASE WHEN [ID_EQUIPAMENTO] = 'ID_EQTO_QUE_EU_SELECIONO' THEN 0 ELSE 1 END, [ID_EQUIPAMENTO
             this.label13.DataBindings.Clear();
             this.mktValorCremoso.DataBindings.Clear();
             try
             {
-                MySqlConnection combo1 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo1);
-                DataTable dt4 = new DataTable();
-                sql4.Fill(dt4);
+                MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
+                DataTable dt40 = new DataTable();
+                sql40.Fill(dt40);
                 BindingSource source = new BindingSource();
-                source.DataSource = dt4;
-
+                source.DataSource = dt40;
                 label13.Visible = true;
 
-               this.mktValorCremoso.DataBindings.Add("Text", source, "preco", true);
-               this. label13.DataBindings.Add("Text", source, "preco", true);
-                // txtb_endereco.DataBindings.Add("Text", mDataSet, "Cliente.endereco");
-                //tbx3.DataBindings.Add("Text", source, "preco", true);
-                combo1.Close();
+                this.mktValorCremoso.DataBindings.Add("Text", source, "preco", true);
+                //this.label13.DataBindings.Add("Text", source, "preco", true);
+                combo10.Close();
             }
             catch (Exception ex)
             {
@@ -135,23 +128,135 @@ namespace SistemaControleVendasSacoles
             
         }
 
-        private void AddCre_Click(object sender, EventArgs e)
+        private void cbxSuco_SelectedIndexChanged(object sender, EventArgs e)
         {
-           float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text));
-           mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text))).ToString();
-            dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text ,"R$ " + Resultado );
-           /* try
+            this.label13.DataBindings.Clear();
+            this.mskValSuco.DataBindings.Clear();
+            this.mktValorCremoso.DataBindings.Clear();
+            try
             {
-                MySqlConnection cone = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter selectvenda = new MySqlDataAdapter("SELECT * FROM vendas ORDER BY idvendas DESC LIMIT 1", cone);
+                MySqlConnection combo1 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", combo1);
                 DataTable dt4 = new DataTable();
-                selectvenda.Fill(dt4);
+                sql4.Fill(dt4);
                 BindingSource source = new BindingSource();
                 source.DataSource = dt4;
-                string message = cbxUser.SelectedValue.ToString();
-                MessageBox.Show(message);
-                $sql_pega_pedido = mysql_query("SELECT * FROM pedidos ORDER BY id_pedidos DESC LIMIT 1");
-            }*/
+                //  label13.Visible = true;
+                //   this.label13.DataBindings.Add("Text", source, "preco", true);
+                this.mskValSuco.DataBindings.Add("Text", source, "preco", true);
+                combo1.Close();
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+            /*  try
+              {
+                  MySqlConnection con = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                  MySqlDataAdapter sql9 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", con);
+                  DataTable dt9 = new DataTable();
+                  sql9.Fill(dt9);
+                  BindingSource source2 = new BindingSource();
+                  source2.DataSource = dt9;
+                  // txtb_endereco.DataBindings.Add("Text", mDataSet, "Cliente.endereco");
+                  mskValSuco.DataBindings.Add("Text", source2, "preco", true);
+                  mktDesc.DataBindings.Add("Text", source2, "preco", true);
+                  con.Close();
+              }
+              catch (Exception ex)
+              {
+                  ex.Message.ToString();
+              }*/
+        }
+        private bool CamposObrig2()
+        {
+            bool CampoVazio2 = false;
+
+            if (String.IsNullOrEmpty(cbxUser.Text))
+            {
+                MessageBox.Show("Campo (Vendedor) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbxUser.Select();
+                CampoVazio2 = true;
+            }
+            return CampoVazio2;
+        }
+
+        private bool CamposObrig()
+        {
+            bool CampoVazio = false;
+
+            if (String.IsNullOrEmpty(cmbxsacolescre.Text))
+            {
+                MessageBox.Show("Campo (Sacolé Cremoso) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbxsacolescre.Select();
+                CampoVazio = true;
+            }
+
+            if (nupdowCre.Text == "0")
+            {
+                MessageBox.Show("Campo (Quantidade) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nupdowCre.Select();
+                CampoVazio = true;
+            }
+
+           // if (String.IsNullOrEmpty(tbxvalor.Text))
+           // {
+              //  MessageBox.Show("Campo (Valor) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               // tbxnome.Select();
+               // CampoVazio = true;
+           // }
+
+            return CampoVazio;
+        }
+
+        private bool CamposObrig3()
+        {
+            bool CampoVazio3 = false;
+            if (String.IsNullOrEmpty(cbxSuco.Text))
+            {
+                MessageBox.Show("Campo (Sacolé Suco) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbxSuco.Select();
+                CampoVazio3 = true;
+            }
+            if (nupdowSuc.Text == "0")
+            {
+                MessageBox.Show("Campo (Quantidade) deve ser preenchido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nupdowSuc.Select();
+                CampoVazio3 = true;
+            }
+            return CampoVazio3;
+        }
+
+        private void AddCre_Click(object sender, EventArgs e)
+        {
+           bool CamposObrigPreenchidos = CamposObrig();
+
+           if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
+           {
+               float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text));
+               mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text))).ToString();
+               dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
+               cmbxsacolescre.Text = "";
+               nupdowCre.Text = "0";
+               mktValorCremoso.Text = "";
+               //tbxvalor.Clear();
+               /* try
+                {
+                    MySqlConnection cone = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                    MySqlDataAdapter selectvenda = new MySqlDataAdapter("SELECT * FROM vendas ORDER BY idvendas DESC LIMIT 1", cone);
+                    DataTable dt4 = new DataTable();
+                    selectvenda.Fill(dt4);
+                    BindingSource source = new BindingSource();
+                    source.DataSource = dt4;
+                    string message = cbxUser.SelectedValue.ToString();
+                    MessageBox.Show(message);
+                    $sql_pega_pedido = mysql_query("SELECT * FROM pedidos ORDER BY id_pedidos DESC LIMIT 1");
+                }*/
+           }
+           else
+           {
+               return;
+           }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -173,32 +278,42 @@ namespace SistemaControleVendasSacoles
            // DateTime dataConvertida = DateTime.ParseExact(data, "yyyy-MM-dd", null);
            // MessageBox.Show(dataConvertida.ToString());
            // string dataBancoMysql = Convert.ToDateTime(this.textBox1.ToString());
-            try
+            bool CamposObrigPreenchidos2 = CamposObrig2();
+            if (!CamposObrigPreenchidos2)//se o campos estiver preenchido ele entra 
             {
+                try
+                {
 
-                MySqlConnection combouser = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                // MySqlDataReader leitura;
-                combouser.Open();
+                    MySqlConnection combouser = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                    // MySqlDataReader leitura;
+                    combouser.Open();
 
-                string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','11111111')";
-                MySqlCommand comandos = new MySqlCommand(inserir, combouser);
-                comandos.ExecuteNonQuery();
-                combouser.Close();
-               // int valid = Convert.ToInt32(cbxUser.SelectedValue);
+                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','11111111')";
+                    MySqlCommand comandos = new MySqlCommand(inserir, combouser);
+                    comandos.ExecuteNonQuery();
+                    combouser.Close();
+                    // int valid = Convert.ToInt32(cbxUser.SelectedValue);
+                    //label13.Visible = true;
+                    addSuco.Enabled = true;
+                    AddCre.Enabled = true;
+                    // mktData.Text = cbxUser.SelectedValue.ToString(); 
 
-               // mktData.Text = cbxUser.SelectedValue.ToString(); 
-              
-               // MySqlDataAdapter sqluse = new MySqlDataAdapter("INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.Text + "','" + mktData.Text + "')");
-               // MySqlCommand sqluse = new MySqlCommand (
-              //  string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
-              //  MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-                //sqluse.ExecuteNonQuery();
-              //  conexao.Close();
+                    // MySqlDataAdapter sqluse = new MySqlDataAdapter("INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.Text + "','" + mktData.Text + "')");
+                    // MySqlCommand sqluse = new MySqlCommand (
+                    //  string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
+                    //  MySqlCommand comandos = new MySqlCommand(inserir, conexao);
+                    //sqluse.ExecuteNonQuery();
+                    //  conexao.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro de comandos: " + ex.Message);
+                }
             }
-
-            catch (Exception ex)
+            else
             {
-                throw new Exception("Erro de comandos: " + ex.Message);
+                return;
             }
         }
 
@@ -234,64 +349,35 @@ namespace SistemaControleVendasSacoles
             textBox1.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void cbxSuco_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void addSuco_Click(object sender, EventArgs e)
         {
-           // mktTotal.Text = cbxSuco.SelectedValue.ToString();
+           bool CamposObrigPreenchidos = CamposObrig3();
+           if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
+           {
+               float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text));
+               mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text))).ToString();
+               dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
+               cbxSuco.Text = "";
+               nupdowSuc.Text = "0";
+               mskValSuco.Text = "";
+           }
+           else
+           {
+               return;
+           }
+        
+        }
 
-            this.label13.DataBindings.Clear();
-            this.mskValSuco.DataBindings.Clear();
-            try
-            {
-                // string nome = this.combo_alunos_cadastrados.Text;
-                //Console.WriteLine(nome);
-                // if (nome.Contains("System"))
-                // {
-                //    return;
-                //}
-                MySqlConnection combo1 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", combo1);
-                DataTable dt4 = new DataTable();
-                sql4.Fill(dt4);
-                BindingSource source = new BindingSource();
-                source.DataSource = dt4;
+        private void btnSomar_Click(object sender, EventArgs e)
+        {
+            mktTotal.Text = (float.Parse(mktTotal.Text) - float.Parse(mktDesc.Text)).ToString();
+        }
 
-                label13.Visible = true;
-                // SqlDataReader dr = comando.ExecuteNonReader();
-
-                //   while (dt4.Read())
-                // {
-
-                // lbl.Text = ((string)dr["nomeUF"]);
-
-                //}
-
-                this.label13.DataBindings.Add("Text", source, "preco", true);
-                this.mskValSuco.DataBindings.Add("Text", source, "preco", true);
-                // txtb_endereco.DataBindings.Add("Text", mDataSet, "Cliente.endereco");
-                //tbx3.DataBindings.Add("Text", source, "preco", true);
-                combo1.Close();
-            }
-            catch (Exception ex)
-            {
-                ex.Message.ToString();
-            }
-          /*  try
-            {
-                MySqlConnection con = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql9 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", con);
-                DataTable dt9 = new DataTable();
-                sql9.Fill(dt9);
-                BindingSource source2 = new BindingSource();
-                source2.DataSource = dt9;
-                // txtb_endereco.DataBindings.Add("Text", mDataSet, "Cliente.endereco");
-                mskValSuco.DataBindings.Add("Text", source2, "preco", true);
-                mktDesc.DataBindings.Add("Text", source2, "preco", true);
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                ex.Message.ToString();
-            }*/
+        private void cbxSuco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           // cbxSuco.DroppedDown = true;
         }
           /*private void carregaCombox()
           {
