@@ -34,16 +34,15 @@
             this.cbxSuco = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mskValSuco = new System.Windows.Forms.MaskedTextBox();
             this.addSuco = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbxDesc = new System.Windows.Forms.TextBox();
             this.mktTotal = new System.Windows.Forms.MaskedTextBox();
-            this.mktDesc = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSomar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnFinaVenda = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,11 +57,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.mktValorCremoso = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxValCre = new System.Windows.Forms.TextBox();
+            this.tbxValSuc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -127,16 +127,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Suco";
             // 
-            // mskValSuco
-            // 
-            this.mskValSuco.Enabled = false;
-            this.mskValSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskValSuco.Location = new System.Drawing.Point(375, 194);
-            this.mskValSuco.Name = "mskValSuco";
-            this.mskValSuco.Size = new System.Drawing.Size(100, 31);
-            this.mskValSuco.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.mskValSuco, "Valor do sacolé");
-            // 
             // addSuco
             // 
             this.addSuco.Enabled = false;
@@ -152,18 +142,26 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbxDesc);
             this.groupBox1.Controls.Add(this.mktTotal);
-            this.groupBox1.Controls.Add(this.mktDesc);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnSomar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(610, 51);
+            this.groupBox1.Location = new System.Drawing.Point(618, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(403, 282);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Financeiros";
+            // 
+            // tbxDesc
+            // 
+            this.tbxDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.tbxDesc.Location = new System.Drawing.Point(192, 33);
+            this.tbxDesc.Name = "tbxDesc";
+            this.tbxDesc.Size = new System.Drawing.Size(100, 31);
+            this.tbxDesc.TabIndex = 22;
             // 
             // mktTotal
             // 
@@ -175,16 +173,6 @@
             this.mktTotal.Text = "0";
             this.mktTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip1.SetToolTip(this.mktTotal, "Valor total da venda");
-            // 
-            // mktDesc
-            // 
-            this.mktDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktDesc.Location = new System.Drawing.Point(192, 33);
-            this.mktDesc.Name = "mktDesc";
-            this.mktDesc.Size = new System.Drawing.Size(100, 31);
-            this.mktDesc.TabIndex = 19;
-            this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip1.SetToolTip(this.mktDesc, "Digite o valor para desconto");
             // 
             // label4
             // 
@@ -230,16 +218,17 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnFinaVenda
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(761, 380);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(163, 37);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Finalizar Venda";
-            this.toolTip1.SetToolTip(this.button5, "Clique para finalizar a venda");
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnFinaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinaVenda.Location = new System.Drawing.Point(760, 369);
+            this.btnFinaVenda.Name = "btnFinaVenda";
+            this.btnFinaVenda.Size = new System.Drawing.Size(163, 37);
+            this.btnFinaVenda.TabIndex = 11;
+            this.btnFinaVenda.Text = "Finalizar Venda";
+            this.toolTip1.SetToolTip(this.btnFinaVenda, "Clique para finalizar a venda");
+            this.btnFinaVenda.UseVisualStyleBackColor = true;
+            this.btnFinaVenda.Click += new System.EventHandler(this.btnFinaVenda_Click);
             // 
             // statusStrip1
             // 
@@ -341,7 +330,6 @@
             this.cbxUser.Size = new System.Drawing.Size(209, 33);
             this.cbxUser.TabIndex = 32;
             this.toolTip1.SetToolTip(this.cbxUser, "Escolha o seu nome");
-            this.cbxUser.SelectedIndexChanged += new System.EventHandler(this.cbxUser_SelectedIndexChanged_1);
             // 
             // timer1
             // 
@@ -377,16 +365,6 @@
             this.textBox1.TabIndex = 35;
             this.toolTip1.SetToolTip(this.textBox1, "Data de hoje");
             // 
-            // mktValorCremoso
-            // 
-            this.mktValorCremoso.Enabled = false;
-            this.mktValorCremoso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.mktValorCremoso.Location = new System.Drawing.Point(375, 108);
-            this.mktValorCremoso.Name = "mktValorCremoso";
-            this.mktValorCremoso.Size = new System.Drawing.Size(100, 31);
-            this.mktValorCremoso.TabIndex = 37;
-            this.toolTip1.SetToolTip(this.mktValorCremoso, "Valor do sacolé");
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -411,15 +389,32 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 40;
             // 
+            // tbxValCre
+            // 
+            this.tbxValCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.tbxValCre.Location = new System.Drawing.Point(375, 108);
+            this.tbxValCre.Name = "tbxValCre";
+            this.tbxValCre.Size = new System.Drawing.Size(100, 31);
+            this.tbxValCre.TabIndex = 41;
+            // 
+            // tbxValSuc
+            // 
+            this.tbxValSuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.tbxValSuc.Location = new System.Drawing.Point(375, 194);
+            this.tbxValSuc.Name = "tbxValSuc";
+            this.tbxValSuc.Size = new System.Drawing.Size(100, 31);
+            this.tbxValSuc.TabIndex = 42;
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.tbxValSuc);
+            this.Controls.Add(this.tbxValCre);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.mktValorCremoso);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -433,11 +428,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnFinaVenda);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addSuco);
-            this.Controls.Add(this.mskValSuco);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxSuco);
@@ -464,15 +458,13 @@
         private System.Windows.Forms.ComboBox cbxSuco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox mskValSuco;
         private System.Windows.Forms.Button addSuco;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox mktDesc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSomar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnFinaVenda;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -488,11 +480,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MaskedTextBox mktTotal;
-        private System.Windows.Forms.MaskedTextBox mktValorCremoso;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxValCre;
+        private System.Windows.Forms.TextBox tbxValSuc;
+        private System.Windows.Forms.TextBox tbxDesc;
 
     }
 }

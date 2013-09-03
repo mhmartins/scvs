@@ -62,7 +62,7 @@
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
             series2.IsValueShownAsLabel = true;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Quantidade";
             series2.XValueMember = "sabor";
             series2.YValueMembers = "quant";
             series2.YValuesPerPoint = 2;
@@ -70,6 +70,7 @@
             this.chart1.Size = new System.Drawing.Size(936, 465);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title2.Name = "Title1";
             title2.Text = "Gráfico do Estoque";
             this.chart1.Titles.Add(title2);
@@ -101,7 +102,7 @@
             this.Controls.Add(this.chart1);
             this.Name = "graficos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "graficos";
+            this.Text = "Gráfico do Estoque";
             this.Load += new System.EventHandler(this.graficos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
