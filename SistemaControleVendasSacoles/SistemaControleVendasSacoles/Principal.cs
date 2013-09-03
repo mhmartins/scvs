@@ -54,6 +54,12 @@ namespace SistemaControleVendasSacoles
 
         }
 
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            graficos grafo = new graficos();
+            grafo.Show();
+        }
+
 
 
     

@@ -15,5 +15,12 @@ namespace SistemaControleVendasSacoles
         {
             InitializeComponent();
         }
+
+        private void graficos_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'teste_chart1.sacoles' table. You can move, or remove it, as needed.
+            this.sacolesTableAdapter.Fill(this.teste_chart1.sacoles);
+
+        }
     }
 }

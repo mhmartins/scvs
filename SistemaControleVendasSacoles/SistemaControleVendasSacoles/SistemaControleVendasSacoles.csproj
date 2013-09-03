@@ -132,6 +132,11 @@
     <Compile Include="Telateste.Designer.cs">
       <DependentUpon>Telateste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teste_chart1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Teste_chart1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -256,6 +261,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Teste_chart1.xsc">
+      <DependentUpon>Teste_chart1.xsd</DependentUpon>
+    </None>
+    <None Include="Teste_chart1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Teste_chart1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Teste_chart1.xss">
+      <DependentUpon>Teste_chart1.xsd</DependentUpon>
+    </None>
     <None Include="vendas.xsc">
       <DependentUpon>vendas.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

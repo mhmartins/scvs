@@ -62,6 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -182,7 +183,7 @@
             this.mktDesc.Name = "mktDesc";
             this.mktDesc.Size = new System.Drawing.Size(100, 31);
             this.mktDesc.TabIndex = 19;
-            this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mktDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip1.SetToolTip(this.mktDesc, "Digite o valor para desconto");
             // 
             // label4
@@ -403,11 +404,19 @@
             this.textBox2.TabIndex = 39;
             this.textBox2.Text = "18";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(248, 486);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 40;
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.mktValorCremoso);
@@ -483,6 +492,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
 
     }
 }

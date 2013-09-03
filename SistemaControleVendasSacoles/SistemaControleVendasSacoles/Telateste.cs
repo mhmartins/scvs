@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 using MySql.Data.Common;
 using System.Collections;
+using System.Globalization;
 
 namespace SistemaControleVendasSacoles
 {
@@ -123,7 +124,7 @@ namespace SistemaControleVendasSacoles
             }
             catch (Exception ex)
             {
-                ex.Message.ToString();
+                throw new Exception("Erro de comandos: " + ex.Message);
             }
             
         }
@@ -148,7 +149,7 @@ namespace SistemaControleVendasSacoles
             }
             catch (Exception ex)
             {
-                ex.Message.ToString();
+                throw new Exception("Erro de comandos: " + ex.Message);
             }
             /*  try
               {
@@ -233,32 +234,42 @@ namespace SistemaControleVendasSacoles
 
            if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
            {
-   
+               this.textBox3.DataBindings.Clear();
                try
                {
+                   
+                   
                    int quantidade = (int.Parse(nupdowCre.Text));
                    float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text));
+                   textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US"));
+                   ///textBox2.Text = mktValorCremoso.ToString("C", new CultureInfo("pt-BR"));
                    mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(mktValorCremoso.Text))).ToString();
-
+                   mktDesc.Text = Resultado.ToString("N", new CultureInfo("pt-BR"));
+                   
+                   //inicio do SQL
                    MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                   //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
-                                  
+                   //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao3);
+                   string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('"+textBox2.Text+"','" + cmbxsacolescre.SelectedValue.ToString() + "','" + quantidade + "','"+textBox3.Text+"')";               
                    conexao3.Open();
-                   string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + textBox2.Text + "','" + cmbxsacolescre.SelectedValue.ToString() + "','7','8.90')";
+                   
+                   
+                   
+                   //DataTable dt4 = new DataTable();
+                   //select.Fill(dt4);
+                  // BindingSource source = new BindingSource();
+                   //source.DataSource = dt4;
+                  // this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
                    MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
                    comandos3.ExecuteNonQuery();
-                  // DataTable dt4 = new DataTable();
-                  // select.Fill(dt4);
-                  // BindingSource source = new BindingSource();
-                  // source.DataSource = dt4;
-                   //this.textBox2.DataBindings.Add("Text", source, "idvendas", true);                   
                    conexao3.Close();
+                   //Fim do SQL
+
                    dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
                    cmbxsacolescre.Text = "";
                    nupdowCre.Text = "0";
                    mktValorCremoso.Text = "";
-                   textBox2.Text = quantidade.ToString();
-               }
+                   //textBox2.Text = quantidade.ToString();
+                }
                 catch (Exception ex)
                 {
                     throw new Exception("Erro de comandos: " + ex.Message);
@@ -284,7 +295,7 @@ namespace SistemaControleVendasSacoles
 
         private void btnIni_Click(object sender, EventArgs e)
         {
-          //  string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
+           // string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
            //Code Snippet
             //DateTime.Now.ToShortDateString()
            // DateTime dataConvertida = DateTime.ParseExact(data, "yyyy-MM-dd", null);
@@ -293,12 +304,13 @@ namespace SistemaControleVendasSacoles
             bool CamposObrigPreenchidos2 = CamposObrig2();
             if (!CamposObrigPreenchidos2)//se o campos estiver preenchido ele entra 
             {
-               /* try
+                this.textBox2.DataBindings.Clear();
+                try
                 {
 
                     MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
                     conexao.Open();
-                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','22111111')";
+                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','22111212')";
                     MySqlCommand comandos = new MySqlCommand(inserir, conexao);
                     MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
                    
@@ -309,25 +321,25 @@ namespace SistemaControleVendasSacoles
                     source.DataSource = dt4;
                     this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
                    
-                    conexao.Close();*/
+                    conexao.Close();
                     int valid = Convert.ToInt32(cbxUser.SelectedValue);
                     //label13.Visible = true;
                     addSuco.Enabled = true;
                     AddCre.Enabled = true;
                     // mktData.Text = cbxUser.SelectedValue.ToString(); 
+                    /*
+                     MySqlDataAdapter sqluse = new MySqlDataAdapter("INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.Text + "','" + mktData.Text + "')");
+                     MySqlCommand sqluse = new MySqlCommand (
+                      string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
+                      MySqlCommand comandos = new MySqlCommand(inserir, conexao);
+                    sqluse.ExecuteNonQuery();
+                      conexao.Close();*/
+                }
 
-                    // MySqlDataAdapter sqluse = new MySqlDataAdapter("INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.Text + "','" + mktData.Text + "')");
-                    // MySqlCommand sqluse = new MySqlCommand (
-                    //  string inserir = "INSERT INTO sacoles(sabor,tipo,quant,quantmin,preco)values('" + sa.Sabor + "','" + sa.Tipo + "','" + sa.Quant + "','" + sa.QuantMin + "','" + sa.Valor + "')";
-                    //  MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-                    //sqluse.ExecuteNonQuery();
-                    //  conexao.Close();
-                //}
-
-             //   catch (Exception ex)
-               // {
-                //    throw new Exception("Erro de comandos: " + ex.Message);
-              //  }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro de comandos: " + ex.Message);
+                }
             }
             else
             {
@@ -374,12 +386,41 @@ namespace SistemaControleVendasSacoles
            bool CamposObrigPreenchidos = CamposObrig3();
            if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
            {
-               float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text));
-               mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text))).ToString();
-               dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
-               cbxSuco.Text = "";
-               nupdowSuc.Text = "0";
-               mskValSuco.Text = "";
+
+               try
+               {
+                   float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text));
+                   mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowSuc.Text) * float.Parse(mskValSuco.Text))).ToString();
+                   dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
+                   int quantidade = (int.Parse(nupdowSuc.Text));
+                   textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US"));
+                   //inicio do SQL
+                   MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                   //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao3);
+                   string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + textBox2.Text + "','" + cbxSuco.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
+                   conexao3.Open();
+
+
+
+                   //DataTable dt4 = new DataTable();
+                   //select.Fill(dt4);
+                   // BindingSource source = new BindingSource();
+                   //source.DataSource = dt4;
+                   // this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
+                   MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
+                   comandos3.ExecuteNonQuery();
+                   conexao3.Close();
+                   //Fim do SQL
+                   cbxSuco.Text = "";
+                   nupdowSuc.Text = "0";
+                   mskValSuco.Text = "";
+               }
+               catch (Exception ex)
+               {
+                   throw new Exception("Erro de comandos: " + ex.Message);
+               }
+
+
            }
            else
            {
