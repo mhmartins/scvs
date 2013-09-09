@@ -96,3 +96,5 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas.xsc
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas.xsd
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas.xss
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.read.160.tlog
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\GenerateResource.write.160.tlog

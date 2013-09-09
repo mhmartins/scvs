@@ -61,19 +61,22 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.tbxValCre = new System.Windows.Forms.TextBox();
             this.tbxValSuc = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbxValCre = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddCre
             // 
             this.AddCre.Enabled = false;
             this.AddCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCre.Location = new System.Drawing.Point(500, 106);
+            this.AddCre.Location = new System.Drawing.Point(498, 51);
             this.AddCre.Name = "AddCre";
             this.AddCre.Size = new System.Drawing.Size(104, 37);
             this.AddCre.TabIndex = 0;
@@ -85,9 +88,10 @@
             // cmbxsacolescre
             // 
             this.cmbxsacolescre.DisplayMember = "idSacoles";
+            this.cmbxsacolescre.Enabled = false;
             this.cmbxsacolescre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxsacolescre.FormattingEnabled = true;
-            this.cmbxsacolescre.Location = new System.Drawing.Point(12, 106);
+            this.cmbxsacolescre.Location = new System.Drawing.Point(10, 51);
             this.cmbxsacolescre.Name = "cmbxsacolescre";
             this.cmbxsacolescre.Size = new System.Drawing.Size(209, 33);
             this.cmbxsacolescre.TabIndex = 1;
@@ -97,9 +101,10 @@
             // 
             // cbxSuco
             // 
+            this.cbxSuco.Enabled = false;
             this.cbxSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSuco.FormattingEnabled = true;
-            this.cbxSuco.Location = new System.Drawing.Point(12, 194);
+            this.cbxSuco.Location = new System.Drawing.Point(10, 139);
             this.cbxSuco.Name = "cbxSuco";
             this.cbxSuco.Size = new System.Drawing.Size(209, 33);
             this.cbxSuco.TabIndex = 2;
@@ -111,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 79);
+            this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 3;
@@ -121,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 165);
+            this.label2.Location = new System.Drawing.Point(6, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 24);
             this.label2.TabIndex = 4;
@@ -131,7 +136,7 @@
             // 
             this.addSuco.Enabled = false;
             this.addSuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSuco.Location = new System.Drawing.Point(500, 192);
+            this.addSuco.Location = new System.Drawing.Point(498, 137);
             this.addSuco.Name = "addSuco";
             this.addSuco.Size = new System.Drawing.Size(104, 37);
             this.addSuco.TabIndex = 7;
@@ -242,7 +247,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(371, 79);
+            this.label5.Location = new System.Drawing.Point(369, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 24);
             this.label5.TabIndex = 13;
@@ -252,7 +257,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(371, 167);
+            this.label6.Location = new System.Drawing.Point(369, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 24);
             this.label6.TabIndex = 14;
@@ -260,8 +265,9 @@
             // 
             // nupdowCre
             // 
+            this.nupdowCre.Enabled = false;
             this.nupdowCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.nupdowCre.Location = new System.Drawing.Point(244, 108);
+            this.nupdowCre.Location = new System.Drawing.Point(242, 53);
             this.nupdowCre.Name = "nupdowCre";
             this.nupdowCre.Size = new System.Drawing.Size(58, 31);
             this.nupdowCre.TabIndex = 16;
@@ -269,8 +275,9 @@
             // 
             // nupdowSuc
             // 
+            this.nupdowSuc.Enabled = false;
             this.nupdowSuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.nupdowSuc.Location = new System.Drawing.Point(244, 192);
+            this.nupdowSuc.Location = new System.Drawing.Point(242, 137);
             this.nupdowSuc.Name = "nupdowSuc";
             this.nupdowSuc.Size = new System.Drawing.Size(58, 31);
             this.nupdowSuc.TabIndex = 17;
@@ -280,7 +287,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label7.Location = new System.Drawing.Point(240, 79);
+            this.label7.Location = new System.Drawing.Point(238, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 24);
             this.label7.TabIndex = 18;
@@ -290,7 +297,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label8.Location = new System.Drawing.Point(240, 165);
+            this.label8.Location = new System.Drawing.Point(238, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 24);
             this.label8.TabIndex = 19;
@@ -302,7 +309,7 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(12, 244);
+            this.dgv.Location = new System.Drawing.Point(10, 283);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
@@ -368,15 +375,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(309, 125);
+            this.label13.Location = new System.Drawing.Point(307, 70);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.Size = new System.Drawing.Size(0, 20);
             this.label13.TabIndex = 38;
             this.label13.Visible = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 486);
+            this.textBox2.Location = new System.Drawing.Point(521, 356);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 39;
@@ -384,59 +391,80 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(248, 486);
+            this.textBox3.Location = new System.Drawing.Point(521, 330);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 40;
             // 
+            // tbxValSuc
+            // 
+            this.tbxValSuc.Enabled = false;
+            this.tbxValSuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.tbxValSuc.Location = new System.Drawing.Point(373, 139);
+            this.tbxValSuc.Name = "tbxValSuc";
+            this.tbxValSuc.Size = new System.Drawing.Size(100, 31);
+            this.tbxValSuc.TabIndex = 42;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(521, 304);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 43;
+            // 
             // tbxValCre
             // 
+            this.tbxValCre.Enabled = false;
             this.tbxValCre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.tbxValCre.Location = new System.Drawing.Point(375, 108);
+            this.tbxValCre.Location = new System.Drawing.Point(373, 53);
             this.tbxValCre.Name = "tbxValCre";
             this.tbxValCre.Size = new System.Drawing.Size(100, 31);
             this.tbxValCre.TabIndex = 41;
             // 
-            // tbxValSuc
+            // groupBox2
             // 
-            this.tbxValSuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.tbxValSuc.Location = new System.Drawing.Point(375, 194);
-            this.tbxValSuc.Name = "tbxValSuc";
-            this.tbxValSuc.Size = new System.Drawing.Size(100, 31);
-            this.tbxValSuc.TabIndex = 42;
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.AddCre);
+            this.groupBox2.Controls.Add(this.tbxValSuc);
+            this.groupBox2.Controls.Add(this.cmbxsacolescre);
+            this.groupBox2.Controls.Add(this.tbxValCre);
+            this.groupBox2.Controls.Add(this.cbxSuco);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.addSuco);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.nupdowCre);
+            this.groupBox2.Controls.Add(this.nupdowSuc);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(0, 68);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(606, 183);
+            this.groupBox2.TabIndex = 44;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sabores";
             // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
-            this.Controls.Add(this.tbxValSuc);
-            this.Controls.Add(this.tbxValCre);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbxUser);
             this.Controls.Add(this.btnIni);
             this.Controls.Add(this.dgv);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.nupdowSuc);
-            this.Controls.Add(this.nupdowCre);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnFinaVenda);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.addSuco);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbxSuco);
-            this.Controls.Add(this.cmbxsacolescre);
-            this.Controls.Add(this.AddCre);
             this.Name = "Telateste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Vendas";
@@ -446,6 +474,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,9 +514,11 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox tbxValCre;
         private System.Windows.Forms.TextBox tbxValSuc;
         private System.Windows.Forms.TextBox tbxDesc;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbxValCre;
+        private System.Windows.Forms.GroupBox groupBox2;
 
     }
 }

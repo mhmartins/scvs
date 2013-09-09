@@ -131,6 +131,7 @@
             this.tbx1.Name = "tbx1";
             this.tbx1.Size = new System.Drawing.Size(100, 20);
             this.tbx1.TabIndex = 7;
+            this.tbx1.TextChanged += new System.EventHandler(this.tbx1_TextChanged);
             // 
             // MenuPrincipal2
             // 

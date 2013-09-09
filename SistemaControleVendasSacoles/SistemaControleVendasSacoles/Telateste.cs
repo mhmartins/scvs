@@ -12,6 +12,16 @@ using MySql.Data.Common;
 using System.Collections;
 using System.Globalization;
 // CTRL+E.F
+// colocar o R$
+// iniciar o mdi
+// colorir o layout
+// facilidade 
+// desabilitar campos 
+// separar campos
+// definir parametros para datas do grafico
+// trabalhar no update das tabelas
+// ajustar telas de excluir e alterar estoque...botões
+// organizar grid por tipo(na consulta)
 namespace SistemaControleVendasSacoles
 {
     public partial class Telateste : Form
@@ -102,6 +112,65 @@ namespace SistemaControleVendasSacoles
             this.dgv.DefaultCellStyle.Font = new Font("Tahoma", 20);
         }
 
+        /// <summary>
+        /// Bora lá que vai
+        /// </summary>
+        /// <param name="Codigo"></param>
+        /// <returns></returns>
+        /*public int GetCodSacole(int Codigo, int cod)
+        {
+            string lcSQL = "select preco from sacoles where idSacoles = '" + cod + "'";
+
+            using (MySqlConnection conn = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;"))
+            {
+                using (MySqlCommand command = new MySqlCommand(lcSQL, conn))
+                {
+                    command.Parameters.AddWithValue("preco", Codigo);
+
+                    conn.Open();
+                    using (MySqlDataReader dr = command.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return dr.GetInt32(0);
+                        }
+                    }
+                }
+            }
+
+            return 0;
+        }*/
+
+       //MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+        //MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
+        //DataTable dt40 = new DataTable();
+
+        /////
+        public int GetCodCliente(int Codigo)
+        {
+            string lcSQL = "SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1";
+
+            using (MySqlConnection conn = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;"))
+            {
+                using (MySqlCommand command = new MySqlCommand(lcSQL, conn))
+                {
+                    command.Parameters.AddWithValue("idvendas", Codigo);
+
+                    conn.Open();
+                    using (MySqlDataReader dr = command.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return dr.GetInt32(0);
+                        }
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+
         private bool CamposObrig2()
         {
             bool CampoVazio2 = false;
@@ -163,27 +232,55 @@ namespace SistemaControleVendasSacoles
 
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
         {
-             this.label13.DataBindings.Clear();
-             this.tbxValCre.DataBindings.Clear();
-             try
-             {
-                 MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                 MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
-                 DataTable dt40 = new DataTable();
-                 sql40.Fill(dt40);
-                 BindingSource source = new BindingSource();
-                 source.DataSource = dt40;
-                 label13.Visible = true;
+            this.label13.DataBindings.Clear();
+            // this.tbxValCre.DataBindings.Clear();
+            //textBox3.Text = .ToString("N", new CultureInfo("en-US"));
+            int preco = 0;
+           // preco = GetCodSacole(preco);
+            tbxValCre.Text = preco.ToString();
 
-                 this.tbxValCre.DataBindings.Add("Text", source, "preco", true);
-                 this.label13.DataBindings.Add("Text", source, "preco", true);
-                 combo10.Close();
-             }
-               catch (Exception ex)
-               {
-                   ex.Message.ToString();
-               }
-             
+            
+            try
+            {
+                MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
+                DataTable dt40 = new DataTable();
+                //int rt = 0;
+                //string lcSQL = "SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1";
+
+             /*   MySqlConnection conn = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                MySqlCommand command = new MySqlCommand(lcSQL, conn);
+                command.Parameters.AddWithValue("idvendas", rt);
+                conn.Open();
+                MySqlDataReader dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    dr.GetInt32(0);
+                }
+                */
+
+            
+
+                sql40.Fill(dt40);
+                BindingSource source = new BindingSource();
+                source.DataSource = dt40;
+                label13.Visible = true;
+
+                /*  foreach (DataRow item in dt40.Rows)
+                  {
+                      int codigo = int.Parse(item["preco"].ToString());
+                      MessageBox.Show("oi " + codigo, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  }*/
+            
+                this.tbxValCre.DataBindings.Add("Text", source, "preco", true);
+                this.label13.DataBindings.Add("Text", source, "preco", true);
+                combo10.Close();
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+
         }
 
         private void cbxSuco_SelectedIndexChanged(object sender, EventArgs e)
@@ -197,25 +294,29 @@ namespace SistemaControleVendasSacoles
                 MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", combo1);
                 DataTable dt4 = new DataTable();
                 sql4.Fill(dt4);
+                string val = cbxSuco.SelectedValue.ToString();
                 BindingSource source = new BindingSource();
                 source.DataSource = dt4;
                 label13.Visible = true;
+
                 this.label13.DataBindings.Add("Text", source, "preco", true);
                 this.tbxValSuc.DataBindings.Add("Text", source, "preco", true);
                 combo1.Close();
             }
-              catch (Exception ex)
-              {
-                  ex.Message.ToString();
-              }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+
         }
 
         private void AddCre_Click(object sender, EventArgs e)
         {
             bool CamposObrigPreenchidos = CamposObrig();
-
             if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
             {
+                int dal = 0, idvenda = 0;
+                idvenda = GetCodCliente(dal);
                 this.textBox3.DataBindings.Clear();
                 try
                 {
@@ -229,7 +330,7 @@ namespace SistemaControleVendasSacoles
                     //inicio do SQL
                     MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
                     //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao3);
-                    string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + textBox2.Text + "','" + cmbxsacolescre.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
+                    string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + idvenda + "','" + cmbxsacolescre.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
                     conexao3.Open();
                     //DataTable dt4 = new DataTable();
                     //select.Fill(dt4);
@@ -289,19 +390,26 @@ namespace SistemaControleVendasSacoles
                     string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','22111212')";
                     MySqlCommand comandos = new MySqlCommand(inserir, conexao);
                     MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
-
+                    int teste;
                     comandos.ExecuteNonQuery();
                     DataTable dt4 = new DataTable();
                     select.Fill(dt4);
+                    //int id = int.Parse(dt.ExecuteScalar());
                     BindingSource source = new BindingSource();
                     source.DataSource = dt4;
-                    this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
+                    this.textBox2.DataBindings.Add("Text", source, "idvendas", true);//vericar se a variavel pode receber dados do databin....
 
                     conexao.Close();
                     int valid = Convert.ToInt32(cbxUser.SelectedValue);
                     //label13.Visible = true;
                     addSuco.Enabled = true;
                     AddCre.Enabled = true;
+                    cmbxsacolescre.Enabled = true;
+                    cbxSuco.Enabled = true;
+                    nupdowCre.Enabled = true;
+                    nupdowSuc.Enabled = true;
+                    tbxValCre.Enabled = true;
+                    tbxValSuc.Enabled = true;
                     // mktData.Text = cbxUser.SelectedValue.ToString(); 
                 }
 

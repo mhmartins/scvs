@@ -36,7 +36,7 @@ namespace SistemaControleVendasSacoles
             venda.Show();
             //Vendas tt = new Vendas();
             //tt.Show();
-            //MenuPrincipal2 forma = new MenuPrincipal2();
+           // MenuPrincipal2 forma = new MenuPrincipal2();
             //forma.Show();
 
         }
