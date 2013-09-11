@@ -264,7 +264,7 @@ namespace SistemaControleVendasSacoles
                 sql40.Fill(dt40);
                 BindingSource source = new BindingSource();
                 source.DataSource = dt40;
-                label13.Visible = true;
+                //label13.Visible = true;
 
                 /*  foreach (DataRow item in dt40.Rows)
                   {
@@ -273,7 +273,7 @@ namespace SistemaControleVendasSacoles
                   }*/
             
                 this.tbxValCre.DataBindings.Add("Text", source, "preco", true);
-                this.label13.DataBindings.Add("Text", source, "preco", true);
+                //this.label13.DataBindings.Add("Text", source, "preco", true);
                 combo10.Close();
             }
             catch (Exception ex)
@@ -299,7 +299,7 @@ namespace SistemaControleVendasSacoles
                 source.DataSource = dt4;
                 label13.Visible = true;
 
-                this.label13.DataBindings.Add("Text", source, "preco", true);
+                //this.label13.DataBindings.Add("Text", source, "preco", true);
                 this.tbxValSuc.DataBindings.Add("Text", source, "preco", true);
                 combo1.Close();
             }

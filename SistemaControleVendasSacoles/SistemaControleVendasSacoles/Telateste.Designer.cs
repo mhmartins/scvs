@@ -388,6 +388,7 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 39;
             this.textBox2.Text = "18";
+            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
@@ -395,6 +396,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 40;
+            this.textBox3.Visible = false;
             // 
             // tbxValSuc
             // 
@@ -411,6 +413,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 43;
+            this.textBox4.Visible = false;
             // 
             // tbxValCre
             // 
@@ -450,6 +453,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1033, 541);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox4);
