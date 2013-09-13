@@ -33,10 +33,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxSenha = new System.Windows.Forms.TextBox();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,15 +81,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaControleVendasSacoles.Properties.Resources.receita_gelinho_ou_sacole;
-            this.pictureBox1.Location = new System.Drawing.Point(506, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(443, 291);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -109,6 +100,15 @@
             this.tbxSenha.Size = new System.Drawing.Size(369, 31);
             this.tbxSenha.TabIndex = 1;
             this.toolTipLogin.SetToolTip(this.tbxSenha, "Digite aqui a sua senha.");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaControleVendasSacoles.Properties.Resources.receita_gelinho_ou_sacole2;
+            this.pictureBox1.Location = new System.Drawing.Point(506, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 550);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
