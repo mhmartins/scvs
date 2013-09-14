@@ -233,12 +233,11 @@ namespace SistemaControleVendasSacoles
         private void cmbxsacolescre_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.label13.DataBindings.Clear();
-            // this.tbxValCre.DataBindings.Clear();
+            this.tbxValCre.DataBindings.Clear();
             //textBox3.Text = .ToString("N", new CultureInfo("en-US"));
             int preco = 0;
            // preco = GetCodSacole(preco);
             tbxValCre.Text = preco.ToString();
-
             
             try
             {
@@ -257,9 +256,7 @@ namespace SistemaControleVendasSacoles
                 {
                     dr.GetInt32(0);
                 }
-                */
-
-            
+                */           
 
                 sql40.Fill(dt40);
                 BindingSource source = new BindingSource();
@@ -341,7 +338,6 @@ namespace SistemaControleVendasSacoles
                     comandos3.ExecuteNonQuery();
                     conexao3.Close();
                     //Fim do SQL
-
                     dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
                     cmbxsacolescre.Text = "";
                     nupdowCre.Text = "0";
