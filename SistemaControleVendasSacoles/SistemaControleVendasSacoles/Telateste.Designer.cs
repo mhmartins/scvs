@@ -65,6 +65,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tbxValCre = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -175,9 +176,9 @@
             this.mktTotal.Name = "mktTotal";
             this.mktTotal.Size = new System.Drawing.Size(264, 80);
             this.mktTotal.TabIndex = 21;
-            this.mktTotal.Text = "0";
             this.mktTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip1.SetToolTip(this.mktTotal, "Valor total da venda");
+            this.mktTotal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mktTotal_MaskInputRejected);
             // 
             // label4
             // 
@@ -272,6 +273,7 @@
             this.nupdowCre.Size = new System.Drawing.Size(58, 31);
             this.nupdowCre.TabIndex = 16;
             this.toolTip1.SetToolTip(this.nupdowCre, "Selecione a quantidade");
+            this.nupdowCre.ValueChanged += new System.EventHandler(this.nupdowCre_ValueChanged);
             // 
             // nupdowSuc
             // 
@@ -449,12 +451,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sabores";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(521, 383);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 45;
+            // 
             // Telateste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -523,6 +533,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox tbxValCre;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox5;
 
     }
 }
