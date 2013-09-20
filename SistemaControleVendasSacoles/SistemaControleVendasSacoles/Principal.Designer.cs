@@ -46,6 +46,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.toolTipPrinc = new System.Windows.Forms.ToolTip(this.components);
+            this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +84,9 @@
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.venderToolStripMenuItem,
+            this.consultarToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
             this.toolStripMenuItem1.Text = "Vendas";
@@ -194,6 +199,19 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // venderToolStripMenuItem
+            // 
+            this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.venderToolStripMenuItem.Text = "Vender";
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar ";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,5 +261,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolTip toolTipPrinc;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }

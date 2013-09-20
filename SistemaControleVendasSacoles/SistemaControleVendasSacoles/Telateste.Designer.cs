@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.addSuco = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.tbxDesc = new System.Windows.Forms.TextBox();
             this.mktTotal = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,6 +67,9 @@
             this.tbxValCre = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowCre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowSuc)).BeginInit();
@@ -111,7 +115,6 @@
             this.cbxSuco.TabIndex = 2;
             this.toolTip1.SetToolTip(this.cbxSuco, "Selecione um sabor");
             this.cbxSuco.SelectedIndexChanged += new System.EventHandler(this.cbxSuco_SelectedIndexChanged);
-            this.cbxSuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxSuco_KeyPress);
             // 
             // label1
             // 
@@ -148,6 +151,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.tbxDesc);
             this.groupBox1.Controls.Add(this.mktTotal);
             this.groupBox1.Controls.Add(this.label4);
@@ -160,6 +164,13 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Financeiros";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(39, 147);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 26);
+            this.textBox9.TabIndex = 23;
             // 
             // tbxDesc
             // 
@@ -178,7 +189,6 @@
             this.mktTotal.TabIndex = 21;
             this.mktTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip1.SetToolTip(this.mktTotal, "Valor total da venda");
-            this.mktTotal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mktTotal_MaskInputRejected);
             // 
             // label4
             // 
@@ -273,7 +283,6 @@
             this.nupdowCre.Size = new System.Drawing.Size(58, 31);
             this.nupdowCre.TabIndex = 16;
             this.toolTip1.SetToolTip(this.nupdowCre, "Selecione a quantidade");
-            this.nupdowCre.ValueChanged += new System.EventHandler(this.nupdowCre_ValueChanged);
             // 
             // nupdowSuc
             // 
@@ -385,16 +394,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(521, 356);
+            this.textBox2.Location = new System.Drawing.Point(498, 346);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 39;
             this.textBox2.Text = "18";
-            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(521, 330);
+            this.textBox3.Location = new System.Drawing.Point(498, 320);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 40;
@@ -411,7 +419,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(521, 304);
+            this.textBox4.Location = new System.Drawing.Point(498, 304);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 43;
@@ -453,10 +461,37 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(521, 383);
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Location = new System.Drawing.Point(498, 369);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(100, 13);
             this.textBox5.TabIndex = 45;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(498, 278);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 46;
+            this.textBox6.Visible = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(498, 386);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 47;
+            this.textBox7.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Location = new System.Drawing.Point(498, 404);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 13);
+            this.textBox8.TabIndex = 48;
             // 
             // Telateste
             // 
@@ -464,6 +499,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox4);
@@ -534,6 +572,10 @@
         private System.Windows.Forms.TextBox tbxValCre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
 
     }
 }

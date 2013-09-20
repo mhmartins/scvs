@@ -12,14 +12,14 @@ using MySql.Data.Common;
 using System.Collections;
 using System.Globalization;
 // CTRL+E.F
-// colocar o R$
+// colocar o R$ OK
 // iniciar o mdi
 // colorir o layout
 // facilidade 
-// desabilitar campos 
-// separar campos
+// desabilitar campos OK
+// separar campos OK
 // definir parametros para datas do grafico
-// trabalhar no update das tabelas
+// trabalhar no update das tabelas OK
 // ajustar telas de excluir e alterar estoque...botões
 // organizar grid por tipo(na consulta)
 namespace SistemaControleVendasSacoles
@@ -73,7 +73,7 @@ namespace SistemaControleVendasSacoles
             try
             {
                 MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 1", combo);
+                MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 1 && quant != 0 ORDER BY sabor ASC", combo);
                 DataTable dt2 = new DataTable();
                 sql.Fill(dt2);
 
@@ -91,7 +91,8 @@ namespace SistemaControleVendasSacoles
             try
             {
                 MySqlConnection combo = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 2", combo);
+                //MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 2 && quant != 0", combo);
+                MySqlDataAdapter sql = new MySqlDataAdapter("select * from sacoles where tipo = 2 && quant != 0 ORDER BY sabor ASC", combo);
                 DataTable dt = new DataTable();
                 sql.Fill(dt);
 
@@ -142,11 +143,11 @@ namespace SistemaControleVendasSacoles
             return 0;
         }*/
 
-       //MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+        //MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
         //MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
         //DataTable dt40 = new DataTable();
 
-        /////
+        //PEGA O CÓDIGO DA ULTIMA VENDA
         public int GetCodCliente(int Codigo)
         {
             string lcSQL = "SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1";
@@ -156,7 +157,6 @@ namespace SistemaControleVendasSacoles
                 using (MySqlCommand command = new MySqlCommand(lcSQL, conn))
                 {
                     command.Parameters.AddWithValue("idvendas", Codigo);
-
                     conn.Open();
                     using (MySqlDataReader dr = command.ExecuteReader())
                     {
@@ -171,7 +171,7 @@ namespace SistemaControleVendasSacoles
             return 0;
         }
 
-
+        //CAMPOS OBRIGATÓRIOS VENDEDOR
         private bool CamposObrig2()
         {
             bool CampoVazio2 = false;
@@ -185,6 +185,7 @@ namespace SistemaControleVendasSacoles
             return CampoVazio2;
         }
 
+        //CAMPOS OBRIGATÓRIO SACOLÉ CREMOSO
         private bool CamposObrig()
         {
             bool CampoVazio = false;
@@ -205,6 +206,7 @@ namespace SistemaControleVendasSacoles
             return CampoVazio;
         }
 
+        //CAMPOS OBRIGATÓRIOS SACOLÉ SUCO
         private bool CamposObrig3()
         {
             bool CampoVazio3 = false;
@@ -223,6 +225,7 @@ namespace SistemaControleVendasSacoles
             return CampoVazio3;
         }
 
+        //VARIVÉL DA DATA
         private void timer1_Tick(object sender, EventArgs e)
         {
             //textBox1.Text=DateTime.Now.ToLongDateString();
@@ -236,43 +239,37 @@ namespace SistemaControleVendasSacoles
         {
             this.label13.DataBindings.Clear();
             this.tbxValCre.DataBindings.Clear();
+            this.textBox6.DataBindings.Clear();
+            nupdowCre.Value = 0;
             //textBox3.Text = .ToString("N", new CultureInfo("en-US"));
             int preco = 0;
-           // preco = GetCodSacole(preco);
             tbxValCre.Text = preco.ToString();
-            nupdowCre.Maximum = 10;
+
             try
             {
                 MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
+                MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco, quant from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
                 DataTable dt40 = new DataTable();
                 //int rt = 0;
                 //string lcSQL = "SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1";
 
-             /*   MySqlConnection conn = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlCommand command = new MySqlCommand(lcSQL, conn);
-                command.Parameters.AddWithValue("idvendas", rt);
-                conn.Open();
-                MySqlDataReader dr = command.ExecuteReader();
-                while (dr.Read())
-                {
-                    dr.GetInt32(0);
-                }
-                */           
-
+                /*   MySqlConnection conn = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                   MySqlCommand command = new MySqlCommand(lcSQL, conn);
+                   command.Parameters.AddWithValue("idvendas", rt);
+                   conn.Open();
+                   MySqlDataReader dr = command.ExecuteReader();
+                   while (dr.Read())
+                   {
+                       dr.GetInt32(0);
+                   }
+                   */
                 sql40.Fill(dt40);
                 BindingSource source = new BindingSource();
                 source.DataSource = dt40;
-                //label13.Visible = true;
 
-                /*  foreach (DataRow item in dt40.Rows)
-                  {
-                      int codigo = int.Parse(item["preco"].ToString());
-                      MessageBox.Show("oi " + codigo, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                  }*/
-            
                 this.tbxValCre.DataBindings.Add("Text", source, "preco", true);
-                //this.label13.DataBindings.Add("Text", source, "preco", true);
+                this.textBox6.DataBindings.Add("Text", source, "quant", true);
+                nupdowCre.Maximum = int.Parse(textBox6.Text);
                 combo10.Close();
             }
             catch (Exception ex)
@@ -288,10 +285,12 @@ namespace SistemaControleVendasSacoles
             this.label13.DataBindings.Clear();
             this.tbxValSuc.DataBindings.Clear();
             this.tbxValCre.DataBindings.Clear();
+            this.textBox7.DataBindings.Clear();
+            nupdowSuc.Value = 0;
             try
             {
                 MySqlConnection combo1 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", combo1);
+                MySqlDataAdapter sql4 = new MySqlDataAdapter("select preco,quant from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", combo1);
                 DataTable dt4 = new DataTable();
                 sql4.Fill(dt4);
                 string val = cbxSuco.SelectedValue.ToString();
@@ -299,8 +298,9 @@ namespace SistemaControleVendasSacoles
                 source.DataSource = dt4;
                 label13.Visible = true;
 
-                //this.label13.DataBindings.Add("Text", source, "preco", true);
                 this.tbxValSuc.DataBindings.Add("Text", source, "preco", true);
+                this.textBox7.DataBindings.Add("Text", source, "quant", true);
+                nupdowCre.Maximum = int.Parse(textBox7.Text);
                 combo1.Close();
             }
             catch (Exception ex)
@@ -309,7 +309,6 @@ namespace SistemaControleVendasSacoles
             }
 
         }
-
 
         float valorTotal = 0;//VARIAVEL GLOBAL!
         int quantSac = 0;//VARIAVEL GLOBAL!     
@@ -328,24 +327,20 @@ namespace SistemaControleVendasSacoles
                 {
                     int quantidade = (int.Parse(nupdowCre.Text)); //RECEBE A QUANTIDADE DO SACOLÉ
                     float Resultado = (int.Parse(nupdowCre.Text) * float.Parse(tbxValCre.Text)); //RECEBE O VALOR
-                    textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US")); //RECEBE O RESULTADO, CONVERTIDO, PARA O BANCO
-                    //textBox2.Text = mktValorCremoso.ToString("C", new CultureInfo("pt-BR"));
+                    //textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US")); //RECEBE O RESULTADO, CONVERTIDO, PARA O BANCO
+                    textBox3.Text = Resultado.ToString("N", new CultureInfo("pt-BR"));
                     //mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowCre.Text) * float.Parse(tbxValCre.Text))).ToString();
                     valorTotal = valorTotal + (int.Parse(nupdowCre.Text) * float.Parse(tbxValCre.Text)); //VALOR TOTAL
                     mktTotal.Text = valorTotal.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
-                    mktTotal.Text = ("R$ " + mktTotal.Text).ToString(); //CRIA UMA MASCARA 
-                    
+                    mktTotal.Text = ("R$ " + mktTotal.Text).ToString(); //CRIA UMA MASCARA        
 
-                    
-                    //textBox3.Text = .ToString("N", new CultureInfo("en-US"));
-                    //mktDesc.Text = Resultado.ToString("N", new CultureInfo("pt-BR"));
                     int quantAtual = 0;
                     //inicio do SQL
                     MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
                     //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao3);
                     string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + idvenda + "','" + cmbxsacolescre.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
                     MySqlDataAdapter sql40 = new MySqlDataAdapter("select quant from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", conexao3);
-                    
+
                     conexao3.Open();
                     DataTable dt40 = new DataTable();
 
@@ -359,18 +354,18 @@ namespace SistemaControleVendasSacoles
                     MySqlCommand comandoAtualiza = new MySqlCommand(UPDATE, conexao3);
                     comandoAtualiza.ExecuteNonQuery();
 
-                    MessageBox.Show("Esta função ainda não esta funcional = " + quantAtual, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (quantAtual <= 5)
                     {
-                        MessageBox.Show("Quantidade mínima atingida. Quantida atual do sabor = " + quantAtual, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Quantidade mínima atingida. Quantida em estoque: " + quantAtual, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
 
                     //DataTable dt4 = new DataTable();
                     //select.Fill(dt4);
-                    // BindingSource source = new BindingSource();
+                    //BindingSource source2 = new BindingSource();
                     //source.DataSource = dt4;
-                    // this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
+                    //this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
+
+
                     MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
                     comandos3.ExecuteNonQuery();
                     conexao3.Close();
@@ -385,7 +380,6 @@ namespace SistemaControleVendasSacoles
                 {
                     throw new Exception("Erro de comandos: " + ex.Message);
                 }
-
             }
             else
             {
@@ -400,14 +394,31 @@ namespace SistemaControleVendasSacoles
                 if (MessageBox.Show("Você tem certeza que deseja limpar os campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //apaga os tbx relacionado abaixo
-                    MessageBox.Show("Esta função ainda não esta funcional", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    addSuco.Enabled = false;
+                    AddCre.Enabled = false;
+                    cmbxsacolescre.Enabled = false;
+                    cbxSuco.Enabled = false;
+                    nupdowCre.Enabled = false;
+                    nupdowSuc.Enabled = false;
+                    tbxValCre.Enabled = false;
+                    tbxValSuc.Enabled = false;
+                    cmbxsacolescre.Text = "";
+                    nupdowCre.Text = "0";
+                    tbxValCre.Text = "";
+                    cbxSuco.Text = "";
+                    nupdowSuc.Text = "0";
+                    tbxValSuc.Text = "";
+                    dgv.Rows.Clear();
+                    valorTotal = 0;
+                    tbxDesc.Text = "";
+                    mktTotal.Text = "";
+                    MessageBox.Show("Campos apagados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
         //BOTÃO ADICONAR VENDEDOR
         private void btnIni_Click(object sender, EventArgs e)
         {
-            
             //Code Snippet
             //DateTime.Now.ToShortDateString()
             // DateTime dataConvertida = DateTime.ParseExact(data, "yyyy-MM-dd", null);
@@ -424,18 +435,16 @@ namespace SistemaControleVendasSacoles
                     string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','22111212')";
                     MySqlCommand comandos = new MySqlCommand(inserir, conexao);
                     MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
-                    int teste;
                     comandos.ExecuteNonQuery();
+
                     DataTable dt4 = new DataTable();
                     select.Fill(dt4);
-                    //int id = int.Parse(dt.ExecuteScalar());
                     BindingSource source = new BindingSource();
                     source.DataSource = dt4;
                     this.textBox2.DataBindings.Add("Text", source, "idvendas", true);//vericar se a variavel pode receber dados do databin....
 
                     conexao.Close();
                     int valid = Convert.ToInt32(cbxUser.SelectedValue);
-                    //label13.Visible = true;
                     addSuco.Enabled = true;
                     AddCre.Enabled = true;
                     cmbxsacolescre.Enabled = true;
@@ -444,9 +453,7 @@ namespace SistemaControleVendasSacoles
                     nupdowSuc.Enabled = true;
                     tbxValCre.Enabled = true;
                     tbxValSuc.Enabled = true;
-                    // mktData.Text = cbxUser.SelectedValue.ToString(); 
                 }
-
                 catch (Exception ex)
                 {
                     throw new Exception("Erro de comandos: " + ex.Message);
@@ -461,49 +468,61 @@ namespace SistemaControleVendasSacoles
         //BOTÃO ADICIONAR SABOR SUCO
         private void addSuco_Click(object sender, EventArgs e)
         {
-               bool CamposObrigPreenchidos = CamposObrig3();
-               if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
-               {
-                   try
-                   {
-                       float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text));
-                       //mktTotal.Text = (float.Parse(mktTotal.Text) + (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text))).ToString();
-                       dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
-                       int quantidade = (int.Parse(nupdowSuc.Text));
-                       textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US"));
+            this.textBox8.DataBindings.Clear();
+            bool CamposObrigPreenchidos = CamposObrig3();
+            if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
+            {
+                int dal = 0, idvenda = 0;
+                idvenda = GetCodCliente(dal);
+                try
+                {
+                    int quantAtual = 0;
+                    float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text));
+                    dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
+                    int quantidade = (int.Parse(nupdowSuc.Text));
+                    textBox3.Text = Resultado.ToString("N", new CultureInfo("en-US"));
 
-                       valorTotal = valorTotal + (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text)); //VALOR TOTAL
-                       mktTotal.Text = valorTotal.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
-                       mktTotal.Text = ("R$ " + mktTotal.Text).ToString(); //CRIA UMA MASCARA 
+                    valorTotal = valorTotal + (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text)); //VALOR TOTAL
+                    mktTotal.Text = valorTotal.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
+                    mktTotal.Text = ("R$ " + mktTotal.Text).ToString(); //CRIA UMA MASCARA 
 
+                    //inicio do SQL
+                    MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                    string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + idvenda + "','" + cbxSuco.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
+                    MySqlDataAdapter sql40 = new MySqlDataAdapter("select quant from sacoles where idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'", conexao3);
+                    conexao3.Open();
+                    DataTable dt40 = new DataTable();
 
-                       //inicio do SQL
-                       MySqlConnection conexao3 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                       //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao3);
-                       string inserir3 = "INSERT INTO vendas_sacoles(vendas_idvendas,sacoles_idsacoles,quantidade,valor)values('" + textBox2.Text + "','" + cbxSuco.SelectedValue.ToString() + "','" + quantidade + "','" + textBox3.Text + "')";
-                       conexao3.Open();                       
-                       //DataTable dt4 = new DataTable();
-                       //select.Fill(dt4);
-                       // BindingSource source = new BindingSource();
-                       //source.DataSource = dt4;
-                       // this.textBox2.DataBindings.Add("Text", source, "idvendas", true);
-                       MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
-                       comandos3.ExecuteNonQuery();
-                       conexao3.Close();
-                       //Fim do SQL
-                       cbxSuco.Text = "";
-                       nupdowSuc.Text = "0";
-                       tbxValSuc.Text = "";
-                   }
-                   catch (Exception ex)
-                   {
-                       throw new Exception("Erro de comandos: " + ex.Message);
-                   }
-               }
-               else
-               {
-                   return;
-               }           
+                    sql40.Fill(dt40);
+                    BindingSource source = new BindingSource();
+                    source.DataSource = dt40;
+                    this.textBox8.DataBindings.Add("Text", source, "quant", true);
+                    quantSac = int.Parse(textBox8.Text);
+                    quantAtual = quantSac - quantidade;
+                    string UPDATE = "UPDATE sacoles SET quant= '" + quantAtual + "' WHERE idSacoles = '" + cbxSuco.SelectedValue.ToString() + "'";
+                    MySqlCommand comandoAtualiza = new MySqlCommand(UPDATE, conexao3);
+                    comandoAtualiza.ExecuteNonQuery();
+                    if (quantAtual <= 5)
+                    {
+                        MessageBox.Show("Quantidade mínima atingida. Quantida em estoque: " + quantAtual, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    MySqlCommand comandos3 = new MySqlCommand(inserir3, conexao3);
+                    comandos3.ExecuteNonQuery();
+                    conexao3.Close();
+                    //Fim do SQL
+                    cbxSuco.Text = "";
+                    nupdowSuc.Text = "0";
+                    tbxValSuc.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro de comandos: " + ex.Message);
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         //BOTÃO SOMAR O DESCONTO
@@ -518,27 +537,30 @@ namespace SistemaControleVendasSacoles
             {
                 mktTotal.Text = somadesconto.ToString();
             }
-            
-        }
 
-        private void cbxSuco_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // cbxSuco.DroppedDown = true;
         }
 
         private void btnFinaVenda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Venda finalizada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void mktTotal_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void nupdowCre_ValueChanged(object sender, EventArgs e)
-        {
-
+            addSuco.Enabled = false;
+            AddCre.Enabled = false;
+            cmbxsacolescre.Enabled = false;
+            cbxSuco.Enabled = false;
+            nupdowCre.Enabled = false;
+            nupdowSuc.Enabled = false;
+            tbxValCre.Enabled = false;
+            tbxValSuc.Enabled = false;
+            cmbxsacolescre.Text = "";
+            nupdowCre.Text = "0";
+            tbxValCre.Text = "";
+            cbxSuco.Text = "";
+            nupdowSuc.Text = "0";
+            tbxValSuc.Text = "";
+            dgv.Rows.Clear();
+            valorTotal = 0;
+            tbxDesc.Text = "";
+            mktTotal.Text = "";
         }
 
     }

@@ -67,7 +67,7 @@ namespace SistemaControleVendasSacoles
                 sa.QuantMin = int.Parse(tbxquantmin.Text);
                 sa.Valor = tbxvalor.Text;
                 da.cadastro(sa);
-                MessageBox.Show("Produto cadastrado com sucesso!");
+                MessageBox.Show("Produto cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 tbxnome.Text = "";
                 //nupdowtipo.Text = "1";

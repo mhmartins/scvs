@@ -32,8 +32,8 @@ namespace SistemaControleVendasSacoles
         {
            // Consulta Form4 = new Consulta();
            // Form4.Show();
-            Telateste venda = new Telateste();
-            venda.Show();
+            MessageBox.Show("Função temporariamente inativa!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             //Vendas tt = new Vendas();
             //tt.Show();
            // MenuPrincipal2 forma = new MenuPrincipal2();
@@ -43,8 +43,9 @@ namespace SistemaControleVendasSacoles
 
         private void button1_Click(object sender, EventArgs e)
         {
-            vend Form4 = new vend();
-            Form4.Show();
+            Telateste venda = new Telateste();
+            venda.Show();
+       
             //Telateste Form4 = new Telateste();
             //Form4.Show();
         }
@@ -58,6 +59,12 @@ namespace SistemaControleVendasSacoles
         {
             graficos grafo = new graficos();
             grafo.Show();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            vend Form4 = new vend();
+            Form4.Show();
         }
 
 
