@@ -14,7 +14,6 @@ namespace SistemaControleVendasSacoles
        /* public void venda()
         {
             string caminho = "SERVER=localhost;" + "DATABASE=banco_rr_sacoles;" + "UID=root;" + "PASSOWORD=12345;";
-
             try
             {
                 conexao = new MySqlConnection(caminho);
@@ -25,7 +24,6 @@ namespace SistemaControleVendasSacoles
         public void cadastro(Sacole sa)
         {
             string caminho = "SERVER=localhost;" +" DATABASE=banco_rr_sacoles;" +" UID=root;"+"PASSWORD=12345;";
-
             try
             {
                 conexao = new MySqlConnection(caminho);
@@ -60,12 +58,10 @@ namespace SistemaControleVendasSacoles
             {
                 Principal Form2 = new Principal();
                 Form2.Show();
-            }
-           
+            }           
              leitura.Close();
                conexao.Close();
             }
-
             catch (Exception ex)
             {
                 throw new Exception("Erro de comandos: " + ex.Message);

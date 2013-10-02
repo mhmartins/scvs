@@ -9,17 +9,18 @@ using System.Windows.Forms;
 
 namespace SistemaControleVendasSacoles
 {
-    public partial class graficos : Form
+    public partial class Form4 : Form
     {
-        public graficos()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void graficos_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'grafo_Estoque.sacoles' table. You can move, or remove it, as needed.
             this.sacolesTableAdapter.Fill(this.grafo_Estoque.sacoles);
+
         }
     }
 }

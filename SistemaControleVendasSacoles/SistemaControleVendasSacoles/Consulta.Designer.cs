@@ -44,6 +44,7 @@
             this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGeraPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,10 +94,10 @@
             this.quantminDataGridViewTextBoxColumn,
             this.precoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.sacolesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(166, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(215, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(599, 328);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -163,11 +164,24 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Lista de Sacolés";
             // 
+            // btnGeraPDF
+            // 
+            this.btnGeraPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeraPDF.Location = new System.Drawing.Point(820, 302);
+            this.btnGeraPDF.Name = "btnGeraPDF";
+            this.btnGeraPDF.Size = new System.Drawing.Size(113, 48);
+            this.btnGeraPDF.TabIndex = 5;
+            this.btnGeraPDF.Text = "Gerar PDF";
+            this.btnGeraPDF.UseVisualStyleBackColor = true;
+            this.btnGeraPDF.Visible = false;
+            this.btnGeraPDF.Click += new System.EventHandler(this.btnGeraPDF_Click);
+            // 
             // Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.ClientSize = new System.Drawing.Size(1033, 541);
+            this.Controls.Add(this.btnGeraPDF);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Consulta";
@@ -201,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantminDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnGeraPDF;
     }
 }
