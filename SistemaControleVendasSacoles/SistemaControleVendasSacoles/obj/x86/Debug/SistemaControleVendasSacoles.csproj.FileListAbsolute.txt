@@ -106,3 +106,4 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\itextsharp.pdfa.dll
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\itextsharp.xtra.dll
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\itextsharp.xml
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.faturamento.resources

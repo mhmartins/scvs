@@ -114,6 +114,12 @@
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="faturamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faturamento.Designer.cs">
+      <DependentUpon>faturamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExibirVenda.resx">
       <DependentUpon>ExibirVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faturamento.resx">
+      <DependentUpon>faturamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

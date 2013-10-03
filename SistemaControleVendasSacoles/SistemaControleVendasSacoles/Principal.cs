@@ -83,7 +83,8 @@ namespace SistemaControleVendasSacoles
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            graficos grafo = new graficos();
+            //graficos grafo = new graficos();
+            faturamento grafo = new faturamento();
             grafo.MdiParent = this;
             grafo.Show();
         }
