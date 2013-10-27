@@ -60,6 +60,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionaProd.cs">
+      <DependentUpon>AdicionaProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionaProd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdicionaProd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionaProdSuc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdicionaProdSuc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionaProducaoSuco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionaProducaoSuco.Designer.cs">
+      <DependentUpon>AdicionaProducaoSuco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarProducao.Designer.cs">
+      <DependentUpon>AdicionarProducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="banco.cs">
       <DependentUpon>banco.xsd</DependentUpon>
     </Compile>
@@ -114,11 +139,23 @@
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="FatuMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FatuMes.Designer.cs">
+      <DependentUpon>FatuMes.cs</DependentUpon>
+    </Compile>
     <Compile Include="faturamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="faturamento.Designer.cs">
       <DependentUpon>faturamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FatuSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FatuSemana.Designer.cs">
+      <DependentUpon>FatuSemana.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -138,6 +175,12 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +192,11 @@
     </Compile>
     <Compile Include="graficos.Designer.cs">
       <DependentUpon>graficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoVendasSacoles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>
     </Compile>
     <Compile Include="GrafoSacQuant.cs" />
     <Compile Include="Grafo_Estoque.cs">
@@ -215,6 +263,12 @@
       <DependentUpon>vendas.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <EmbeddedResource Include="AdicionaProducaoSuco.resx">
+      <DependentUpon>AdicionaProducaoSuco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarProducao.resx">
+      <DependentUpon>AdicionarProducao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroSacoles.resx">
       <DependentUpon>CadastroSacoles.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,8 +281,14 @@
     <EmbeddedResource Include="ExibirVenda.resx">
       <DependentUpon>ExibirVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FatuMes.resx">
+      <DependentUpon>FatuMes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="faturamento.resx">
       <DependentUpon>faturamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FatuSemana.resx">
+      <DependentUpon>FatuSemana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -238,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendas.resx">
       <DependentUpon>frmVendas.cs</DependentUpon>
@@ -276,6 +339,28 @@
     <EmbeddedResource Include="Vendas.resx">
       <DependentUpon>Vendas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AdicionaProd.xsc">
+      <DependentUpon>AdicionaProd.xsd</DependentUpon>
+    </None>
+    <None Include="AdicionaProd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdicionaProd.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdicionaProd.xss">
+      <DependentUpon>AdicionaProd.xsd</DependentUpon>
+    </None>
+    <None Include="AdicionaProdSuc.xsc">
+      <DependentUpon>AdicionaProdSuc.xsd</DependentUpon>
+    </None>
+    <None Include="AdicionaProdSuc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdicionaProdSuc.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdicionaProdSuc.xss">
+      <DependentUpon>AdicionaProdSuc.xsd</DependentUpon>
+    </None>
     <None Include="app.config" />
     <None Include="banco.xsc">
       <DependentUpon>banco.xsd</DependentUpon>
@@ -326,6 +411,17 @@
     <None Include="exibir_venda.xss">
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GraficoVendasSacoles.xsc">
+      <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>
+    </None>
+    <None Include="GraficoVendasSacoles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GraficoVendasSacoles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GraficoVendasSacoles.xss">
+      <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>
     </None>
     <None Include="Grafo_Estoque.xsc">
       <DependentUpon>Grafo_Estoque.xsd</DependentUpon>

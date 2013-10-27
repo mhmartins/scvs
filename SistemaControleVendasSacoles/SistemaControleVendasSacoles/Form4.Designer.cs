@@ -53,7 +53,7 @@
             this.chart1.DataSource = this.sacolesBindingSource;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(136, 46);
+            this.chart1.Location = new System.Drawing.Point(285, 54);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.ChartArea = "ChartArea1";

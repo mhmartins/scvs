@@ -81,7 +81,6 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Form2.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmVendas.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.graficos.resources
-C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.JanelaEstoque.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Login.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.MenuPrincipal2.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Principal.resources
@@ -107,3 +106,8 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\itextsharp.xtra.dll
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\itextsharp.xml
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.faturamento.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.FatuSemana.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.FatuMes.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.AdicionarProducao.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.AdicionaProducaoSuco.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.PesquisaPersonalizada.resources

@@ -48,7 +48,8 @@ namespace SistemaControleVendasSacoles
             //define COLUNAS e LINHA do DATAGRID
             dgv.Columns[0].Width = 250;
             dgv.Columns[1].Width = 80;
-            dgv.Columns[2].Width = 129;            
+            dgv.Columns[2].Width = 129;
+
         }
 
         private DataView LoadUserData()
@@ -302,7 +303,7 @@ namespace SistemaControleVendasSacoles
 
                 this.tbxValSuc.DataBindings.Add("Text", source, "preco", true);
                 this.tbxEstSuc.DataBindings.Add("Text", source, "quant", true);
-                nupdowCre.Maximum = int.Parse(tbxEstSuc.Text);
+                nupdowSuc.Maximum = int.Parse(tbxEstSuc.Text);
                 combo1.Close();
             }
             catch (Exception ex)
@@ -373,7 +374,7 @@ namespace SistemaControleVendasSacoles
                     comandos3.ExecuteNonQuery();
                     conexao3.Close();
                     //Fim do SQL
-                    dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + Resultado);
+                    dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + (String.Format("{0:0.00}",Resultado)));
                     cmbxsacolescre.Text = "";
                     nupdowCre.Text = "0";
                     tbxValCre.Text = "";
@@ -403,9 +404,18 @@ namespace SistemaControleVendasSacoles
             }
             else
             {
-                data = textBox1.Text;
-                DateTime d = Convert.ToDateTime(data);
-                sDataF = d.ToString("yyyyMMdd");
+                DateTime resultado = DateTime.MinValue;
+                if (DateTime.TryParse(this.textBox1.Text.Trim(), out resultado))
+                {
+                    data = textBox1.Text;
+                    DateTime d = Convert.ToDateTime(data);
+                    sDataF = d.ToString("yyyyMMdd");
+                }
+                else
+                {
+                    return null;
+                }
+
             }
             return sDataF;
         }
@@ -458,58 +468,65 @@ namespace SistemaControleVendasSacoles
             string sData= "";
             string sData1 = pegadata(sData);
             //MessageBox.Show("DATA = " + sData1);
-
-            //string date = textBox1.Text;
-            //DateTime dt = Convert.ToDateTime(date);
-            //Console.WriteLine("Year: {0}, Month: {1}, Day: {2}", dt.Year, dt.Month, dt.Day);
-            //MessageBox.Show(dt.ToString());
-            //string date = "01/08/2008";
-            //DateTime dt = Convert.ToDateTime(date);
-            //Console.WriteLine("Year: {0}, Month: {1}, Day: {2}", dt.Year, dt.Month, dt.Day);
-
-            //textBox2.Text = Convert.ToDateTime(this.textBox1.ToString());
-
-            bool CamposObrigPreenchidos2 = CamposObrig2();
-            if (!CamposObrigPreenchidos2)//se o campos estiver preenchido ele entra 
+            if (sData1 == null)
             {
-                this.textBox2.DataBindings.Clear();
-                
-                try
-                {
-                    MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                    conexao.Open();
-                    string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','" + sData1 + "')";
-                    MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-                    //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
-                    comandos.ExecuteNonQuery();
-
-                    //DataTable dt4 = new DataTable();
-                    //select.Fill(dt4);
-                    //BindingSource source = new BindingSource();
-                    //source.DataSource = dt4;
-                    //this.textBox2.DataBindings.Add("Text", source, "idvendas", true);//vericar se a variavel pode receber dados do databin....
-
-                    conexao.Close();
-                    int valid = Convert.ToInt32(cbxUser.SelectedValue);
-                    addSuco.Enabled = true;
-                    AddCre.Enabled = true;
-                    cmbxsacolescre.Enabled = true;
-                    cbxSuco.Enabled = true;
-                    nupdowCre.Enabled = true;
-                    nupdowSuc.Enabled = true;
-                    tbxValCre.Enabled = true;
-                    tbxValSuc.Enabled = true;
-                    btnSomar.Enabled = true;
-                    btnFinaVenda.Enabled = true;
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Erro de comandos: " + ex.Message);
-                }
+                textBox1.Text = "";
+                MessageBox.Show("Data Inválida.","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                return;
+                //string date = textBox1.Text;
+                //DateTime dt = Convert.ToDateTime(date);
+                //Console.WriteLine("Year: {0}, Month: {1}, Day: {2}", dt.Year, dt.Month, dt.Day);
+                //MessageBox.Show(dt.ToString());
+                //string date = "01/08/2008";
+                //DateTime dt = Convert.ToDateTime(date);
+                //Console.WriteLine("Year: {0}, Month: {1}, Day: {2}", dt.Year, dt.Month, dt.Day);
+
+                //textBox2.Text = Convert.ToDateTime(this.textBox1.ToString());
+
+                bool CamposObrigPreenchidos2 = CamposObrig2();
+                if (!CamposObrigPreenchidos2)//se o campos estiver preenchido ele entra 
+                {
+                    this.textBox2.DataBindings.Clear();
+
+                    try
+                    {
+                        MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
+                        conexao.Open();
+                        string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','" + sData1 + "')";
+                        MySqlCommand comandos = new MySqlCommand(inserir, conexao);
+                        //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
+                        comandos.ExecuteNonQuery();
+
+                        //DataTable dt4 = new DataTable();
+                        //select.Fill(dt4);
+                        //BindingSource source = new BindingSource();
+                        //source.DataSource = dt4;
+                        //this.textBox2.DataBindings.Add("Text", source, "idvendas", true);//vericar se a variavel pode receber dados do databin....
+
+                        conexao.Close();
+                        int valid = Convert.ToInt32(cbxUser.SelectedValue);
+                        addSuco.Enabled = true;
+                        AddCre.Enabled = true;
+                        cmbxsacolescre.Enabled = true;
+                        cbxSuco.Enabled = true;
+                        nupdowCre.Enabled = true;
+                        nupdowSuc.Enabled = true;
+                        tbxValCre.Enabled = true;
+                        tbxValSuc.Enabled = true;
+                        btnSomar.Enabled = true;
+                        btnFinaVenda.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Erro de comandos: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 
@@ -526,7 +543,7 @@ namespace SistemaControleVendasSacoles
                 {
                     int quantAtual = 0;
                     float Resultado = (int.Parse(nupdowSuc.Text) * float.Parse(tbxValSuc.Text));
-                    dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + Resultado);
+                    dgv.Rows.Add(cbxSuco.Text, nupdowSuc.Text, "R$ " + (String.Format("{0:0.00}",Resultado)));
                     int quantidade = (int.Parse(nupdowSuc.Text));
                     textBox3.Text = Resultado.ToString("N", new CultureInfo("pt-BR"));
 
@@ -597,7 +614,7 @@ namespace SistemaControleVendasSacoles
             this.textBox7.DataBindings.Clear();
             string sData = "";
             string sData1 = pegadata(sData);
-            string valor = valorTotal.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
+            string valor = valorTotal.ToString("N", new CultureInfo("en-US")); //CONVERTE O VALOR PARA REAL
             MessageBox.Show("Venda " + valor, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
@@ -614,7 +631,7 @@ namespace SistemaControleVendasSacoles
 
 
 
-                if (textBox7.Text == "")
+                if (textBox7.Text == "")//se a DATA for NOVA
                 {
                     MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
                     conexao.Open();
@@ -634,7 +651,7 @@ namespace SistemaControleVendasSacoles
                     float soma = (float.Parse(textBox9.Text) + valorTotal);
                     MessageBox.Show("Venda " + soma, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    string valor2 = soma.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
+                    string valor2 = soma.ToString("N", new CultureInfo("en-US")); //CONVERTE O VALOR PARA REAL
                     MessageBox.Show("Venda " + valor2, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     string UPDATE = "UPDATE faturamento SET total = '" + valor2 + "' WHERE data = '" + sData1 + "'";
                     MySqlCommand comandoAtualiza = new MySqlCommand(UPDATE, conexao3);

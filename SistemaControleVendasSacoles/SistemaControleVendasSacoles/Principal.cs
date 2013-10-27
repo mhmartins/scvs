@@ -23,7 +23,7 @@ namespace SistemaControleVendasSacoles
 
         private void button3_Click(object sender, EventArgs e)
         {
-            JanelaEstoque Form3 = new JanelaEstoque();
+            PesquisaPersonalizada Form3 = new PesquisaPersonalizada();
             Form3.Show();
             //this.Close();
         }
@@ -87,6 +87,10 @@ namespace SistemaControleVendasSacoles
             faturamento grafo = new faturamento();
             grafo.MdiParent = this;
             grafo.Show();
+            PesquisaPersonalizada dia = new PesquisaPersonalizada();
+            dia.MdiParent = this;
+            dia.Show();
+
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,6 +160,67 @@ namespace SistemaControleVendasSacoles
             Form4 frm = new Form4();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            FatuSemana form = new FatuSemana();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            FatuMes form = new FatuMes();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void adicionarProduçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //AdicionaProd form1 = new AdicionaProd();
+            //form1.MdiParent = this; 
+            //form1.  
+            //Form5 form = new Form5();
+            //form.MdiParent = this; 
+            //form.Show();
+
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cremosoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarProducao form2 = new AdicionarProducao();
+            form2.MdiParent = this;
+            form2.Show();
+        }
+
+        private void sucoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionaProducaoSuco form2 = new AdicionaProducaoSuco();
+            form2.MdiParent = this;
+            form2.Show();
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisaPersonalizada form = new PesquisaPersonalizada();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }

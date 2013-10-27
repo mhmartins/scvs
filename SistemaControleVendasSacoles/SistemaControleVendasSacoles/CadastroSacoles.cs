@@ -145,7 +145,7 @@ namespace SistemaControleVendasSacoles
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            JanelaEstoque Form = new JanelaEstoque();
+            PesquisaPersonalizada Form = new PesquisaPersonalizada();
             Form.Show();
             this.Close();
         }

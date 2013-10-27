@@ -113,7 +113,7 @@ namespace SistemaControleVendasSacoles
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            int dal = 0, dall= 0;
+            int dal = 0; //dall= 0;
             dal = GetCodCliente(dal);
             MessageBox.Show("APERTOU --> "+dal);
 
