@@ -805,8 +805,8 @@ namespace SistemaControleVendasSacoles.AdicionaProdTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `sabor`, `tipo`, `quant`, `preco` FROM `sacoles`  WHERE tipo = 1 ORDER BY " +
-                "sabor";
+            this._commandCollection[0].CommandText = "SELECT `sabor`, `tipo`, `quant`, `preco` \r\nFROM `sacoles`  \r\nWHERE tipo = 1 \r\nORD" +
+                "ER BY sabor asc";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

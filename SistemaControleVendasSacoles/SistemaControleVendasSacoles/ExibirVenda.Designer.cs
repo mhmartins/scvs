@@ -40,7 +40,6 @@
             this.ProdutosTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.sacolesTableAdapter();
             this.vendas_sacolesTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.vendas_sacolesTableAdapter();
             this.vendasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -82,10 +81,10 @@
             // idvendasLabel
             // 
             idvendasLabel.AutoSize = true;
-            idvendasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idvendasLabel.Location = new System.Drawing.Point(326, 53);
+            idvendasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idvendasLabel.Location = new System.Drawing.Point(766, 216);
             idvendasLabel.Name = "idvendasLabel";
-            idvendasLabel.Size = new System.Drawing.Size(91, 24);
+            idvendasLabel.Size = new System.Drawing.Size(131, 31);
             idvendasLabel.TabIndex = 1;
             idvendasLabel.Text = "idvendas:";
             idvendasLabel.Visible = false;
@@ -93,20 +92,20 @@
             // usuarios_idusuariosLabel
             // 
             usuarios_idusuariosLabel.AutoSize = true;
-            usuarios_idusuariosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarios_idusuariosLabel.Location = new System.Drawing.Point(326, 90);
+            usuarios_idusuariosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarios_idusuariosLabel.Location = new System.Drawing.Point(348, 66);
             usuarios_idusuariosLabel.Name = "usuarios_idusuariosLabel";
-            usuarios_idusuariosLabel.Size = new System.Drawing.Size(100, 24);
+            usuarios_idusuariosLabel.Size = new System.Drawing.Size(139, 31);
             usuarios_idusuariosLabel.TabIndex = 3;
             usuarios_idusuariosLabel.Text = "Vendedor:";
             // 
             // dataLabel
             // 
             dataLabel.AutoSize = true;
-            dataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataLabel.Location = new System.Drawing.Point(326, 130);
+            dataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataLabel.Location = new System.Drawing.Point(348, 109);
             dataLabel.Name = "dataLabel";
-            dataLabel.Size = new System.Drawing.Size(52, 24);
+            dataLabel.Size = new System.Drawing.Size(80, 31);
             dataLabel.TabIndex = 5;
             dataLabel.Text = "Data:";
             // 
@@ -144,7 +143,7 @@
             // 
             // vendasBindingNavigator
             // 
-            this.vendasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.vendasBindingNavigator.AddNewItem = null;
             this.vendasBindingNavigator.BindingSource = this.vendasBindingSource;
             this.vendasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.vendasBindingNavigator.CountItemFormat = "de {0}";
@@ -160,7 +159,6 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.vendasBindingNavigatorSaveItem});
             this.vendasBindingNavigator.Location = new System.Drawing.Point(0, 0);
@@ -173,15 +171,6 @@
             this.vendasBindingNavigator.Size = new System.Drawing.Size(1033, 29);
             this.vendasBindingNavigator.TabIndex = 0;
             this.vendasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 26);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
@@ -280,10 +269,10 @@
             // idvendasTextBox
             // 
             this.idvendasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "idvendas", true));
-            this.idvendasTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idvendasTextBox.Location = new System.Drawing.Point(461, 50);
+            this.idvendasTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idvendasTextBox.Location = new System.Drawing.Point(901, 213);
             this.idvendasTextBox.Name = "idvendasTextBox";
-            this.idvendasTextBox.Size = new System.Drawing.Size(121, 29);
+            this.idvendasTextBox.Size = new System.Drawing.Size(121, 38);
             this.idvendasTextBox.TabIndex = 2;
             this.idvendasTextBox.Visible = false;
             // 
@@ -292,11 +281,11 @@
             this.usuarios_idusuariosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "usuarios_idusuarios", true));
             this.usuarios_idusuariosComboBox.DataSource = this.usuariosBindingSource;
             this.usuarios_idusuariosComboBox.DisplayMember = "nome";
-            this.usuarios_idusuariosComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarios_idusuariosComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarios_idusuariosComboBox.FormattingEnabled = true;
-            this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(461, 87);
+            this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(493, 63);
             this.usuarios_idusuariosComboBox.Name = "usuarios_idusuariosComboBox";
-            this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(121, 32);
+            this.usuarios_idusuariosComboBox.Size = new System.Drawing.Size(191, 39);
             this.usuarios_idusuariosComboBox.TabIndex = 4;
             this.usuarios_idusuariosComboBox.ValueMember = "idusuarios";
             // 
@@ -308,10 +297,10 @@
             // dataMaskedTextBox
             // 
             this.dataMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "data", true));
-            this.dataMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataMaskedTextBox.Location = new System.Drawing.Point(461, 127);
+            this.dataMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataMaskedTextBox.Location = new System.Drawing.Point(493, 106);
             this.dataMaskedTextBox.Name = "dataMaskedTextBox";
-            this.dataMaskedTextBox.Size = new System.Drawing.Size(121, 29);
+            this.dataMaskedTextBox.Size = new System.Drawing.Size(191, 38);
             this.dataMaskedTextBox.TabIndex = 6;
             // 
             // vendas_sacolesBindingSource
@@ -396,7 +385,7 @@
             this.Controls.Add(this.vendasBindingNavigator);
             this.Name = "ExibirVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ExibirVenda";
+            this.Text = "Consultar as Vendas Efetuadas";
             this.Load += new System.EventHandler(this.ExibirVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.exibir_venda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
@@ -419,7 +408,6 @@
         private exibir_vendaTableAdapters.vendasTableAdapter vendasTableAdapter;
         private exibir_vendaTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator vendasBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

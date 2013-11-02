@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SistemaControleVendasSacoles
 {
-    public partial class Form3 : Form
+    public partial class ConsultarVendasVendedor : Form
     {
-        public Form3()
+        public ConsultarVendasVendedor()
         {
             InitializeComponent();
         }

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GraficoFULL" targetNamespace="http://tempuri.org/GraficoFULL.xsd" xmlns:mstns="http://tempuri.org/GraficoFULL.xsd" xmlns="http://tempuri.org/GraficoFULL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="banco_rr_sacolesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="banco_rr_sacolesConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaControleVendasSacoles.Properties.Settings.GlobalReference.Default.banco_rr_sacolesConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="graficovendasTableAdapter" GeneratorDataComponentClassName="graficovendasTableAdapter" Name="graficovendas" UserDataComponentName="graficovendasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="banco_rr_sacolesConnectionString (Settings)" DbObjectName="banco_rr_sacoles.graficovendas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `sabor`, `quantidade` 
+FROM `graficovendas`
+ORDER BY quantidade DESC
+
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sabor" DataSetColumn="sabor" />
+              <Mapping SourceColumn="quantidade" DataSetColumn="quantidade" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GraficoFULL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GraficoFULL" msprop:Generator_UserDSName="GraficoFULL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="graficovendas" msprop:Generator_TableClassName="graficovendasDataTable" msprop:Generator_TableVarName="tablegraficovendas" msprop:Generator_RowChangedName="graficovendasRowChanged" msprop:Generator_TablePropName="graficovendas" msprop:Generator_RowDeletingName="graficovendasRowDeleting" msprop:Generator_RowChangingName="graficovendasRowChanging" msprop:Generator_RowEvHandlerName="graficovendasRowChangeEventHandler" msprop:Generator_RowDeletedName="graficovendasRowDeleted" msprop:Generator_RowClassName="graficovendasRow" msprop:Generator_UserTableName="graficovendas" msprop:Generator_RowEvArgName="graficovendasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sabor" msprop:Generator_ColumnVarNameInTable="columnsabor" msprop:Generator_ColumnPropNameInRow="sabor" msprop:Generator_ColumnPropNameInTable="saborColumn" msprop:Generator_UserColumnName="sabor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantidade" msprop:Generator_ColumnVarNameInTable="columnquantidade" msprop:Generator_ColumnPropNameInRow="quantidade" msprop:Generator_ColumnPropNameInTable="quantidadeColumn" msprop:Generator_UserColumnName="quantidade" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -20,17 +20,17 @@ namespace SistemaControleVendasSacoles {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AdicionaProdSuc")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GraficoFULL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AdicionaProdSuc : global::System.Data.DataSet {
+    public partial class GraficoFULL : global::System.Data.DataSet {
         
-        private sacolesDataTable tablesacoles;
+        private graficovendasDataTable tablegraficovendas;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public AdicionaProdSuc() {
+        public GraficoFULL() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SistemaControleVendasSacoles {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected AdicionaProdSuc(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GraficoFULL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace SistemaControleVendasSacoles {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["sacoles"] != null)) {
-                    base.Tables.Add(new sacolesDataTable(ds.Tables["sacoles"]));
+                if ((ds.Tables["graficovendas"] != null)) {
+                    base.Tables.Add(new graficovendasDataTable(ds.Tables["graficovendas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace SistemaControleVendasSacoles {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sacolesDataTable sacoles {
+        public graficovendasDataTable graficovendas {
             get {
-                return this.tablesacoles;
+                return this.tablegraficovendas;
             }
         }
         
@@ -127,7 +127,7 @@ namespace SistemaControleVendasSacoles {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AdicionaProdSuc cln = ((AdicionaProdSuc)(base.Clone()));
+            GraficoFULL cln = ((GraficoFULL)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace SistemaControleVendasSacoles {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["sacoles"] != null)) {
-                    base.Tables.Add(new sacolesDataTable(ds.Tables["sacoles"]));
+                if ((ds.Tables["graficovendas"] != null)) {
+                    base.Tables.Add(new graficovendasDataTable(ds.Tables["graficovendas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace SistemaControleVendasSacoles {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablesacoles = ((sacolesDataTable)(base.Tables["sacoles"]));
+            this.tablegraficovendas = ((graficovendasDataTable)(base.Tables["graficovendas"]));
             if ((initTable == true)) {
-                if ((this.tablesacoles != null)) {
-                    this.tablesacoles.InitVars();
+                if ((this.tablegraficovendas != null)) {
+                    this.tablegraficovendas.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace SistemaControleVendasSacoles {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AdicionaProdSuc";
+            this.DataSetName = "GraficoFULL";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AdicionaProdSuc.xsd";
+            this.Namespace = "http://tempuri.org/GraficoFULL.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablesacoles = new sacolesDataTable();
-            base.Tables.Add(this.tablesacoles);
+            this.tablegraficovendas = new graficovendasDataTable();
+            base.Tables.Add(this.tablegraficovendas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializesacoles() {
+        private bool ShouldSerializegraficovendas() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace SistemaControleVendasSacoles {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AdicionaProdSuc ds = new AdicionaProdSuc();
+            GraficoFULL ds = new GraficoFULL();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace SistemaControleVendasSacoles {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void sacolesRowChangeEventHandler(object sender, sacolesRowChangeEvent e);
+        public delegate void graficovendasRowChangeEventHandler(object sender, graficovendasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sacolesDataTable : global::System.Data.TypedTableBase<sacolesRow> {
+        public partial class graficovendasDataTable : global::System.Data.TypedTableBase<graficovendasRow> {
             
             private global::System.Data.DataColumn columnsabor;
             
-            private global::System.Data.DataColumn columntipo;
-            
-            private global::System.Data.DataColumn columnquant;
-            
-            private global::System.Data.DataColumn columnpreco;
+            private global::System.Data.DataColumn columnquantidade;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesDataTable() {
-                this.TableName = "sacoles";
+            public graficovendasDataTable() {
+                this.TableName = "graficovendas";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace SistemaControleVendasSacoles {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal sacolesDataTable(global::System.Data.DataTable table) {
+            internal graficovendasDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +311,7 @@ namespace SistemaControleVendasSacoles {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected sacolesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected graficovendasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -330,25 +326,9 @@ namespace SistemaControleVendasSacoles {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipoColumn {
+            public global::System.Data.DataColumn quantidadeColumn {
                 get {
-                    return this.columntipo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn quantColumn {
-                get {
-                    return this.columnquant;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn precoColumn {
-                get {
-                    return this.columnpreco;
+                    return this.columnquantidade;
                 }
             }
             
@@ -363,48 +343,46 @@ namespace SistemaControleVendasSacoles {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesRow this[int index] {
+            public graficovendasRow this[int index] {
                 get {
-                    return ((sacolesRow)(this.Rows[index]));
+                    return ((graficovendasRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sacolesRowChangeEventHandler sacolesRowChanging;
+            public event graficovendasRowChangeEventHandler graficovendasRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sacolesRowChangeEventHandler sacolesRowChanged;
+            public event graficovendasRowChangeEventHandler graficovendasRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sacolesRowChangeEventHandler sacolesRowDeleting;
+            public event graficovendasRowChangeEventHandler graficovendasRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sacolesRowChangeEventHandler sacolesRowDeleted;
+            public event graficovendasRowChangeEventHandler graficovendasRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddsacolesRow(sacolesRow row) {
+            public void AddgraficovendasRow(graficovendasRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesRow AddsacolesRow(string sabor, int tipo, int quant, string preco) {
-                sacolesRow rowsacolesRow = ((sacolesRow)(this.NewRow()));
+            public graficovendasRow AddgraficovendasRow(string sabor, int quantidade) {
+                graficovendasRow rowgraficovendasRow = ((graficovendasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         sabor,
-                        tipo,
-                        quant,
-                        preco};
-                rowsacolesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsacolesRow);
-                return rowsacolesRow;
+                        quantidade};
+                rowgraficovendasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowgraficovendasRow);
+                return rowgraficovendasRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sacolesDataTable cln = ((sacolesDataTable)(base.Clone()));
+                graficovendasDataTable cln = ((graficovendasDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,16 +390,14 @@ namespace SistemaControleVendasSacoles {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sacolesDataTable();
+                return new graficovendasDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnsabor = base.Columns["sabor"];
-                this.columntipo = base.Columns["tipo"];
-                this.columnquant = base.Columns["quant"];
-                this.columnpreco = base.Columns["preco"];
+                this.columnquantidade = base.Columns["quantidade"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -429,44 +405,35 @@ namespace SistemaControleVendasSacoles {
             private void InitClass() {
                 this.columnsabor = new global::System.Data.DataColumn("sabor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsabor);
-                this.columntipo = new global::System.Data.DataColumn("tipo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipo);
-                this.columnquant = new global::System.Data.DataColumn("quant", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquant);
-                this.columnpreco = new global::System.Data.DataColumn("preco", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpreco);
-                this.columnsabor.AllowDBNull = false;
+                this.columnquantidade = new global::System.Data.DataColumn("quantidade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantidade);
                 this.columnsabor.MaxLength = 45;
-                this.columntipo.AllowDBNull = false;
-                this.columnquant.AllowDBNull = false;
-                this.columnpreco.AllowDBNull = false;
-                this.columnpreco.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesRow NewsacolesRow() {
-                return ((sacolesRow)(this.NewRow()));
+            public graficovendasRow NewgraficovendasRow() {
+                return ((graficovendasRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sacolesRow(builder);
+                return new graficovendasRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sacolesRow);
+                return typeof(graficovendasRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sacolesRowChanged != null)) {
-                    this.sacolesRowChanged(this, new sacolesRowChangeEvent(((sacolesRow)(e.Row)), e.Action));
+                if ((this.graficovendasRowChanged != null)) {
+                    this.graficovendasRowChanged(this, new graficovendasRowChangeEvent(((graficovendasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -474,8 +441,8 @@ namespace SistemaControleVendasSacoles {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sacolesRowChanging != null)) {
-                    this.sacolesRowChanging(this, new sacolesRowChangeEvent(((sacolesRow)(e.Row)), e.Action));
+                if ((this.graficovendasRowChanging != null)) {
+                    this.graficovendasRowChanging(this, new graficovendasRowChangeEvent(((graficovendasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -483,8 +450,8 @@ namespace SistemaControleVendasSacoles {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sacolesRowDeleted != null)) {
-                    this.sacolesRowDeleted(this, new sacolesRowChangeEvent(((sacolesRow)(e.Row)), e.Action));
+                if ((this.graficovendasRowDeleted != null)) {
+                    this.graficovendasRowDeleted(this, new graficovendasRowChangeEvent(((graficovendasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -492,14 +459,14 @@ namespace SistemaControleVendasSacoles {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sacolesRowDeleting != null)) {
-                    this.sacolesRowDeleting(this, new sacolesRowChangeEvent(((sacolesRow)(e.Row)), e.Action));
+                if ((this.graficovendasRowDeleting != null)) {
+                    this.graficovendasRowDeleting(this, new graficovendasRowChangeEvent(((graficovendasRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovesacolesRow(sacolesRow row) {
+            public void RemovegraficovendasRow(graficovendasRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -508,7 +475,7 @@ namespace SistemaControleVendasSacoles {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AdicionaProdSuc ds = new AdicionaProdSuc();
+                GraficoFULL ds = new GraficoFULL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -526,7 +493,7 @@ namespace SistemaControleVendasSacoles {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sacolesDataTable";
+                attribute2.FixedValue = "graficovendasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -570,59 +537,71 @@ namespace SistemaControleVendasSacoles {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sacolesRow : global::System.Data.DataRow {
+        public partial class graficovendasRow : global::System.Data.DataRow {
             
-            private sacolesDataTable tablesacoles;
+            private graficovendasDataTable tablegraficovendas;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal sacolesRow(global::System.Data.DataRowBuilder rb) : 
+            internal graficovendasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesacoles = ((sacolesDataTable)(this.Table));
+                this.tablegraficovendas = ((graficovendasDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string sabor {
                 get {
-                    return ((string)(this[this.tablesacoles.saborColumn]));
+                    try {
+                        return ((string)(this[this.tablegraficovendas.saborColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sabor\' in table \'graficovendas\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablesacoles.saborColumn] = value;
+                    this[this.tablegraficovendas.saborColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipo {
+            public int quantidade {
                 get {
-                    return ((int)(this[this.tablesacoles.tipoColumn]));
+                    try {
+                        return ((int)(this[this.tablegraficovendas.quantidadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'quantidade\' in table \'graficovendas\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablesacoles.tipoColumn] = value;
+                    this[this.tablegraficovendas.quantidadeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int quant {
-                get {
-                    return ((int)(this[this.tablesacoles.quantColumn]));
-                }
-                set {
-                    this[this.tablesacoles.quantColumn] = value;
-                }
+            public bool IssaborNull() {
+                return this.IsNull(this.tablegraficovendas.saborColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string preco {
-                get {
-                    return ((string)(this[this.tablesacoles.precoColumn]));
-                }
-                set {
-                    this[this.tablesacoles.precoColumn] = value;
-                }
+            public void SetsaborNull() {
+                this[this.tablegraficovendas.saborColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsquantidadeNull() {
+                return this.IsNull(this.tablegraficovendas.quantidadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetquantidadeNull() {
+                this[this.tablegraficovendas.quantidadeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -630,22 +609,22 @@ namespace SistemaControleVendasSacoles {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class sacolesRowChangeEvent : global::System.EventArgs {
+        public class graficovendasRowChangeEvent : global::System.EventArgs {
             
-            private sacolesRow eventRow;
+            private graficovendasRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesRowChangeEvent(sacolesRow row, global::System.Data.DataRowAction action) {
+            public graficovendasRowChangeEvent(graficovendasRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sacolesRow Row {
+            public graficovendasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -661,7 +640,7 @@ namespace SistemaControleVendasSacoles {
         }
     }
 }
-namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
+namespace SistemaControleVendasSacoles.GraficoFULLTableAdapters {
     
     
     /// <summary>
@@ -673,7 +652,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sacolesTableAdapter : global::System.ComponentModel.Component {
+    public partial class graficovendasTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -687,7 +666,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public sacolesTableAdapter() {
+        public graficovendasTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -784,11 +763,9 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sacoles";
+            tableMapping.DataSetTable = "graficovendas";
             tableMapping.ColumnMappings.Add("sabor", "sabor");
-            tableMapping.ColumnMappings.Add("tipo", "tipo");
-            tableMapping.ColumnMappings.Add("quant", "quant");
-            tableMapping.ColumnMappings.Add("preco", "preco");
+            tableMapping.ColumnMappings.Add("quantidade", "quantidade");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -805,8 +782,8 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `sabor`, `tipo`, `quant`, `preco` \r\nFROM `sacoles` \r\nWHERE tipo = 2 \r\nORDE" +
-                "R BY sabor asc";
+            this._commandCollection[0].CommandText = "SELECT `sabor`, `quantidade` \r\nFROM `graficovendas`\r\nORDER BY quantidade DESC\r\n\r\n" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -814,7 +791,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AdicionaProdSuc.sacolesDataTable dataTable) {
+        public virtual int Fill(GraficoFULL.graficovendasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -827,9 +804,9 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AdicionaProdSuc.sacolesDataTable GetData() {
+        public virtual GraficoFULL.graficovendasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AdicionaProdSuc.sacolesDataTable dataTable = new AdicionaProdSuc.sacolesDataTable();
+            GraficoFULL.graficovendasDataTable dataTable = new GraficoFULL.graficovendasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -903,7 +880,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(AdicionaProdSuc dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GraficoFULL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -913,7 +890,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(AdicionaProdSuc dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GraficoFULL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -923,7 +900,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(AdicionaProdSuc dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GraficoFULL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -957,7 +934,7 @@ namespace SistemaControleVendasSacoles.AdicionaProdSucTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(AdicionaProdSuc dataSet) {
+        public virtual int UpdateAll(GraficoFULL dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

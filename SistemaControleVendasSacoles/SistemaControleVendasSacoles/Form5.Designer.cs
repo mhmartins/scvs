@@ -84,16 +84,16 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(15, 173);
+            this.dgv.Location = new System.Drawing.Point(15, 59);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(669, 180);
+            this.dgv.Size = new System.Drawing.Size(394, 402);
             this.dgv.TabIndex = 5;
             // 
             // RelatorioSacoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 412);
+            this.ClientSize = new System.Drawing.Size(1140, 473);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

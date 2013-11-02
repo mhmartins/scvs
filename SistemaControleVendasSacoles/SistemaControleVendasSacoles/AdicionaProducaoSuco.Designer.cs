@@ -34,10 +34,18 @@
             System.Windows.Forms.Label precoLabel2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionaProducaoSuco));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbxValLiga = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tbxValAcucar = new System.Windows.Forms.TextBox();
             this.tbxSaco = new System.Windows.Forms.TextBox();
@@ -48,8 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.saborLabel3 = new System.Windows.Forms.Label();
-            this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adicionaProdSuc = new SistemaControleVendasSacoles.AdicionaProdSuc();
             this.quantTextBox1 = new System.Windows.Forms.TextBox();
             this.precoLabel3 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,8 +63,6 @@
             this.tbxQuantAdd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.sacolesTableAdapter = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.sacolesTableAdapter();
-            this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager();
             this.sacolesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -72,24 +76,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbxValLiga = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adicionaProdSuc = new SistemaControleVendasSacoles.AdicionaProdSuc();
+            this.sacolesTableAdapter = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.sacolesTableAdapter();
+            this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager();
+            this.label20 = new System.Windows.Forms.Label();
             saborLabel2 = new System.Windows.Forms.Label();
             quantLabel1 = new System.Windows.Forms.Label();
             precoLabel2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).BeginInit();
             this.sacolesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).BeginInit();
             this.SuspendLayout();
             // 
             // saborLabel2
@@ -134,6 +135,15 @@
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabela de Consulta de Custos";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(4, 83);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(301, 13);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Liga R$ 0,05 (Valor do quilo R$2,50, equivalente a 25 gramas)";
             // 
             // label12
             // 
@@ -186,6 +196,68 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Custos de Produção";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(145, 195);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 25);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "R$";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(145, 156);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 25);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "R$";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(145, 120);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 25);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "R$";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(145, 83);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 25);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "R$";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(145, 46);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 25);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "R$";
+            // 
+            // tbxValLiga
+            // 
+            this.tbxValLiga.Location = new System.Drawing.Point(183, 153);
+            this.tbxValLiga.Name = "tbxValLiga";
+            this.tbxValLiga.Size = new System.Drawing.Size(100, 31);
+            this.tbxValLiga.TabIndex = 15;
+            this.tbxValLiga.Text = "0,05";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(33, 156);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(59, 25);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Liga:";
             // 
             // label11
             // 
@@ -257,6 +329,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(saborLabel2);
             this.groupBox1.Controls.Add(this.saborLabel3);
             this.groupBox1.Controls.Add(quantLabel1);
@@ -281,16 +354,6 @@
             this.saborLabel3.TabIndex = 1;
             this.saborLabel3.Text = "-";
             // 
-            // sacolesBindingSource
-            // 
-            this.sacolesBindingSource.DataMember = "sacoles";
-            this.sacolesBindingSource.DataSource = this.adicionaProdSuc;
-            // 
-            // adicionaProdSuc
-            // 
-            this.adicionaProdSuc.DataSetName = "AdicionaProdSuc";
-            this.adicionaProdSuc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // quantTextBox1
             // 
             this.quantTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sacolesBindingSource, "quant", true));
@@ -305,7 +368,7 @@
             // 
             this.precoLabel3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sacolesBindingSource, "preco", true));
             this.precoLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precoLabel3.Location = new System.Drawing.Point(121, 153);
+            this.precoLabel3.Location = new System.Drawing.Point(163, 153);
             this.precoLabel3.Name = "precoLabel3";
             this.precoLabel3.Size = new System.Drawing.Size(100, 23);
             this.precoLabel3.TabIndex = 7;
@@ -343,11 +406,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 33);
+            this.label1.Location = new System.Drawing.Point(216, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(711, 42);
+            this.label1.Size = new System.Drawing.Size(766, 42);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Adicione a Produção dos Sacolés Suco";
+            this.label1.Text = "Adicione a Produção dos Sacolés de Suco";
             // 
             // button1
             // 
@@ -359,16 +422,6 @@
             this.button1.Text = "Salvar a Produção";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // sacolesTableAdapter
-            // 
-            this.sacolesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sacolesBindingNavigator
             // 
@@ -496,76 +549,35 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "label8";
             // 
-            // tbxValLiga
+            // sacolesBindingSource
             // 
-            this.tbxValLiga.Location = new System.Drawing.Point(183, 153);
-            this.tbxValLiga.Name = "tbxValLiga";
-            this.tbxValLiga.Size = new System.Drawing.Size(100, 31);
-            this.tbxValLiga.TabIndex = 15;
-            this.tbxValLiga.Text = "0,05";
+            this.sacolesBindingSource.DataMember = "sacoles";
+            this.sacolesBindingSource.DataSource = this.adicionaProdSuc;
             // 
-            // label17
+            // adicionaProdSuc
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(33, 156);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 25);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Liga:";
+            this.adicionaProdSuc.DataSetName = "AdicionaProdSuc";
+            this.adicionaProdSuc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label16
+            // sacolesTableAdapter
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 83);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(301, 13);
-            this.label16.TabIndex = 24;
-            this.label16.Text = "Liga R$ 0,05 (Valor do quilo R$2,50, equivalente a 25 gramas)";
+            this.sacolesTableAdapter.ClearBeforeFill = true;
             // 
-            // label18
+            // tableAdapterManager
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(145, 46);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(39, 25);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "R$";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // label13
+            // label20
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(145, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 25);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "R$";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(145, 120);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 25);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "R$";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(145, 156);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(39, 25);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "R$";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(145, 195);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 25);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "R$";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(123, 153);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 29);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "R$";
             // 
             // AdicionaProducaoSuco
             // 
@@ -584,7 +596,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "AdicionaProducaoSuco";
-            this.Text = "AdicionaProducaoSuco";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicionar a Producao dos Sacolés de Suco";
             this.Load += new System.EventHandler(this.AdicionaProducaoSuco_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -592,11 +605,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).EndInit();
             this.sacolesBindingNavigator.ResumeLayout(false);
             this.sacolesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,5 +664,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
     }
 }

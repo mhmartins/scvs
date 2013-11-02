@@ -16,13 +16,13 @@ namespace SistemaControleVendasSacoles
         {
             InitializeComponent();
             //inicia DATAGRID 
-            dgv.Columns.Add("sabor", "          Sacolés");
-            dgv.Columns.Add("quant", "    Quantidade");
-            dgv.Columns.Add("total", "        Total");
+            //dgv.Columns.Add("sabor", "          Sacolés");
+            //dgv.Columns.Add("quant", "    Quantidade");
+           // dgv.Columns.Add("total", "        Total");
             //define COLUNAS e LINHA do DATAGRID
-            dgv.Columns[0].Width = 250;
-            dgv.Columns[1].Width = 80;
-            dgv.Columns[2].Width = 129;
+           // dgv.Columns[0].Width = 250;
+           // dgv.Columns[1].Width = 80;
+           // dgv.Columns[2].Width = 129;
 
         }
 
@@ -33,11 +33,20 @@ namespace SistemaControleVendasSacoles
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string SQL = "SELECT sabor, SUM( quantidade ) AS quant FROM vendas_sacoles INNER JOIN sacoles ON vendas_sacoles.sacoles_idsacoles = sacoles.idSacoles INNER JOIN vendas ON vendas_sacoles.vendas_idvendas = vendas.idvendas WHERE data like '%2013%' GROUP BY sacoles.idSacoles ORDER BY quant DESC";
+            
             try
             {
+                string SQL1 = "INSERT INTO graficovendas SELECT idSacoles,sabor, SUM( quantidade ) AS quant FROM vendas_sacoles INNER JOIN sacoles ON vendas_sacoles.sacoles_idsacoles = sacoles.idSacoles && sacoles.tipo=1 INNER JOIN vendas ON vendas_sacoles.vendas_idvendas = vendas.idvendas WHERE data like '%2013%' GROUP BY sacoles.idSacoles ORDER BY quant DESC";
+                string SQL = "SELECT sabor, SUM( quantidade ) AS quant FROM vendas_sacoles INNER JOIN sacoles ON vendas_sacoles.sacoles_idsacoles = sacoles.idSacoles && sacoles.tipo=1 INNER JOIN vendas ON vendas_sacoles.vendas_idvendas = vendas.idvendas WHERE data like '%2013%' GROUP BY sacoles.idSacoles ORDER BY quant DESC";
+                
+                string SQL_APAGAR = "DELETE FROM graficovendas";
                 MySqlConnection combo10 = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
-                MySqlDataAdapter sql40 = new MySqlDataAdapter("select preco, quant from sacoles where idSacoles = '" + cmbxsacolescre.SelectedValue.ToString() + "'", combo10);
+                MySqlDataAdapter sql40 = new MySqlDataAdapter(SQL, combo10);
+                MySqlCommand comandos = new MySqlCommand(SQL1, combo10);
+                MySqlCommand comandodrop = new MySqlCommand(SQL_APAGAR, combo10);
+                combo10.Open();
+                comandodrop.ExecuteNonQuery();
+                comandos.ExecuteNonQuery();
                 DataTable dt40 = new DataTable();
                 //int rt = 0;
                 //string lcSQL = "SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1";
@@ -52,19 +61,29 @@ namespace SistemaControleVendasSacoles
                        dr.GetInt32(0);
                    }
                    */
+
+              //  while (Reader.Read())
+               // {
+                 //   label1.Content = "" + Reader.GetString(0);
+              //  }
+                //connection.Close(); 
                 sql40.Fill(dt40);
                 BindingSource source = new BindingSource();
-                source.DataSource = dt40;
+                dgv.DataSource = dt40;
+                //source.DataSource = dt40;
+                //dgv.Rows.Add(cmbxsacolescre.Text, nupdowCre.Text, "R$ " + (String.Format("{0:0.00}", Resultado)));
 
-                this.tbxValCre.DataBindings.Add("Text", source, "preco", true);
-                this.tbxEstCre.DataBindings.Add("Text", source, "quant", true);
-                nupdowCre.Maximum = int.Parse(tbxEstCre.Text);
+                //nupdowCre.Maximum = int.Parse(tbxEstCre.Text);
                 combo10.Close();
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                ex.Message.ToString();
+
+                MessageBox.Show("Erro!!" + ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            Form4 form = new Form4();
+            form.Show();
             //$result = mysql_query($query) or die(mysql_error());
         }
     }

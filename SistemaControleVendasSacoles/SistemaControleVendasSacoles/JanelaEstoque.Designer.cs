@@ -78,7 +78,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 35);
             this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "11111111";
             // 
             // textBox3
             // 
@@ -87,7 +86,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 35);
             this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "20131027";
             // 
             // btnConsultarMes
             // 
@@ -296,9 +294,8 @@
             this.labelBruto.AutoSize = true;
             this.labelBruto.Location = new System.Drawing.Point(53, 143);
             this.labelBruto.Name = "labelBruto";
-            this.labelBruto.Size = new System.Drawing.Size(113, 29);
+            this.labelBruto.Size = new System.Drawing.Size(0, 29);
             this.labelBruto.TabIndex = 6;
-            this.labelBruto.Text = "resultado";
             this.labelBruto.Visible = false;
             // 
             // labelLiquido
@@ -306,9 +303,8 @@
             this.labelLiquido.AutoSize = true;
             this.labelLiquido.Location = new System.Drawing.Point(53, 223);
             this.labelLiquido.Name = "labelLiquido";
-            this.labelLiquido.Size = new System.Drawing.Size(113, 29);
+            this.labelLiquido.Size = new System.Drawing.Size(0, 29);
             this.labelLiquido.TabIndex = 5;
-            this.labelLiquido.Text = "resultado";
             this.labelLiquido.Visible = false;
             // 
             // label8
@@ -326,9 +322,8 @@
             this.labelCusto.AutoSize = true;
             this.labelCusto.Location = new System.Drawing.Point(53, 73);
             this.labelCusto.Name = "labelCusto";
-            this.labelCusto.Size = new System.Drawing.Size(113, 29);
+            this.labelCusto.Size = new System.Drawing.Size(0, 29);
             this.labelCusto.TabIndex = 3;
-            this.labelCusto.Text = "resultado";
             this.labelCusto.Visible = false;
             // 
             // label6
@@ -381,7 +376,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "PesquisaPersonalizada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pesquisa Personalizada";
+            this.Text = "Pesquisa Financeira Personalizada";
             this.Load += new System.EventHandler(this.JanelaEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupdowAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowANOpesq)).EndInit();

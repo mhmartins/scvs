@@ -56,6 +56,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.tbxValLiga = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -79,12 +85,7 @@
             this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdTableAdapters.TableAdapterManager();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             saborLabel = new System.Windows.Forms.Label();
             quantLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
@@ -170,7 +171,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(60, 30);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -196,13 +197,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 30);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -217,7 +218,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -225,7 +226,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 30);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -234,13 +235,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 30);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // saborLabel1
             // 
@@ -266,7 +267,7 @@
             // 
             this.precoLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sacolesBindingSource, "preco", true));
             this.precoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precoLabel1.Location = new System.Drawing.Point(132, 157);
+            this.precoLabel1.Location = new System.Drawing.Point(172, 157);
             this.precoLabel1.Name = "precoLabel1";
             this.precoLabel1.Size = new System.Drawing.Size(156, 32);
             this.precoLabel1.TabIndex = 8;
@@ -287,7 +288,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 34);
+            this.label1.Location = new System.Drawing.Point(200, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(799, 42);
             this.label1.TabIndex = 10;
@@ -323,6 +324,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.saborLabel1);
             this.groupBox1.Controls.Add(this.precoLabel1);
             this.groupBox1.Controls.Add(precoLabel);
@@ -364,6 +366,60 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Custos de Produção";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(148, 228);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(39, 25);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "R$";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(148, 190);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(39, 25);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "R$";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(148, 153);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 25);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "R$";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(148, 115);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 25);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "R$";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(148, 75);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 25);
+            this.label19.TabIndex = 15;
+            this.label19.Text = "R$";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(148, 41);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 25);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "R$";
             // 
             // tbxValLiga
             // 
@@ -474,12 +530,13 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 364);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(364, 112);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tabela de Consulta de Custos";
+            this.groupBox3.Text = "Atenção! Tabela de Consulta de Custos ";
             // 
             // label16
             // 
@@ -563,59 +620,15 @@
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 20;
             // 
-            // label18
+            // label24
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(148, 41);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(39, 25);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "R$";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(148, 75);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 25);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "R$";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(148, 115);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 25);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "R$";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(148, 153);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 25);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "R$";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(148, 190);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 25);
-            this.label22.TabIndex = 18;
-            this.label22.Text = "R$";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(148, 228);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 25);
-            this.label23.TabIndex = 19;
-            this.label23.Text = "R$";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(132, 157);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 29);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "R$";
             // 
             // AdicionarProducao
             // 
@@ -635,7 +648,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sacolesBindingNavigator);
             this.Name = "AdicionarProducao";
-            this.Text = "AdicionarProducao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicione a Produção do Sacolés Cremosos";
             this.Load += new System.EventHandler(this.AdicionarProducao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).EndInit();
             this.sacolesBindingNavigator.ResumeLayout(false);
@@ -707,5 +721,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label24;
     }
 }

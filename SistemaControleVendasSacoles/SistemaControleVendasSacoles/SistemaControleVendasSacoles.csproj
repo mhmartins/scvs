@@ -120,6 +120,12 @@
     <Compile Include="Consulta.Designer.cs">
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaPorGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaPorGrafico.Designer.cs">
+      <DependentUpon>ConsultaPorGrafico.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO.cs" />
     <Compile Include="AlterareExcluir.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FatuAno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FatuAno.Designer.cs">
+      <DependentUpon>FatuAno.cs</DependentUpon>
     </Compile>
     <Compile Include="FatuMes.cs">
       <SubType>Form</SubType>
@@ -163,11 +175,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="ConsultarVendasVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="ConsultarVendasVendedor.Designer.cs">
+      <DependentUpon>ConsultarVendasVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
@@ -186,6 +198,11 @@
     </Compile>
     <Compile Include="frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoFULL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GraficoFULL.xsd</DependentUpon>
     </Compile>
     <Compile Include="graficos.cs">
       <SubType>Form</SubType>
@@ -278,8 +295,14 @@
     <EmbeddedResource Include="AlterareExcluir.resx">
       <DependentUpon>AlterareExcluir.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaPorGrafico.resx">
+      <DependentUpon>ConsultaPorGrafico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExibirVenda.resx">
       <DependentUpon>ExibirVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FatuAno.resx">
+      <DependentUpon>FatuAno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FatuMes.resx">
       <DependentUpon>FatuMes.cs</DependentUpon>
@@ -293,8 +316,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultarVendasVendedor.resx">
+      <DependentUpon>ConsultarVendasVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
@@ -411,6 +434,17 @@
     <None Include="exibir_venda.xss">
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GraficoFULL.xsc">
+      <DependentUpon>GraficoFULL.xsd</DependentUpon>
+    </None>
+    <None Include="GraficoFULL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GraficoFULL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GraficoFULL.xss">
+      <DependentUpon>GraficoFULL.xsd</DependentUpon>
     </None>
     <None Include="GraficoVendasSacoles.xsc">
       <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>

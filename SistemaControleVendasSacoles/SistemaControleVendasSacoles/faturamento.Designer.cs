@@ -103,7 +103,7 @@
             this.MaximizeBox = false;
             this.Name = "faturamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Faturamento";
+            this.Text = "Faturamento do Dia";
             this.Load += new System.EventHandler(this.faturamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

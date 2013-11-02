@@ -12,7 +12,10 @@
               <DbSource ConnectionRef="banco_rr_sacolesConnectionString (Settings)" DbObjectName="banco_rr_sacoles.sacoles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `sabor`, `tipo`, `quant`, `preco` FROM `sacoles`  WHERE tipo = 1 ORDER BY sabor</CommandText>
+                    <CommandText>SELECT `sabor`, `tipo`, `quant`, `preco` 
+FROM `sacoles`  
+WHERE tipo = 1 
+ORDER BY sabor asc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -34,7 +37,7 @@
   <xs:element name="AdicionaProd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AdicionaProd" msprop:Generator_UserDSName="AdicionaProd">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="sacoles" msprop:Generator_TableClassName="sacolesDataTable" msprop:Generator_TableVarName="tablesacoles" msprop:Generator_RowChangedName="sacolesRowChanged" msprop:Generator_TablePropName="sacoles" msprop:Generator_RowDeletingName="sacolesRowDeleting" msprop:Generator_RowChangingName="sacolesRowChanging" msprop:Generator_RowEvHandlerName="sacolesRowChangeEventHandler" msprop:Generator_RowDeletedName="sacolesRowDeleted" msprop:Generator_RowClassName="sacolesRow" msprop:Generator_UserTableName="sacoles" msprop:Generator_RowEvArgName="sacolesRowChangeEvent">
+        <xs:element name="sacoles" msprop:Generator_TableClassName="sacolesDataTable" msprop:Generator_TableVarName="tablesacoles" msprop:Generator_TablePropName="sacoles" msprop:Generator_RowDeletingName="sacolesRowDeleting" msprop:Generator_RowChangingName="sacolesRowChanging" msprop:Generator_RowEvHandlerName="sacolesRowChangeEventHandler" msprop:Generator_RowDeletedName="sacolesRowDeleted" msprop:Generator_UserTableName="sacoles" msprop:Generator_RowChangedName="sacolesRowChanged" msprop:Generator_RowEvArgName="sacolesRowChangeEvent" msprop:Generator_RowClassName="sacolesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="sabor" msprop:Generator_ColumnVarNameInTable="columnsabor" msprop:Generator_ColumnPropNameInRow="sabor" msprop:Generator_ColumnPropNameInTable="saborColumn" msprop:Generator_UserColumnName="sabor">

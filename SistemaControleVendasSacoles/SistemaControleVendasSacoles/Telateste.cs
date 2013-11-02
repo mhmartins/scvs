@@ -15,10 +15,10 @@ using System.Globalization;
 // colocar o R$ OK
 // iniciar o mdi OK
 // colorir o layout
-// facilidade 
+// facilidade OK
 // desabilitar campos OK
 // separar campos OK
-// definir parametros para datas do grafico
+// definir parametros para datas do grafico 
 // trabalhar no update das tabelas OK
 // ajustar telas de excluir e alterar estoque...botões
 // organizar grid por tipo(na consulta)

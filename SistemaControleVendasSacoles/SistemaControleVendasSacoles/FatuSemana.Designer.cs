@@ -65,6 +65,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -109,7 +110,8 @@
             this.Controls.Add(this.tbxFaturamento);
             this.Controls.Add(this.label1);
             this.Name = "FatuSemana";
-            this.Text = "FatuSemana";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Faturamento da Semana";
             this.Load += new System.EventHandler(this.FatuSemana_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
