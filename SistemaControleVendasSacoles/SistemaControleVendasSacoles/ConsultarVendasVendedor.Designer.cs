@@ -30,10 +30,10 @@
         {
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.labelBruto = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelCusto = new System.Windows.Forms.Label();
+            this.labelQuant = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,10 +50,14 @@
             this.btnConsultarMes = new System.Windows.Forms.Button();
             this.nupdowAno = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxUser = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowANOpesq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowAno)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -68,19 +72,27 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.labelBruto);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.labelCusto);
+            this.groupBox2.Controls.Add(this.labelQuant);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(695, 130);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(452, 291);
+            this.groupBox2.Size = new System.Drawing.Size(528, 291);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultado";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 29);
+            this.label8.TabIndex = 8;
             // 
             // label11
             // 
@@ -97,28 +109,20 @@
             this.labelBruto.AutoSize = true;
             this.labelBruto.Location = new System.Drawing.Point(53, 180);
             this.labelBruto.Name = "labelBruto";
-            this.labelBruto.Size = new System.Drawing.Size(0, 29);
+            this.labelBruto.Size = new System.Drawing.Size(106, 29);
             this.labelBruto.TabIndex = 6;
+            this.labelBruto.Text = "Let\'s Go!";
             this.labelBruto.Visible = false;
             // 
-            // label8
+            // labelQuant
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 110);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 29);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "R$";
-            this.label8.Visible = false;
-            // 
-            // labelCusto
-            // 
-            this.labelCusto.AutoSize = true;
-            this.labelCusto.Location = new System.Drawing.Point(53, 110);
-            this.labelCusto.Name = "labelCusto";
-            this.labelCusto.Size = new System.Drawing.Size(0, 29);
-            this.labelCusto.TabIndex = 3;
-            this.labelCusto.Visible = false;
+            this.labelQuant.AutoSize = true;
+            this.labelQuant.Location = new System.Drawing.Point(7, 110);
+            this.labelQuant.Name = "labelQuant";
+            this.labelQuant.Size = new System.Drawing.Size(106, 29);
+            this.labelQuant.TabIndex = 3;
+            this.labelQuant.Text = "Let\'s Go!";
+            this.labelQuant.Visible = false;
             // 
             // label6
             // 
@@ -135,9 +139,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(7, 81);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 29);
+            this.label4.Size = new System.Drawing.Size(373, 29);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Quantidade Vendida";
+            this.label4.Text = "Quantidade de Sacolés Vendidos";
             this.label4.Visible = false;
             // 
             // groupBox1
@@ -156,9 +160,9 @@
             this.groupBox1.Controls.Add(this.nupdowAno);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(112, 130);
+            this.groupBox1.Location = new System.Drawing.Point(12, 224);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 291);
+            this.groupBox1.Size = new System.Drawing.Size(577, 282);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione o período";
@@ -200,6 +204,7 @@
             this.btnConsultaAno.TabIndex = 20;
             this.btnConsultaAno.Text = "Consultar";
             this.btnConsultaAno.UseVisualStyleBackColor = true;
+            this.btnConsultaAno.Click += new System.EventHandler(this.btnConsultaAno_Click);
             // 
             // label1
             // 
@@ -220,11 +225,13 @@
             this.btnConsultaPeriodo.TabIndex = 19;
             this.btnConsultaPeriodo.Text = "Consultar";
             this.btnConsultaPeriodo.UseVisualStyleBackColor = true;
+            this.btnConsultaPeriodo.Click += new System.EventHandler(this.btnConsultaPeriodo_Click);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(6, 63);
+            this.textBox2.MaxLength = 10;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 35);
             this.textBox2.TabIndex = 9;
@@ -243,6 +250,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(205, 63);
+            this.textBox3.MaxLength = 10;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 35);
             this.textBox3.TabIndex = 10;
@@ -279,6 +287,7 @@
             this.btnConsultarMes.TabIndex = 12;
             this.btnConsultarMes.Text = "Consultar";
             this.btnConsultarMes.UseVisualStyleBackColor = true;
+            this.btnConsultarMes.Click += new System.EventHandler(this.btnConsultarMes_Click);
             // 
             // nupdowAno
             // 
@@ -325,15 +334,48 @@
             this.comboBox1.Size = new System.Drawing.Size(175, 39);
             this.comboBox1.TabIndex = 15;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 29);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Vendedor";
+            // 
+            // cbxUser
+            // 
+            this.cbxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxUser.FormattingEnabled = true;
+            this.cbxUser.Location = new System.Drawing.Point(6, 73);
+            this.cbxUser.Name = "cbxUser";
+            this.cbxUser.Size = new System.Drawing.Size(251, 37);
+            this.cbxUser.TabIndex = 34;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.cbxUser);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.groupBox3.Location = new System.Drawing.Point(12, 89);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(577, 117);
+            this.groupBox3.TabIndex = 36;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Selecione o vendedor";
+            // 
             // ConsultarVendasVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 471);
+            this.ClientSize = new System.Drawing.Size(1258, 518);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarVendasVendedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Vendas dos Vendedores";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -341,6 +383,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowANOpesq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupdowAno)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,8 +396,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelBruto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelCusto;
+        private System.Windows.Forms.Label labelQuant;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -370,6 +413,10 @@
         private System.Windows.Forms.Button btnConsultarMes;
         private System.Windows.Forms.NumericUpDown nupdowAno;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxUser;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
 
 
     }

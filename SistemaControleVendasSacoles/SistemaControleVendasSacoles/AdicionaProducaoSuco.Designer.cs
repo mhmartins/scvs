@@ -55,7 +55,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.saborLabel3 = new System.Windows.Forms.Label();
+            this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adicionaProdSuc = new SistemaControleVendasSacoles.AdicionaProdSuc();
             this.quantTextBox1 = new System.Windows.Forms.TextBox();
             this.precoLabel3 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,21 +79,18 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adicionaProdSuc = new SistemaControleVendasSacoles.AdicionaProdSuc();
             this.sacolesTableAdapter = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.sacolesTableAdapter();
             this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager();
-            this.label20 = new System.Windows.Forms.Label();
             saborLabel2 = new System.Windows.Forms.Label();
             quantLabel1 = new System.Windows.Forms.Label();
             precoLabel2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).BeginInit();
-            this.sacolesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).BeginInit();
+            this.sacolesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // saborLabel2
@@ -249,6 +249,7 @@
             this.tbxValLiga.Size = new System.Drawing.Size(100, 31);
             this.tbxValLiga.TabIndex = 15;
             this.tbxValLiga.Text = "0,05";
+            this.tbxValLiga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxValLiga_KeyPress);
             // 
             // label17
             // 
@@ -275,6 +276,7 @@
             this.tbxValAcucar.Size = new System.Drawing.Size(100, 31);
             this.tbxValAcucar.TabIndex = 8;
             this.tbxValAcucar.Text = "0,73";
+            this.tbxValAcucar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxValAcucar_KeyPress);
             // 
             // tbxSaco
             // 
@@ -283,6 +285,7 @@
             this.tbxSaco.Size = new System.Drawing.Size(100, 31);
             this.tbxSaco.TabIndex = 7;
             this.tbxSaco.Text = "0,50";
+            this.tbxSaco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxSaco_KeyPress);
             // 
             // label7
             // 
@@ -300,6 +303,7 @@
             this.tbxOutros.Size = new System.Drawing.Size(100, 31);
             this.tbxOutros.TabIndex = 5;
             this.tbxOutros.Text = "0";
+            this.tbxOutros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxOutros_KeyPress);
             // 
             // tbxEssencia
             // 
@@ -308,6 +312,7 @@
             this.tbxEssencia.Size = new System.Drawing.Size(100, 31);
             this.tbxEssencia.TabIndex = 4;
             this.tbxEssencia.Text = "0,30";
+            this.tbxEssencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxEssencia_KeyPress);
             // 
             // label6
             // 
@@ -344,6 +349,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto em Estoque";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(123, 153);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 29);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "R$";
+            // 
             // saborLabel3
             // 
             this.saborLabel3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sacolesBindingSource, "sabor", true));
@@ -353,6 +368,16 @@
             this.saborLabel3.Size = new System.Drawing.Size(207, 23);
             this.saborLabel3.TabIndex = 1;
             this.saborLabel3.Text = "-";
+            // 
+            // sacolesBindingSource
+            // 
+            this.sacolesBindingSource.DataMember = "sacoles";
+            this.sacolesBindingSource.DataSource = this.adicionaProdSuc;
+            // 
+            // adicionaProdSuc
+            // 
+            this.adicionaProdSuc.DataSetName = "AdicionaProdSuc";
+            this.adicionaProdSuc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // quantTextBox1
             // 
@@ -401,6 +426,7 @@
             this.tbxQuantAdd.Name = "tbxQuantAdd";
             this.tbxQuantAdd.Size = new System.Drawing.Size(100, 35);
             this.tbxQuantAdd.TabIndex = 21;
+            this.tbxQuantAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxQuantAdd_KeyPress);
             // 
             // label1
             // 
@@ -549,16 +575,6 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "label8";
             // 
-            // sacolesBindingSource
-            // 
-            this.sacolesBindingSource.DataMember = "sacoles";
-            this.sacolesBindingSource.DataSource = this.adicionaProdSuc;
-            // 
-            // adicionaProdSuc
-            // 
-            this.adicionaProdSuc.DataSetName = "AdicionaProdSuc";
-            this.adicionaProdSuc.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sacolesTableAdapter
             // 
             this.sacolesTableAdapter.ClearBeforeFill = true;
@@ -568,16 +584,6 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(123, 153);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 29);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "R$";
             // 
             // AdicionaProducaoSuco
             // 
@@ -605,11 +611,11 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingNavigator)).EndInit();
             this.sacolesBindingNavigator.ResumeLayout(false);
             this.sacolesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adicionaProdSuc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

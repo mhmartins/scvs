@@ -87,7 +87,6 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Properties.Resources.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Telateste.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.vend.resources
-C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.Vendas.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas1.Designer.cs
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas.xsc
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\bin\Debug\vendas.xsd
@@ -114,3 +113,5 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.ConsultaPorGrafico.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.ConsultarVendasVendedor.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.FatuAno.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.GraficoEstSuco.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.EstoqueTabelas.resources

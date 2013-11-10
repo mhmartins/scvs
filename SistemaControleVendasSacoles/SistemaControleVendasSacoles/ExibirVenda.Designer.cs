@@ -58,13 +58,13 @@
             this.dataMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.vendas_sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendas_sacolesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.usuariosTableAdapter();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idvendasLabel = new System.Windows.Forms.Label();
             usuarios_idusuariosLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
@@ -281,6 +281,7 @@
             this.usuarios_idusuariosComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "usuarios_idusuarios", true));
             this.usuarios_idusuariosComboBox.DataSource = this.usuariosBindingSource;
             this.usuarios_idusuariosComboBox.DisplayMember = "nome";
+            this.usuarios_idusuariosComboBox.Enabled = false;
             this.usuarios_idusuariosComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarios_idusuariosComboBox.FormattingEnabled = true;
             this.usuarios_idusuariosComboBox.Location = new System.Drawing.Point(493, 63);
@@ -297,6 +298,7 @@
             // dataMaskedTextBox
             // 
             this.dataMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "data", true));
+            this.dataMaskedTextBox.Enabled = false;
             this.dataMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataMaskedTextBox.Location = new System.Drawing.Point(493, 106);
             this.dataMaskedTextBox.Name = "dataMaskedTextBox";
@@ -319,24 +321,33 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.vendas_sacolesDataGridView.DataSource = this.vendas_sacolesBindingSource;
+            this.vendas_sacolesDataGridView.Enabled = false;
             this.vendas_sacolesDataGridView.Location = new System.Drawing.Point(314, 165);
             this.vendas_sacolesDataGridView.Name = "vendas_sacolesDataGridView";
             this.vendas_sacolesDataGridView.RowHeadersVisible = false;
             this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(405, 256);
             this.vendas_sacolesDataGridView.TabIndex = 7;
             // 
-            // dataGridViewTextBoxColumn1
+            // ProdutosBindingSource
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "vendas_sacID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "vendas_sacID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.ProdutosBindingSource.DataMember = "sacoles";
+            this.ProdutosBindingSource.DataSource = this.exibir_venda;
             // 
-            // dataGridViewTextBoxColumn2
+            // usuariosTableAdapter
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
-            this.dataGridViewTextBoxColumn2.HeaderText = "N. da Venda";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -349,26 +360,18 @@
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "idSacoles";
             // 
-            // ProdutosBindingSource
+            // dataGridViewTextBoxColumn2
             // 
-            this.ProdutosBindingSource.DataMember = "sacoles";
-            this.ProdutosBindingSource.DataSource = this.exibir_venda;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "N. da Venda";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // ExibirVenda
             // 

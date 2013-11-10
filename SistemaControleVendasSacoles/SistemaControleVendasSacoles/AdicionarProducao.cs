@@ -136,5 +136,68 @@ namespace SistemaControleVendasSacoles
             }
         }
 
+        private void tbxQuantAdd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxLeite_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxSaco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxEssencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxValAcucar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxValLiga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxOutros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

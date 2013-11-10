@@ -495,6 +495,7 @@ namespace SistemaControleVendasSacoles
                         MySqlConnection conexao = new MySqlConnection("SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;");
                         conexao.Open();
                         string inserir = "INSERT into vendas(usuarios_idusuarios, data) values ('" + cbxUser.SelectedValue.ToString() + "','" + sData1 + "')";
+                       // String insVen = "INSERT into vendidosvendedor(idvendedor, data) values ('" + cbxUser.SelectedValue.ToString() + "','" + sData1 + "')";
                         MySqlCommand comandos = new MySqlCommand(inserir, conexao);
                         //MySqlDataAdapter select = new MySqlDataAdapter("SELECT idvendas FROM vendas ORDER BY idvendas DESC LIMIT 1", conexao);
                         comandos.ExecuteNonQuery();
@@ -615,7 +616,7 @@ namespace SistemaControleVendasSacoles
             string sData = "";
             string sData1 = pegadata(sData);
             string valor = valorTotal.ToString("N", new CultureInfo("en-US")); //CONVERTE O VALOR PARA REAL
-            MessageBox.Show("Venda " + valor, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Venda " + valor, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
                 //inicio do SQL
@@ -649,10 +650,10 @@ namespace SistemaControleVendasSacoles
                     source1.DataSource = dt1;
                     this.textBox9.DataBindings.Add("Text", source1, "total", true);
                     float soma = (float.Parse(textBox9.Text) + valorTotal);
-                    MessageBox.Show("Venda " + soma, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Venda " + soma, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     string valor2 = soma.ToString("N", new CultureInfo("en-US")); //CONVERTE O VALOR PARA REAL
-                    MessageBox.Show("Venda " + valor2, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // MessageBox.Show("Venda " + valor2, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     string UPDATE = "UPDATE faturamento SET total = '" + valor2 + "' WHERE data = '" + sData1 + "'";
                     MySqlCommand comandoAtualiza = new MySqlCommand(UPDATE, conexao3);
                     comandoAtualiza.ExecuteNonQuery();
@@ -705,5 +706,6 @@ namespace SistemaControleVendasSacoles
                 e.Handled = true;
             }
         }
+
     }
 }

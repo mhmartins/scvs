@@ -133,6 +133,22 @@
     <Compile Include="AlterareExcluir.Designer.cs">
       <DependentUpon>AlterareExcluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstoqueCremoso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstoqueCremoso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EstoqueSuco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstoqueSuco.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EstoqueTabelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstoqueTabelas.Designer.cs">
+      <DependentUpon>EstoqueTabelas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExibirVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +215,12 @@
     <Compile Include="frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraficoEstSuco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoEstSuco.Designer.cs">
+      <DependentUpon>GraficoEstSuco.cs</DependentUpon>
+    </Compile>
     <Compile Include="GraficoFULL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,6 +236,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrafoEstCremoso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrafoEstCremoso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrafoEstSuco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrafoEstSuco.xsd</DependentUpon>
     </Compile>
     <Compile Include="GrafoSacQuant.cs" />
     <Compile Include="Grafo_Estoque.cs">
@@ -268,12 +300,6 @@
       <DependentUpon>vend.cs</DependentUpon>
     </Compile>
     <Compile Include="Vendacs.cs" />
-    <Compile Include="Vendas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vendas.Designer.cs">
-      <DependentUpon>Vendas.cs</DependentUpon>
-    </Compile>
     <Compile Include="vendas1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -297,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPorGrafico.resx">
       <DependentUpon>ConsultaPorGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstoqueTabelas.resx">
+      <DependentUpon>EstoqueTabelas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExibirVenda.resx">
       <DependentUpon>ExibirVenda.cs</DependentUpon>
@@ -328,6 +357,9 @@
     <EmbeddedResource Include="frmVendas.resx">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GraficoEstSuco.resx">
+      <DependentUpon>GraficoEstSuco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="graficos.resx">
       <DependentUpon>graficos.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,9 +390,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vend.resx">
       <DependentUpon>vend.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vendas.resx">
-      <DependentUpon>Vendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AdicionaProd.xsc">
       <DependentUpon>AdicionaProd.xsd</DependentUpon>
@@ -421,6 +450,28 @@
     <None Include="banco_rr_sacolesDataSet1.xss">
       <DependentUpon>banco_rr_sacolesDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="EstoqueCremoso.xsc">
+      <DependentUpon>EstoqueCremoso.xsd</DependentUpon>
+    </None>
+    <None Include="EstoqueCremoso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstoqueCremoso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstoqueCremoso.xss">
+      <DependentUpon>EstoqueCremoso.xsd</DependentUpon>
+    </None>
+    <None Include="EstoqueSuco.xsc">
+      <DependentUpon>EstoqueSuco.xsd</DependentUpon>
+    </None>
+    <None Include="EstoqueSuco.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstoqueSuco.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstoqueSuco.xss">
+      <DependentUpon>EstoqueSuco.xsd</DependentUpon>
+    </None>
     <None Include="exibir_venda.xsc">
       <DependentUpon>exibir_venda.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -456,6 +507,28 @@
     </None>
     <None Include="GraficoVendasSacoles.xss">
       <DependentUpon>GraficoVendasSacoles.xsd</DependentUpon>
+    </None>
+    <None Include="GrafoEstCremoso.xsc">
+      <DependentUpon>GrafoEstCremoso.xsd</DependentUpon>
+    </None>
+    <None Include="GrafoEstCremoso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrafoEstCremoso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GrafoEstCremoso.xss">
+      <DependentUpon>GrafoEstCremoso.xsd</DependentUpon>
+    </None>
+    <None Include="GrafoEstSuco.xsc">
+      <DependentUpon>GrafoEstSuco.xsd</DependentUpon>
+    </None>
+    <None Include="GrafoEstSuco.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrafoEstSuco.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GrafoEstSuco.xss">
+      <DependentUpon>GrafoEstSuco.xsd</DependentUpon>
     </None>
     <None Include="Grafo_Estoque.xsc">
       <DependentUpon>Grafo_Estoque.xsd</DependentUpon>

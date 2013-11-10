@@ -55,6 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@
             this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdTableAdapters.TableAdapterManager();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             saborLabel = new System.Windows.Forms.Label();
             quantLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
@@ -301,6 +301,7 @@
             this.tbxQuantAdd.Name = "tbxQuantAdd";
             this.tbxQuantAdd.Size = new System.Drawing.Size(100, 35);
             this.tbxQuantAdd.TabIndex = 11;
+            this.tbxQuantAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxQuantAdd_KeyPress);
             // 
             // label2
             // 
@@ -338,6 +339,16 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto em Estoque";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(132, 157);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 29);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "R$";
             // 
             // groupBox2
             // 
@@ -428,6 +439,7 @@
             this.tbxValLiga.Size = new System.Drawing.Size(100, 31);
             this.tbxValLiga.TabIndex = 13;
             this.tbxValLiga.Text = "0,05";
+            this.tbxValLiga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxValLiga_KeyPress);
             // 
             // label17
             // 
@@ -454,6 +466,7 @@
             this.tbxValAcucar.Size = new System.Drawing.Size(100, 31);
             this.tbxValAcucar.TabIndex = 10;
             this.tbxValAcucar.Text = "0,73";
+            this.tbxValAcucar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxValAcucar_KeyPress);
             // 
             // tbxSaco
             // 
@@ -462,6 +475,7 @@
             this.tbxSaco.Size = new System.Drawing.Size(100, 31);
             this.tbxSaco.TabIndex = 7;
             this.tbxSaco.Text = "0,50";
+            this.tbxSaco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxSaco_KeyPress);
             // 
             // label7
             // 
@@ -479,6 +493,7 @@
             this.tbxOutros.Size = new System.Drawing.Size(100, 31);
             this.tbxOutros.TabIndex = 5;
             this.tbxOutros.Text = "0";
+            this.tbxOutros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxOutros_KeyPress);
             // 
             // tbxEssencia
             // 
@@ -487,6 +502,7 @@
             this.tbxEssencia.Size = new System.Drawing.Size(100, 31);
             this.tbxEssencia.TabIndex = 4;
             this.tbxEssencia.Text = "0,31";
+            this.tbxEssencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxEssencia_KeyPress);
             // 
             // label6
             // 
@@ -513,6 +529,7 @@
             this.tbxLeite.Size = new System.Drawing.Size(100, 31);
             this.tbxLeite.TabIndex = 1;
             this.tbxLeite.Text = "4,30";
+            this.tbxLeite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxLeite_KeyPress);
             // 
             // label4
             // 
@@ -619,16 +636,6 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 20;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(132, 157);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 29);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "R$";
             // 
             // AdicionarProducao
             // 

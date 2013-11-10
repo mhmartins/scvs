@@ -602,5 +602,33 @@ namespace SistemaControleVendasSacoles
             }
             catch { }
         }
+
+        private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarVendasVendedor form = new ConsultarVendasVendedor();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void cremosoToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            graficos form = new graficos();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void sucoToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            GraficoEstSuco form = new GraficoEstSuco();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void cremosoToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            EstoqueTabelas form = new EstoqueTabelas();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

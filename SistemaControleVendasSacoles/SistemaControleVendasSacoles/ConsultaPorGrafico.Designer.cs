@@ -129,6 +129,7 @@
             this.btnConsultaAno.TabIndex = 20;
             this.btnConsultaAno.Text = "Consultar";
             this.btnConsultaAno.UseVisualStyleBackColor = true;
+            this.btnConsultaAno.Click += new System.EventHandler(this.btnConsultaAno_Click);
             // 
             // label1
             // 
@@ -157,6 +158,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 35);
             this.textBox2.TabIndex = 9;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label3
             // 
@@ -175,6 +177,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 35);
             this.textBox3.TabIndex = 10;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // nupdowANOpesq
             // 
@@ -208,6 +212,7 @@
             this.btnConsultarMes.TabIndex = 12;
             this.btnConsultarMes.Text = "Consultar";
             this.btnConsultarMes.UseVisualStyleBackColor = true;
+            this.btnConsultarMes.Click += new System.EventHandler(this.btnConsultarMes_Click);
             // 
             // nupdowAno
             // 

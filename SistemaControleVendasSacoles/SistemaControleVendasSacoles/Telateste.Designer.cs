@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Telateste));
             this.AddCre = new System.Windows.Forms.Button();
             this.cmbxsacolescre = new System.Windows.Forms.ComboBox();
             this.cbxSuco = new System.Windows.Forms.ComboBox();
@@ -590,6 +591,7 @@
             this.Controls.Add(this.btnFinaVenda);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Telateste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Vendas";
