@@ -86,6 +86,7 @@
             this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdTableAdapters.TableAdapterManager();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             saborLabel = new System.Windows.Forms.Label();
             quantLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
@@ -146,7 +147,8 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
+            this.bindingNavigatorSeparator2,
+            this.toolStripLabel2});
             this.sacolesBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.sacolesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.sacolesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -553,7 +555,7 @@
             this.groupBox3.Size = new System.Drawing.Size(364, 112);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Atenção! Tabela de Consulta de Custos ";
+            this.groupBox3.Text = "Atenção! Tabela de Consulta de Custos  ";
             // 
             // label16
             // 
@@ -636,6 +638,13 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 20;
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(266, 30);
+            this.toolStripLabel2.Text = "*Utilize as setas para trocar os sabores.";
             // 
             // AdicionarProducao
             // 
@@ -729,5 +738,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
     }
 }

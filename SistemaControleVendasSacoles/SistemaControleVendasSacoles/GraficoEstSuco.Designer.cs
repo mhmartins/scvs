@@ -62,7 +62,7 @@
             legend1.Name = "Legend1";
             legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(48, 38);
+            this.chart1.Location = new System.Drawing.Point(4, 8);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
@@ -73,12 +73,12 @@
             series1.XValueMember = "sabor";
             series1.YValueMembers = "quant";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(936, 465);
+            this.chart1.Size = new System.Drawing.Size(1025, 525);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             title1.Name = "Title1";
-            title1.Text = "Gráfico do Estoque ";
+            title1.Text = "Gráfico do Estoque dos Sacolés de Suco";
             this.chart1.Titles.Add(title1);
             // 
             // sacolesBindingSource
@@ -108,7 +108,7 @@
             this.Controls.Add(this.chart1);
             this.Name = "GraficoEstSuco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GraficoEstSuco";
+            this.Text = "Gráfico do Estoque dos Sacolés de Suco";
             this.Load += new System.EventHandler(this.GraficoEstSuco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();

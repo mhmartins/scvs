@@ -34,17 +34,17 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.grafoEstCremoso = new SistemaControleVendasSacoles.GrafoEstCremoso();
             this.sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grafo_Estoque = new SistemaControleVendasSacoles.Grafo_Estoque();
             this.sacolesTableAdapter = new SistemaControleVendasSacoles.Grafo_EstoqueTableAdapters.sacolesTableAdapter();
-            this.grafoEstCremoso = new SistemaControleVendasSacoles.GrafoEstCremoso();
-            this.sacolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sacolesTableAdapter1 = new SistemaControleVendasSacoles.GrafoEstCremosoTableAdapters.sacolesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafoEstCremoso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafo_Estoque)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grafoEstCremoso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -59,9 +59,11 @@
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.DataSource = this.sacolesBindingSource1;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(48, 38);
+            this.chart1.Location = new System.Drawing.Point(4, 8);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -74,13 +76,23 @@
             series1.YValueMembers = "quant";
             series1.YValuesPerPoint = 2;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(936, 465);
+            this.chart1.Size = new System.Drawing.Size(1025, 525);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
-            title1.Text = "Gráfico do Estoque";
+            title1.Text = "Gráfico do Estoque dos Sacolés Cremosos";
             this.chart1.Titles.Add(title1);
+            // 
+            // sacolesBindingSource1
+            // 
+            this.sacolesBindingSource1.DataMember = "sacoles";
+            this.sacolesBindingSource1.DataSource = this.grafoEstCremoso;
+            // 
+            // grafoEstCremoso
+            // 
+            this.grafoEstCremoso.DataSetName = "GrafoEstCremoso";
+            this.grafoEstCremoso.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sacolesBindingSource
             // 
@@ -95,16 +107,6 @@
             // sacolesTableAdapter
             // 
             this.sacolesTableAdapter.ClearBeforeFill = true;
-            // 
-            // grafoEstCremoso
-            // 
-            this.grafoEstCremoso.DataSetName = "GrafoEstCremoso";
-            this.grafoEstCremoso.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sacolesBindingSource1
-            // 
-            this.sacolesBindingSource1.DataMember = "sacoles";
-            this.sacolesBindingSource1.DataSource = this.grafoEstCremoso;
             // 
             // sacolesTableAdapter1
             // 
@@ -121,10 +123,10 @@
             this.Text = "Gráfico do Estoque do Sacolés Cremosos";
             this.Load += new System.EventHandler(this.graficos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafoEstCremoso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafo_Estoque)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grafoEstCremoso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sacolesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

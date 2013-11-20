@@ -214,11 +214,11 @@
             // 
             this.btnSomar.Enabled = false;
             this.btnSomar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSomar.Location = new System.Drawing.Point(142, 105);
+            this.btnSomar.Location = new System.Drawing.Point(192, 88);
             this.btnSomar.Name = "btnSomar";
-            this.btnSomar.Size = new System.Drawing.Size(150, 36);
+            this.btnSomar.Size = new System.Drawing.Size(165, 36);
             this.btnSomar.TabIndex = 17;
-            this.btnSomar.Text = "Calcular Total";
+            this.btnSomar.Text = "Inserir Desconto";
             this.toolTip1.SetToolTip(this.btnSomar, "Clique para calcular o total com desconto");
             this.btnSomar.UseVisualStyleBackColor = true;
             this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);

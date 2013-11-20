@@ -131,7 +131,7 @@ namespace SistemaControleVendasSacoles
                     labelBruto.Text = "Não há dados para esse período.";
                 }
 
-                MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " no ano de " + nupdowAno.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " no ano de " + nupdowANOpesq.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //nupdowSuc.Maximum = int.Parse(tbxEstSuc.Text);
                 combo1.Close();
             }
@@ -234,7 +234,7 @@ namespace SistemaControleVendasSacoles
                     labelBruto.Text = "Não há dados para esse período.";
                 }
 
-                MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " no ano de " + nupdowAno.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " no mês de " + comboBox1.Text + " do ano de " + nupdowAno.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //nupdowSuc.Maximum = int.Parse(tbxEstSuc.Text);
                 combo1.Close();
             }
@@ -314,7 +314,7 @@ namespace SistemaControleVendasSacoles
                             labelBruto.Text = "Não há dados para esse período.";
                         }
 
-                        MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " no ano de " + nupdowAno.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Dados das vendas do vendedor " + cbxUser.Text + " da data " + textBox2.Text + " até " + textBox3.Text + ".", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //nupdowSuc.Maximum = int.Parse(tbxEstSuc.Text);
                         combo1.Close();
                     }

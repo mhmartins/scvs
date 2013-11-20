@@ -424,33 +424,33 @@ namespace SistemaControleVendasSacoles
         //BOTÃO LIMPAR A TELA
         private void button4_Click(object sender, EventArgs e)
         {
+
+            if (MessageBox.Show("Você tem certeza que deseja limpar os campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Você tem certeza que deseja limpar os campos?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    //apaga os tbx relacionado abaixo
-                    addSuco.Enabled = false;
-                    AddCre.Enabled = false;
-                    cmbxsacolescre.Enabled = false;
-                    cbxSuco.Enabled = false;
-                    nupdowCre.Enabled = false;
-                    nupdowSuc.Enabled = false;
-                    tbxValCre.Enabled = false;
-                    tbxValSuc.Enabled = false;
-                    cmbxsacolescre.Text = "";
-                    nupdowCre.Text = "0";
-                    tbxValCre.Text = "";
-                    cbxSuco.Text = "";
-                    nupdowSuc.Text = "0";
-                    tbxValSuc.Text = "";
-                    dgv.Rows.Clear();
-                    valorTotal = 0;
-                    tbxDesc.Text = "";
-                    mktTotal.Text = "";
-                    tbxEstCre.Text = "";
-                    tbxEstSuc.Text = "";
-                    MessageBox.Show("Campos apagados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                //apaga os tbx relacionado abaixo
+                addSuco.Enabled = false;
+                AddCre.Enabled = false;
+                cmbxsacolescre.Enabled = false;
+                cbxSuco.Enabled = false;
+                nupdowCre.Enabled = false;
+                nupdowSuc.Enabled = false;
+                tbxValCre.Enabled = false;
+                tbxValSuc.Enabled = false;
+                cmbxsacolescre.Text = "";
+                nupdowCre.Text = "0";
+                tbxValCre.Text = "";
+                cbxSuco.Text = "";
+                nupdowSuc.Text = "0";
+                tbxValSuc.Text = "";
+                dgv.Rows.Clear();
+                valorTotal = 0;
+                tbxDesc.Text = "";
+                mktTotal.Text = "";
+                tbxEstCre.Text = "";
+                tbxEstSuc.Text = "";
+                MessageBox.Show("Campos apagados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
         //BOTÃO ADICONAR VENDEDOR
         private void btnIni_Click(object sender, EventArgs e)
@@ -595,6 +595,9 @@ namespace SistemaControleVendasSacoles
         //BOTÃO SOMAR O DESCONTO
         private void btnSomar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Você tem certeza que deseja dar R$ "+ tbxDesc.Text +" de desconto?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
             float somadesconto = (valorTotal - float.Parse(tbxDesc.Text));
             if (somadesconto < 0)
             {
@@ -605,6 +608,9 @@ namespace SistemaControleVendasSacoles
                 valorTotal = somadesconto;
                 mktTotal.Text = valorTotal.ToString("N", new CultureInfo("pt-BR")); //CONVERTE O VALOR PARA REAL
                 mktTotal.Text = ("R$ " + mktTotal.Text).ToString(); //CRIA UMA MASCARA
+            }
+
+            MessageBox.Show("Desconto inserido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

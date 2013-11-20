@@ -33,6 +33,9 @@
             System.Windows.Forms.Label usuarios_idusuariosLabel;
             System.Windows.Forms.Label dataLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExibirVenda));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.exibir_venda = new SistemaControleVendasSacoles.exibir_venda();
             this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendasTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.vendasTableAdapter();
@@ -41,7 +44,6 @@
             this.vendas_sacolesTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.vendas_sacolesTableAdapter();
             this.vendasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -51,20 +53,19 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.vendasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idvendasTextBox = new System.Windows.Forms.TextBox();
             this.usuarios_idusuariosComboBox = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.vendas_sacolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendas_sacolesDataGridView = new System.Windows.Forms.DataGridView();
-            this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.usuariosTableAdapter();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosTableAdapter = new SistemaControleVendasSacoles.exibir_vendaTableAdapters.usuariosTableAdapter();
             idvendasLabel = new System.Windows.Forms.Label();
             usuarios_idusuariosLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
@@ -147,7 +148,7 @@
             this.vendasBindingNavigator.BindingSource = this.vendasBindingSource;
             this.vendasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.vendasBindingNavigator.CountItemFormat = "de {0}";
-            this.vendasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.vendasBindingNavigator.DeleteItem = null;
             this.vendasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.bindingNavigatorMoveFirstItem,
@@ -158,9 +159,7 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorDeleteItem,
-            this.vendasBindingNavigatorSaveItem});
+            this.bindingNavigatorSeparator2});
             this.vendasBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.vendasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.vendasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -180,21 +179,12 @@
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 26);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(364, 26);
+            this.toolStripLabel1.Size = new System.Drawing.Size(379, 26);
             this.toolStripLabel1.Text = "                                                                                 " +
-    "                                      ";
+    "                                           ";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -257,15 +247,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
-            // vendasBindingNavigatorSaveItem
-            // 
-            this.vendasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.vendasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("vendasBindingNavigatorSaveItem.Image")));
-            this.vendasBindingNavigatorSaveItem.Name = "vendasBindingNavigatorSaveItem";
-            this.vendasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 26);
-            this.vendasBindingNavigatorSaveItem.Text = "Save Data";
-            this.vendasBindingNavigatorSaveItem.Click += new System.EventHandler(this.vendasBindingNavigatorSaveItem_Click);
-            // 
             // idvendasTextBox
             // 
             this.idvendasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "idvendas", true));
@@ -312,7 +293,22 @@
             // 
             // vendas_sacolesDataGridView
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.vendas_sacolesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.vendas_sacolesDataGridView.AutoGenerateColumns = false;
+            this.vendas_sacolesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.vendas_sacolesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.vendas_sacolesDataGridView.BackgroundColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendas_sacolesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.vendas_sacolesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendas_sacolesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -321,33 +317,29 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.vendas_sacolesDataGridView.DataSource = this.vendas_sacolesBindingSource;
-            this.vendas_sacolesDataGridView.Enabled = false;
-            this.vendas_sacolesDataGridView.Location = new System.Drawing.Point(314, 165);
+            this.vendas_sacolesDataGridView.Location = new System.Drawing.Point(291, 165);
             this.vendas_sacolesDataGridView.Name = "vendas_sacolesDataGridView";
             this.vendas_sacolesDataGridView.RowHeadersVisible = false;
-            this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(405, 256);
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.vendas_sacolesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.vendas_sacolesDataGridView.Size = new System.Drawing.Size(450, 277);
             this.vendas_sacolesDataGridView.TabIndex = 7;
             // 
-            // ProdutosBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.ProdutosBindingSource.DataMember = "sacoles";
-            this.ProdutosBindingSource.DataSource = this.exibir_venda;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "vendas_sacID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // usuariosTableAdapter
+            // dataGridViewTextBoxColumn2
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "N. da Venda";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 112;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -359,19 +351,30 @@
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "idSacoles";
+            this.dataGridViewTextBoxColumn3.Width = 91;
             // 
-            // dataGridViewTextBoxColumn2
+            // ProdutosBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
-            this.dataGridViewTextBoxColumn2.HeaderText = "N. da Venda";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.ProdutosBindingSource.DataMember = "sacoles";
+            this.ProdutosBindingSource.DataSource = this.exibir_venda;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "vendas_sacID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "vendas_sacID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 117;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 71;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // ExibirVenda
             // 
@@ -412,7 +415,6 @@
         private exibir_vendaTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator vendasBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -421,7 +423,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton vendasBindingNavigatorSaveItem;
         private exibir_vendaTableAdapters.vendas_sacolesTableAdapter vendas_sacolesTableAdapter;
         private System.Windows.Forms.TextBox idvendasTextBox;
         private System.Windows.Forms.ComboBox usuarios_idusuariosComboBox;

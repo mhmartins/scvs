@@ -159,16 +159,7 @@ namespace SistemaControleVendasSacoles
 
         private void gráficoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (Application.OpenForms["graficos"] == null)
-                {
-                    graficos frm = new graficos();
-                    frm.MdiParent = this;
-                    frm.Show();
-                }
-            }
-            catch { }
+
         }
 
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -203,11 +194,11 @@ namespace SistemaControleVendasSacoles
         {
             try
             {
-                if (Application.OpenForms["Consulta"] == null)
+                if (Application.OpenForms["EstoqueTabelas"] == null)
                 {
-                    Consulta frm = new Consulta();
-                    frm.MdiParent = this;
-                    frm.Show();
+                    EstoqueTabelas form = new EstoqueTabelas();
+                    form.MdiParent = this;
+                    form.Show();
                 }
             }
             catch { }
@@ -612,23 +603,37 @@ namespace SistemaControleVendasSacoles
 
         private void cremosoToolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            graficos form = new graficos();
-            form.MdiParent = this;
-            form.Show();
+            try
+            {
+                if (Application.OpenForms["graficos"] == null)
+                {
+                    graficos form = new graficos();
+                    form.MdiParent = this;
+                    form.Show();
+                }
+            }
+            catch { }
+
         }
 
         private void sucoToolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            GraficoEstSuco form = new GraficoEstSuco();
-            form.MdiParent = this;
-            form.Show();
+
+            try
+            {
+                if (Application.OpenForms["GraficoEstSuco"] == null)
+                {
+                    GraficoEstSuco form = new GraficoEstSuco();
+                    form.MdiParent = this;
+                    form.Show();
+                }
+            }
+            catch { }
         }
 
         private void cremosoToolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            EstoqueTabelas form = new EstoqueTabelas();
-            form.MdiParent = this;
-            form.Show();
+
         }
     }
 }

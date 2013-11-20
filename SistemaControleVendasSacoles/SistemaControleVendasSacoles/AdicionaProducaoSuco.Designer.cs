@@ -81,6 +81,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.sacolesTableAdapter = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.sacolesTableAdapter();
             this.tableAdapterManager = new SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             saborLabel2 = new System.Windows.Forms.Label();
             quantLabel1 = new System.Windows.Forms.Label();
             precoLabel2 = new System.Windows.Forms.Label();
@@ -440,13 +441,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.PaleGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(849, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 68);
             this.button1.TabIndex = 19;
             this.button1.Text = "Salvar a Produção";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // sacolesBindingNavigator
@@ -467,7 +469,8 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
+            this.bindingNavigatorSeparator2,
+            this.toolStripLabel2});
             this.sacolesBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.sacolesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.sacolesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -585,6 +588,13 @@
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = SistemaControleVendasSacoles.AdicionaProdSucTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(266, 30);
+            this.toolStripLabel2.Text = "*Utilize as setas para trocar os sabores.";
+            // 
             // AdicionaProducaoSuco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,5 +681,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
     }
 }

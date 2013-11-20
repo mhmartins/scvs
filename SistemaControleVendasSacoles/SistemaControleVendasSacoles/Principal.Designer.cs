@@ -62,14 +62,11 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cremosoToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sucoToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cremosoToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.sucoToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarProduçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cremosoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sucoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,7 +164,7 @@
             this.saídaDeProdutoToolStripMenuItem,
             this.faturamentoToolStripMenuItem});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(177, 26);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(163, 26);
             this.toolStripMenuItem5.Text = "Dia";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -208,7 +205,7 @@
             this.saídaDeProdutoToolStripMenuItem1,
             this.faturamentoToolStripMenuItem1});
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(177, 26);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(163, 26);
             this.toolStripMenuItem6.Text = "Semana";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
@@ -248,7 +245,7 @@
             this.saídaDeProdutoToolStripMenuItem2,
             this.faturamentoToolStripMenuItem2});
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(177, 26);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(163, 26);
             this.toolStripMenuItem7.Text = "Mês";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
@@ -288,7 +285,7 @@
             this.saídaDeProdutoToolStripMenuItem3,
             this.faturamentoToolStripMenuItem3});
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(177, 26);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(163, 26);
             this.toolStripMenuItem8.Text = "Ano";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
@@ -325,15 +322,15 @@
             // vendedoresToolStripMenuItem
             // 
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
-            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
             this.vendedoresToolStripMenuItem.Click += new System.EventHandler(this.vendedoresToolStripMenuItem_Click);
             // 
             // outrosToolStripMenuItem
             // 
             this.outrosToolStripMenuItem.Name = "outrosToolStripMenuItem";
-            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
-            this.outrosToolStripMenuItem.Text = "Personalizado";
+            this.outrosToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.outrosToolStripMenuItem.Text = "Financeiro";
             this.outrosToolStripMenuItem.Click += new System.EventHandler(this.outrosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
@@ -342,7 +339,6 @@
             this.consultarToolStripMenuItem1,
             this.cadastrarToolStripMenuItem,
             this.alterarCadastroToolStripMenuItem,
-            this.excluirToolStripMenuItem,
             this.adicionarProduçãoToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(77, 25);
@@ -360,26 +356,10 @@
             // 
             // tabelaToolStripMenuItem
             // 
-            this.tabelaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cremosoToolStripMenuItem6,
-            this.sucoToolStripMenuItem6});
             this.tabelaToolStripMenuItem.Name = "tabelaToolStripMenuItem";
-            this.tabelaToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
+            this.tabelaToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.tabelaToolStripMenuItem.Text = "Tabela";
             this.tabelaToolStripMenuItem.Click += new System.EventHandler(this.tabelaToolStripMenuItem_Click);
-            // 
-            // cremosoToolStripMenuItem6
-            // 
-            this.cremosoToolStripMenuItem6.Name = "cremosoToolStripMenuItem6";
-            this.cremosoToolStripMenuItem6.Size = new System.Drawing.Size(143, 26);
-            this.cremosoToolStripMenuItem6.Text = "Cremoso";
-            this.cremosoToolStripMenuItem6.Click += new System.EventHandler(this.cremosoToolStripMenuItem6_Click);
-            // 
-            // sucoToolStripMenuItem6
-            // 
-            this.sucoToolStripMenuItem6.Name = "sucoToolStripMenuItem6";
-            this.sucoToolStripMenuItem6.Size = new System.Drawing.Size(143, 26);
-            this.sucoToolStripMenuItem6.Text = "Suco";
             // 
             // gráficoToolStripMenuItem1
             // 
@@ -387,21 +367,21 @@
             this.cremosoToolStripMenuItem5,
             this.sucoToolStripMenuItem5});
             this.gráficoToolStripMenuItem1.Name = "gráficoToolStripMenuItem1";
-            this.gráficoToolStripMenuItem1.Size = new System.Drawing.Size(130, 26);
+            this.gráficoToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.gráficoToolStripMenuItem1.Text = "Gráfico";
             this.gráficoToolStripMenuItem1.Click += new System.EventHandler(this.gráficoToolStripMenuItem1_Click);
             // 
             // cremosoToolStripMenuItem5
             // 
             this.cremosoToolStripMenuItem5.Name = "cremosoToolStripMenuItem5";
-            this.cremosoToolStripMenuItem5.Size = new System.Drawing.Size(143, 26);
+            this.cremosoToolStripMenuItem5.Size = new System.Drawing.Size(152, 26);
             this.cremosoToolStripMenuItem5.Text = "Cremoso";
             this.cremosoToolStripMenuItem5.Click += new System.EventHandler(this.cremosoToolStripMenuItem5_Click);
             // 
             // sucoToolStripMenuItem5
             // 
             this.sucoToolStripMenuItem5.Name = "sucoToolStripMenuItem5";
-            this.sucoToolStripMenuItem5.Size = new System.Drawing.Size(143, 26);
+            this.sucoToolStripMenuItem5.Size = new System.Drawing.Size(152, 26);
             this.sucoToolStripMenuItem5.Text = "Suco";
             this.sucoToolStripMenuItem5.Click += new System.EventHandler(this.sucoToolStripMenuItem5_Click);
             // 
@@ -419,13 +399,6 @@
             this.alterarCadastroToolStripMenuItem.Text = "Alterar Cadastro";
             this.alterarCadastroToolStripMenuItem.Click += new System.EventHandler(this.alterarCadastroToolStripMenuItem_Click);
             // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.excluirToolStripMenuItem.Text = "Excluir";
-            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
-            // 
             // adicionarProduçãoToolStripMenuItem
             // 
             this.adicionarProduçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -439,14 +412,14 @@
             // cremosoToolStripMenuItem
             // 
             this.cremosoToolStripMenuItem.Name = "cremosoToolStripMenuItem";
-            this.cremosoToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.cremosoToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.cremosoToolStripMenuItem.Text = "Cremoso";
             this.cremosoToolStripMenuItem.Click += new System.EventHandler(this.cremosoToolStripMenuItem_Click);
             // 
             // sucoToolStripMenuItem
             // 
             this.sucoToolStripMenuItem.Name = "sucoToolStripMenuItem";
-            this.sucoToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.sucoToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.sucoToolStripMenuItem.Text = "Suco";
             this.sucoToolStripMenuItem.Click += new System.EventHandler(this.sucoToolStripMenuItem_Click);
             // 
@@ -612,7 +585,6 @@
         private System.Windows.Forms.ToolStripMenuItem gráficoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarCadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarProduçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cremosoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sucoToolStripMenuItem;
@@ -637,7 +609,5 @@
         private System.Windows.Forms.ToolStripMenuItem vendedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cremosoToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem sucoToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem cremosoToolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem sucoToolStripMenuItem6;
     }
 }

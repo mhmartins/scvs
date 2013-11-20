@@ -271,7 +271,7 @@
             this.groupBox2.Size = new System.Drawing.Size(452, 291);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Resultado";
+            this.groupBox2.Text = "Resultado da Pesquisa";
             // 
             // label12
             // 
