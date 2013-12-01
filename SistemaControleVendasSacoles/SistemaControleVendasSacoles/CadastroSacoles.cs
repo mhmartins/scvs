@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SistemaControleVendasSacoles
 {
@@ -50,9 +51,8 @@ namespace SistemaControleVendasSacoles
 
             if (!CamposObrigPreenchidos)//se o campos estiver preenchido ele entra 
             {
-                Sacole sa = new Sacole();
-                DAO da = new DAO();
-                sa.Sabor = tbxnome.Text;
+                this.label7.DataBindings.Clear();
+                
                 int nupdow;
                 if (nupdowtipo2.Text == "Cremoso")
                 {
@@ -62,18 +62,48 @@ namespace SistemaControleVendasSacoles
                 {
                     nupdow = 2;
                 }
-                sa.Tipo = nupdow;
-                sa.Quant = int.Parse(tbxquant.Text);
-                sa.QuantMin = int.Parse(tbxquantmin.Text);
-                sa.Valor = tbxvalor.Text;
-                da.cadastro(sa);
-                MessageBox.Show("Produto cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                try
+                {
+                    string caminho = "SERVER=localhost;" + " DATABASE=banco_rr_sacoles;" + " UID=root;" + "PASSWORD=12345;";
+                    MySqlConnection conexao = new MySqlConnection(caminho);
+                    MySqlDataAdapter comandos = new MySqlDataAdapter("SELECT sabor FROM sacoles WHERE sabor = '" + tbxnome.Text + "' and tipo ='" + nupdow + "'", conexao);
+                    conexao.Open();
+                    DataTable dt40 = new DataTable();
+                    comandos.Fill(dt40);
+                    BindingSource source = new BindingSource();
+                    source.DataSource = dt40;
+                    this.label7.DataBindings.Add("Text", source, "sabor", true);
+                    conexao.Close();
+                }
 
-                tbxnome.Text = "";
-                //nupdowtipo.Text = "1";
-                tbxquant.Text = "";
-                //tbxquantmin.Text = "";
-                tbxvalor.Text = "";
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro de comandos: " + ex.Message);
+                }
+
+                if (label7.Text == "")
+                {
+                    Sacole sa = new Sacole();
+                    DAO da = new DAO();
+                    sa.Sabor = tbxnome.Text;
+                    sa.Tipo = nupdow;
+                    sa.Quant = int.Parse(tbxquant.Text);
+                    sa.QuantMin = int.Parse(tbxquantmin.Text);
+                    sa.Valor = tbxvalor.Text;
+                    da.cadastro(sa);
+                    MessageBox.Show("Produto cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    tbxnome.Text = "";
+                    //nupdowtipo.Text = "1";
+                    tbxquant.Text = "";
+                    //tbxquantmin.Text = "";
+                    tbxvalor.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Este sabor já foi cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else//campo não preenchido
             {

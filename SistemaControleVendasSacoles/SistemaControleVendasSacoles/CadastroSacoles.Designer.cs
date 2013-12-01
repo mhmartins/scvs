@@ -55,6 +55,7 @@
             this.tipoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.vendasTableAdapter1 = new SistemaControleVendasSacoles.banco_rr_sacolesDataSet1TableAdapters.vendasTableAdapter();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.banco_rr_sacolesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banco)).BeginInit();
@@ -280,11 +281,21 @@
             this.btnVoltar.Visible = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(24, 486);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 18;
+            // 
             // CadastroSacoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 533);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.nupdowtipo2);
             this.Controls.Add(this.label8);
@@ -343,5 +354,6 @@
         private System.Windows.Forms.BindingSource tipoBindingSource2;
         private banco_rr_sacolesDataSet1TableAdapters.vendasTableAdapter vendasTableAdapter1;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label label7;
     }
 }

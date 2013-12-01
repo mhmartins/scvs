@@ -288,7 +288,16 @@ namespace SistemaControleVendasSacoles
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (Application.OpenForms["frmajuda"] == null)
+                {
+                    frmajuda form = new frmajuda();
+                    form.MdiParent = this;
+                    form.Show();
+                }
+            }
+            catch { }
         }
 
         private void outrosToolStripMenuItem_Click(object sender, EventArgs e)

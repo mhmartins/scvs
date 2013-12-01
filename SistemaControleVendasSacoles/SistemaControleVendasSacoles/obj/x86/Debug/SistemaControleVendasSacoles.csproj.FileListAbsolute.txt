@@ -115,3 +115,4 @@ C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleV
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.FatuAno.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.GraficoEstSuco.resources
 C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.EstoqueTabelas.resources
+C:\Users\LeO\Documents\GitHub\scvs\SistemaControleVendasSacoles\SistemaControleVendasSacoles\obj\x86\Debug\SistemaControleVendasSacoles.frmajuda.resources

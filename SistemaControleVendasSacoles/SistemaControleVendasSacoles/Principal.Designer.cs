@@ -351,13 +351,13 @@
             this.tabelaToolStripMenuItem,
             this.gráficoToolStripMenuItem1});
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(234, 26);
             this.consultarToolStripMenuItem1.Text = "Consultar";
             // 
             // tabelaToolStripMenuItem
             // 
             this.tabelaToolStripMenuItem.Name = "tabelaToolStripMenuItem";
-            this.tabelaToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.tabelaToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.tabelaToolStripMenuItem.Text = "Tabela";
             this.tabelaToolStripMenuItem.Click += new System.EventHandler(this.tabelaToolStripMenuItem_Click);
             // 
@@ -367,35 +367,35 @@
             this.cremosoToolStripMenuItem5,
             this.sucoToolStripMenuItem5});
             this.gráficoToolStripMenuItem1.Name = "gráficoToolStripMenuItem1";
-            this.gráficoToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.gráficoToolStripMenuItem1.Size = new System.Drawing.Size(130, 26);
             this.gráficoToolStripMenuItem1.Text = "Gráfico";
             this.gráficoToolStripMenuItem1.Click += new System.EventHandler(this.gráficoToolStripMenuItem1_Click);
             // 
             // cremosoToolStripMenuItem5
             // 
             this.cremosoToolStripMenuItem5.Name = "cremosoToolStripMenuItem5";
-            this.cremosoToolStripMenuItem5.Size = new System.Drawing.Size(152, 26);
+            this.cremosoToolStripMenuItem5.Size = new System.Drawing.Size(143, 26);
             this.cremosoToolStripMenuItem5.Text = "Cremoso";
             this.cremosoToolStripMenuItem5.Click += new System.EventHandler(this.cremosoToolStripMenuItem5_Click);
             // 
             // sucoToolStripMenuItem5
             // 
             this.sucoToolStripMenuItem5.Name = "sucoToolStripMenuItem5";
-            this.sucoToolStripMenuItem5.Size = new System.Drawing.Size(152, 26);
+            this.sucoToolStripMenuItem5.Size = new System.Drawing.Size(143, 26);
             this.sucoToolStripMenuItem5.Text = "Suco";
             this.sucoToolStripMenuItem5.Click += new System.EventHandler(this.sucoToolStripMenuItem5_Click);
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.cadastrarToolStripMenuItem.Text = "Cadastrar Novo Sabor";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // alterarCadastroToolStripMenuItem
             // 
             this.alterarCadastroToolStripMenuItem.Name = "alterarCadastroToolStripMenuItem";
-            this.alterarCadastroToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.alterarCadastroToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.alterarCadastroToolStripMenuItem.Text = "Alterar Cadastro";
             this.alterarCadastroToolStripMenuItem.Click += new System.EventHandler(this.alterarCadastroToolStripMenuItem_Click);
             // 
@@ -405,21 +405,21 @@
             this.cremosoToolStripMenuItem,
             this.sucoToolStripMenuItem});
             this.adicionarProduçãoToolStripMenuItem.Name = "adicionarProduçãoToolStripMenuItem";
-            this.adicionarProduçãoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.adicionarProduçãoToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.adicionarProduçãoToolStripMenuItem.Text = "Adicionar Produção";
             this.adicionarProduçãoToolStripMenuItem.Click += new System.EventHandler(this.adicionarProduçãoToolStripMenuItem_Click);
             // 
             // cremosoToolStripMenuItem
             // 
             this.cremosoToolStripMenuItem.Name = "cremosoToolStripMenuItem";
-            this.cremosoToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.cremosoToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.cremosoToolStripMenuItem.Text = "Cremoso";
             this.cremosoToolStripMenuItem.Click += new System.EventHandler(this.cremosoToolStripMenuItem_Click);
             // 
             // sucoToolStripMenuItem
             // 
             this.sucoToolStripMenuItem.Name = "sucoToolStripMenuItem";
-            this.sucoToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.sucoToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.sucoToolStripMenuItem.Text = "Suco";
             this.sucoToolStripMenuItem.Click += new System.EventHandler(this.sucoToolStripMenuItem_Click);
             // 

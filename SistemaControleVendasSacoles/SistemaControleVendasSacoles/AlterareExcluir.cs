@@ -41,17 +41,17 @@ namespace SistemaControleVendasSacoles
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             try
-{
-this.Validate();
-this.sacolesBindingSource.EndEdit();
-this.tableAdapterManager.UpdateAll(this.banco_rr_sacolesDataSet1);
-}
-catch (Exception)
-{
-MessageBox.Show("Não é possível deletar.\nHá relacionados.", "Erro ao Excluir", MessageBoxButtons.OK,
-MessageBoxIcon.Error);
-this.sacolesTableAdapter.Fill(this.banco_rr_sacolesDataSet1.sacoles);
-}
+            {
+                this.Validate();
+                this.sacolesBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.banco_rr_sacolesDataSet1);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não é possível deletar.\nHá relacionados.", "Erro ao Excluir", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                this.sacolesTableAdapter.Fill(this.banco_rr_sacolesDataSet1.sacoles);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,6 +59,7 @@ this.sacolesTableAdapter.Fill(this.banco_rr_sacolesDataSet1.sacoles);
             this.Validate();
             this.sacolesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.banco_rr_sacolesDataSet1);
+            MessageBox.Show("Suas alterações foram salvas com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void sacolesBindingNavigator_RefreshItems(object sender, EventArgs e)
