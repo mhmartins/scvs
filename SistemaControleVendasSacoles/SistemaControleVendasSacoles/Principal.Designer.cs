@@ -428,6 +428,7 @@
             this.janelasToolStripMenuItem.Name = "janelasToolStripMenuItem";
             this.janelasToolStripMenuItem.Size = new System.Drawing.Size(72, 25);
             this.janelasToolStripMenuItem.Text = "Janelas";
+            this.janelasToolStripMenuItem.Visible = false;
             // 
             // toolStripMenuItem4
             // 

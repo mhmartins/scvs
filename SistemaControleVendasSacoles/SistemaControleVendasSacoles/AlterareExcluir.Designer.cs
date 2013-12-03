@@ -372,6 +372,7 @@
             this.Controls.Add(this.saborTextBox);
             this.Controls.Add(idSacolesLabel);
             this.Controls.Add(this.idSacolesLabel1);
+            this.MaximizeBox = false;
             this.Name = "AlterareExcluir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Cadastro dos Sacolés do Estoque";

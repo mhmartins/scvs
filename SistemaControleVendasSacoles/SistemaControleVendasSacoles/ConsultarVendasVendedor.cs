@@ -325,5 +325,23 @@ namespace SistemaControleVendasSacoles
                 }
             }
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 47)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //tramento de erro, não é permitido inserir caract. apenas num e backspace
+            if (!(char.IsDigit(e.KeyChar)) && e.KeyChar != 08 && e.KeyChar != 47)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

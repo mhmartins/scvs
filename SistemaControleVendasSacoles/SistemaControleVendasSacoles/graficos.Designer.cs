@@ -118,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 541);
             this.Controls.Add(this.chart1);
+            this.MaximizeBox = false;
             this.Name = "graficos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gráfico do Estoque do Sacolés Cremosos";

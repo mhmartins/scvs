@@ -339,7 +339,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "vendas_idvendas";
             this.dataGridViewTextBoxColumn2.HeaderText = "N. da Venda";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 112;
+            this.dataGridViewTextBoxColumn2.Width = 122;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -389,6 +389,7 @@
             this.Controls.Add(dataLabel);
             this.Controls.Add(this.dataMaskedTextBox);
             this.Controls.Add(this.vendasBindingNavigator);
+            this.MaximizeBox = false;
             this.Name = "ExibirVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar as Vendas Efetuadas";

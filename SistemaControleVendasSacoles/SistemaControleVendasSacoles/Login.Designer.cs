@@ -123,6 +123,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxUser);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Controle de Vendas de Sacolés - RR Sacolés";

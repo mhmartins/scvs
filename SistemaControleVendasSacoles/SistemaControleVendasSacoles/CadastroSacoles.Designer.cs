@@ -312,6 +312,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(1, 1);
+            this.MaximizeBox = false;
             this.Name = "CadastroSacoles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Sacolés - RR Sacolés";
